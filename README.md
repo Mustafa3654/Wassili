@@ -8,6 +8,10 @@
   <strong>ريڤا</strong> — منصة توصيل و متجر إلكتروني عند الطلب.
 </p>
 
+## About
+
+**ريڤا** is an on-demand delivery and marketplace platform that connects customers with local stores and independent drivers. Built for the Lebanese market, it handles multi-vendor orders, WhatsApp-based dispatch, real-time tracking, and dual-currency pricing (USD + LBP).
+
 A multi-vendor delivery platform built around a **"Direct Dispatch via WhatsApp"**
 model — no native apps, no routing engines, no delivery-driver app to maintain. A
 customer builds a cart in the browser, checkout fires a pre-filled WhatsApp message
