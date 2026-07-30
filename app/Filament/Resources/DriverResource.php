@@ -24,43 +24,43 @@ class DriverResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return __('wassili.drivers');
+        return __('reva.drivers');
     }
 
     public static function form(Form $form): Form
     {
         return $form->schema([
             Forms\Components\TextInput::make('name')
-                ->label(__('wassili.name'))->required(),
+                ->label(__('reva.name'))->required(),
 
             Forms\Components\TextInput::make('phone')
-                ->label(__('wassili.phone'))
+                ->label(__('reva.phone'))
                 ->tel()
                 ->required()
-                ->prefix(__('wassili.phone_prefix')),
+                ->prefix(__('reva.phone_prefix')),
 
             Forms\Components\Select::make('vehicle_type')
-                ->label(__('wassili.vehicle_type'))
+                ->label(__('reva.vehicle_type'))
                 ->options([
-                    'motorcycle' => __('wassili.motorcycle'),
-                    'car'        => __('wassili.car'),
-                    'bicycle'    => __('wassili.bicycle'),
+                    'motorcycle' => __('reva.motorcycle'),
+                    'car'        => __('reva.car'),
+                    'bicycle'    => __('reva.bicycle'),
                 ])
                 ->default('motorcycle')
                 ->required(),
 
             Forms\Components\Select::make('status')
-                ->label(__('wassili.status'))
+                ->label(__('reva.status'))
                 ->options([
-                    'available' => __('wassili.available'),
-                    'busy'      => __('wassili.busy'),
-                    'offline'   => __('wassili.offline'),
+                    'available' => __('reva.available'),
+                    'busy'      => __('reva.busy'),
+                    'offline'   => __('reva.offline'),
                 ])
                 ->default('available')
                 ->required(),
 
             Forms\Components\Toggle::make('is_active')
-                ->label(__('wassili.active'))->default(true),
+                ->label(__('reva.active'))->default(true),
         ]);
     }
 
@@ -73,18 +73,18 @@ class DriverResource extends Resource
                     ->searchable()
                     ->formatStateUsing(fn ($state) => $state ? '+961 ' . $state : null),
                 Tables\Columns\TextColumn::make('vehicle_type')
-                    ->label(__('wassili.vehicle_type'))
+                    ->label(__('reva.vehicle_type'))
                     ->badge()
-                    ->formatStateUsing(fn (string $state) => __("wassili.$state"))
+                    ->formatStateUsing(fn (string $state) => __("reva.$state"))
                     ->color(fn (string $state) => match ($state) {
                         'motorcycle' => 'info',
                         'car'        => 'primary',
                         'bicycle'    => 'gray',
                     }),
                 Tables\Columns\TextColumn::make('status')
-                    ->label(__('wassili.status'))
+                    ->label(__('reva.status'))
                     ->badge()
-                    ->formatStateUsing(fn (string $state) => __("wassili.$state"))
+                    ->formatStateUsing(fn (string $state) => __("reva.$state"))
                     ->color(fn (string $state) => match ($state) {
                         'available' => 'success',
                         'busy'      => 'warning',
@@ -94,9 +94,9 @@ class DriverResource extends Resource
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('status')->options([
-                    'available' => __('wassili.available'),
-                    'busy'      => __('wassili.busy'),
-                    'offline'   => __('wassili.offline'),
+                    'available' => __('reva.available'),
+                    'busy'      => __('reva.busy'),
+                    'offline'   => __('reva.offline'),
                 ]),
                 Tables\Filters\TernaryFilter::make('is_active'),
             ])

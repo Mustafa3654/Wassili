@@ -25,7 +25,7 @@ class CategoryExporter extends Exporter
 
     public static function getCompletedNotificationBody(Export $export): string
     {
-        return __('wassili.export_completed', [
+        return __('reva.export_completed', [
             'successful' => $export->successful_rows,
             'total'      => $export->total_rows,
         ]);

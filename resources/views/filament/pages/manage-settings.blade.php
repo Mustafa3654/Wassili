@@ -4,7 +4,7 @@
 
         <div class="flex justify-end">
             <x-filament::button type="submit" icon="heroicon-o-check">
-                {{ __('wassili.save') }}
+                {{ __('reva.save') }}
             </x-filament::button>
         </div>
     </form>

@@ -1,4 +1,12 @@
-# Wassili (وصّلي)
+<p align="center">
+  <span style="font-size:3rem; font-weight:bold;">🛵 Reva — ريڤا</span>
+</p>
+
+<p align="center">
+  On-demand delivery &amp; marketplace platform built with <a href="https://laravel.com">Laravel</a> + <a href="https://filamentphp.com">Filament</a>.
+  <br>
+  <strong>ريڤا</strong> — منصة توصيل و متجر إلكتروني عند الطلب.
+</p>
 
 A multi-vendor delivery platform built around a **"Direct Dispatch via WhatsApp"**
 model — no native apps, no routing engines, no delivery-driver app to maintain. A
@@ -65,7 +73,7 @@ Set your database + business values in `.env` (see **Configuration** below), the
 
 ```bash
 # 3. Database (create it first)
-mysql -u root -e "CREATE DATABASE wassili CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+mysql -u root -e "CREATE DATABASE reva CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 php artisan migrate --seed
 
 # 4. Assets + storage
@@ -100,19 +108,19 @@ populated immediately.
 
 ## Configuration
 
-All business rules live in `.env` and are read through `config/wassili.php`, so they
+All business rules live in `.env` and are read through `config/reva.php`, so they
 can differ per environment without touching code.
 
 ```dotenv
 # WhatsApp call-centre number — full international format, digits only (no +, no 00)
-WASSILI_CALL_CENTER_NUMBER=9611234567
+REVA_CALL_CENTER_NUMBER=9611234567
 
 # Delivery fees, in USD (the base currency)
-WASSILI_BASE_DELIVERY_FEE=2      # single-vendor order
-WASSILI_MULTI_VENDOR_FEE=1       # added per EXTRA distinct pickup point
+REVA_BASE_DELIVERY_FEE=2      # single-vendor order
+REVA_MULTI_VENDOR_FEE=1       # added per EXTRA distinct pickup point
 
 # Lebanese Pounds per 1 USD — drives the dual USD/LBP price display
-WASSILI_LBP_RATE=89000
+REVA_LBP_RATE=89000
 ```
 
 After changing any of these on a cached environment, run `php artisan config:clear`.
@@ -120,7 +128,7 @@ After changing any of these on a cached environment, run `php artisan config:cle
 ### Currency
 
 Prices are stored and entered in **USD**; every displayed amount is rendered next to
-its **LBP** equivalent (`$5.00 · 445,000 LL`) using `WASSILI_LBP_RATE`. The rate is
+its **LBP** equivalent (`$5.00 · 445,000 LL`) using `REVA_LBP_RATE`. The rate is
 also editable at runtime from **Control Center → Settings**, so you don't have to
 redeploy when the market moves — a stored setting overrides the `.env` default. All
 formatting goes through a single `App\Support\Money` helper, so the storefront, cart,
@@ -130,8 +138,8 @@ tracking page, admin tables and the WhatsApp messages never drift apart.
 
 `app/Http/Middleware/SetLocale.php` resolves the active locale from `?lang=ar|en`,
 then the session, then `APP_LOCALE`. Arabic renders `dir="rtl"`, English `dir="ltr"`.
-UI strings live in `lang/{ar,en}/wassili.php` (admin) and `lang/ar.json` (storefront);
-content models carry `name_ar` columns for bilingual data.
+UI strings live in `lang/{ar,en}/reva.php`; content models carry `name_ar` columns
+for bilingual data.
 
 ## How it works
 
@@ -220,15 +228,13 @@ ngrok http --url=https://YOUR-DOMAIN.ngrok-free.dev 8000   # terminal 2
 
 Set `APP_URL` to the ngrok root (no subfolder) and `php artisan config:clear`.
 `bootstrap/app.php` already trusts proxies, so HTTPS is detected via `X-Forwarded-*`.
-See `WASSILI_SETUP.md` for the full walkthrough, including the Apache VirtualHost
-alternative.
 
 ## Deploying to shared hosting (Hostinger)
 
 1. `npm run build` locally and upload `public/build`.
 2. Point the domain's document root at `/public`.
 3. Production `.env`: real DB credentials, `APP_ENV=production`, `APP_DEBUG=false`,
-   real `WASSILI_CALL_CENTER_NUMBER`.
+   real `REVA_CALL_CENTER_NUMBER`.
 4. `php artisan migrate --force && php artisan config:cache && php artisan route:cache`.
 
 No queue workers or websockets are needed for the core dispatch/tracking flow. (CSV
@@ -241,3 +247,7 @@ which is fine for shared hosting.)
 - `composer.phar` and `.claude/` are intentionally git-ignored; install Composer
   globally rather than committing the binary.
 - The default admin password is `password` — change it before any public exposure.
+
+## License
+
+[MIT](LICENSE)

@@ -9,7 +9,7 @@ use Filament\Pages\Auth\Login as BaseLogin;
 use Illuminate\Validation\ValidationException;
 
 /**
- * Username-based login for the Wassili Control Center (email removed).
+ * Username-based login for the Reva Control Center (email removed).
  */
 class Login extends BaseLogin
 {
@@ -27,7 +27,7 @@ class Login extends BaseLogin
     protected function getUsernameFormComponent(): Component
     {
         return TextInput::make('username')
-            ->label(__('wassili.username'))
+            ->label(__('reva.username'))
             ->required()
             ->autocomplete()
             ->autofocus()

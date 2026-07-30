@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Wassili — وصّلي')
+@section('title', __('app_name'))
 
 @section('content')
     <header class="mb-6">

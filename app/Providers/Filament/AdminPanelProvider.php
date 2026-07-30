@@ -28,8 +28,8 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login(\App\Filament\Pages\Auth\Login::class)
-            // "Wassili Control Center" branding.
-            ->brandName('Wassili — وصّلي')
+            // Branding: use the configured app name (Reva / ريڤا).
+            ->brandName(config('app.name'))
             ->favicon(asset('favicon.ico'))
             ->colors([
                 'primary' => Color::Emerald,

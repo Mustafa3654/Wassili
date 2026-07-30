@@ -28,12 +28,12 @@ class ManageSettings extends Page implements HasForms
 
     public static function getNavigationLabel(): string
     {
-        return __('wassili.settings');
+        return __('reva.settings');
     }
 
     public function getTitle(): string
     {
-        return __('wassili.settings');
+        return __('reva.settings');
     }
 
     public function mount(): void
@@ -52,39 +52,39 @@ class ManageSettings extends Page implements HasForms
     {
         return $form
             ->schema([
-                Section::make(__('wassili.currency_section'))
-                    ->description(__('wassili.currency_section_help'))
+                Section::make(__('reva.currency_section'))
+                    ->description(__('reva.currency_section_help'))
                     ->schema([
                         TextInput::make('lbp_rate')
-                            ->label(__('wassili.lbp_rate'))
+                            ->label(__('reva.lbp_rate'))
                             ->numeric()->required()->minValue(1)
-                            ->suffix(__('wassili.lbp_per_usd'))
-                            ->helperText(__('wassili.lbp_rate_help')),
+                            ->suffix(__('reva.lbp_per_usd'))
+                            ->helperText(__('reva.lbp_rate_help')),
                     ]),
 
-                Section::make(__('wassili.delivery_section'))
+                Section::make(__('reva.delivery_section'))
                     ->schema([
                         TextInput::make('base_delivery_fee')
-                            ->label(__('wassili.base_delivery_fee'))
+                            ->label(__('reva.base_delivery_fee'))
                             ->numeric()->required()->minValue(0)->prefix('$'),
                         TextInput::make('multi_vendor_fee')
-                            ->label(__('wassili.multi_vendor_fee'))
+                            ->label(__('reva.multi_vendor_fee'))
                             ->numeric()->required()->minValue(0)->prefix('$')
-                            ->helperText(__('wassili.multi_vendor_fee_help')),
+                            ->helperText(__('reva.multi_vendor_fee_help')),
                     ])->columns(2),
 
-                Section::make(__('wassili.dispatch_section'))
+                Section::make(__('reva.dispatch_section'))
                     ->schema([
                         TextInput::make('call_center_number')
-                            ->label(__('wassili.call_center_number'))
+                            ->label(__('reva.call_center_number'))
                             ->tel()
-                            ->helperText(__('wassili.call_center_help')),
+                            ->helperText(__('reva.call_center_help')),
                     ]),
 
-                Section::make(__('wassili.display_section'))
+                Section::make(__('reva.display_section'))
                     ->schema([
                         Toggle::make('show_price_on_main_page')
-                            ->label(__('wassili.show_price_on_main_page'))
+                            ->label(__('reva.show_price_on_main_page'))
                             ->default(true),
                     ]),
             ])
@@ -101,7 +101,7 @@ class ManageSettings extends Page implements HasForms
         }
 
         Notification::make()
-            ->title(__('wassili.settings_saved'))
+            ->title(__('reva.settings_saved'))
             ->success()
             ->send();
     }

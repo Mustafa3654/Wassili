@@ -5,7 +5,7 @@ namespace App\Support;
 use App\Models\Order;
 
 /**
- * Builds pre-formatted, human-readable WhatsApp message bodies for Wassili.
+ * Builds pre-formatted, human-readable WhatsApp message bodies for Reva.
  * Returns a fully built https://wa.me/ URL ready to open in a new tab.
  */
 class WhatsappFormatter
@@ -18,7 +18,7 @@ class WhatsappFormatter
         $phone = self::normalizePhone($order->driver?->phone ?? '');
 
         $lines = [];
-        $lines[] = '🛵 *مهمة توصيل جديدة — وصّلي (Wassili)*';
+        $lines[] = '🛵 *مهمة توصيل جديدة — Reva*';
         $lines[] = '——————————————';
         $lines[] = '👤 العميل / Customer: '.$order->customer_name;
         $lines[] = '📞 الهاتف / Phone: '.$order->customer_phone;

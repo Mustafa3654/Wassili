@@ -1,38 +1,38 @@
 @php
     $locale = app()->getLocale();
-    $isRtl  = in_array($locale, config('wassili.rtl_locales', ['ar']));
+    $isRtl  = in_array($locale, config('reva.rtl_locales', ['ar']));
 @endphp
 <!DOCTYPE html>
 <html
     lang="{{ $locale }}"
     dir="{{ $isRtl ? 'rtl' : 'ltr' }}"
-    x-data="{ dark: (localStorage.getItem('wassili_theme') || 'light') === 'dark' }"
-    x-init="$watch('dark', v => localStorage.setItem('wassili_theme', v ? 'dark' : 'light'))"
+    x-data="{ dark: (localStorage.getItem('reva_theme') || 'light') === 'dark' }"
+    x-init="$watch('dark', v => localStorage.setItem('reva_theme', v ? 'dark' : 'light'))"
     :class="{ 'dark': dark }"
 >
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Wassili — وصّلي')</title>
+    <title>@yield('title', __('app_name'))</title>
 
     {{-- Apply saved theme before paint to avoid a flash of the wrong mode. --}}
     <script>
-        if ((localStorage.getItem('wassili_theme') || 'light') === 'dark') {
+        if ((localStorage.getItem('reva_theme') || 'light') === 'dark') {
             document.documentElement.classList.add('dark');
         }
     </script>
 
     {{-- Runtime config consumed by resources/js/cart.js --}}
     <script>
-        window.WASSILI = {
+        window.REVA = {
             callCenter: @json(\App\Support\Settings::callCenterNumber()),
             baseFee: @json(\App\Support\Settings::baseDeliveryFee()),
             multiVendorFee: @json(\App\Support\Settings::multiVendorFee()),
             locale: @json($locale),
             currency: {
                 lbpRate: @json(\App\Support\Settings::lbpRate()),
-                usdSymbol: @json(config('wassili.currency.usd_symbol')),
+                usdSymbol: @json(config('reva.currency.usd_symbol')),
                 lbpLabel: @json(app()->getLocale() === 'ar' ? 'ل.ل' : 'LL'),
             },
             csrf: document.querySelector('meta[name=csrf-token]').content,
@@ -58,7 +58,7 @@
         <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
             <a href="{{ route('storefront.index') }}" class="flex items-center gap-2 text-xl font-bold text-brand-600 dark:text-brand-500">
                 <span>🛵</span>
-                <span>Wassili <span class="text-gray-400">·</span> وصّلي</span>
+                <span>{{ app()->getLocale() === 'ar' ? 'ريڤا' : 'Reva' }}</span>
             </a>
 
             <div class="flex items-center gap-2">
@@ -98,7 +98,7 @@
 
     {{-- ============================= TOASTS ============================= --}}
     <div x-data="{ show: false, message: '' }"
-         @wassili-toast.window="message = $event.detail.message; show = true; setTimeout(() => show = false, 2000)"
+         @reva-toast.window="message = $event.detail.message; show = true; setTimeout(() => show = false, 2000)"
          x-show="show" x-cloak
          class="fixed bottom-5 inset-x-0 z-50 mx-auto w-fit rounded-full bg-gray-900 px-5 py-2 text-sm text-white shadow-lg dark:bg-white dark:text-gray-900"
          x-transition>

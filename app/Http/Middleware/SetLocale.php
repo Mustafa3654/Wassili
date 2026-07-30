@@ -18,7 +18,7 @@ class SetLocale
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $supported = config('wassili.locales', ['ar', 'en']);
+        $supported = config('reva.locales', ['ar', 'en']);
 
         // 1) Explicit switch via ?lang=ar|en (used by the navbar switcher).
         if ($request->has('lang') && in_array($request->query('lang'), $supported, true)) {

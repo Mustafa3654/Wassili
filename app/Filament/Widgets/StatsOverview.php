@@ -15,19 +15,19 @@ class StatsOverview extends BaseWidget
     protected function getStats(): array
     {
         return [
-            Stat::make(__('wassili.vendors'), Vendor::count())
+            Stat::make(__('reva.vendors'), Vendor::count())
                 ->icon('heroicon-o-building-storefront')
                 ->color('success'),
-            Stat::make(__('wassili.products'), Product::count())
+            Stat::make(__('reva.products'), Product::count())
                 ->icon('heroicon-o-cube')
                 ->color('info'),
-            Stat::make(__('wassili.categories'), Category::count())
+            Stat::make(__('reva.categories'), Category::count())
                 ->icon('heroicon-o-tag')
                 ->color('warning'),
-            Stat::make(__('wassili.drivers'), Driver::count())
+            Stat::make(__('reva.drivers'), Driver::count())
                 ->icon('heroicon-o-truck')
                 ->color('gray'),
-            Stat::make(__('wassili.orders'), Order::count())
+            Stat::make(__('reva.orders'), Order::count())
                 ->icon('heroicon-o-shopping-cart')
                 ->color('danger'),
         ];
