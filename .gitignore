@@ -21,3 +21,10 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+/.claude
+
+# Local Composer binary — install Composer globally instead of committing it.
+/composer.phar
+
+# Local dev docs / scratch (keep out of the repo if you prefer)
+# /WASSILI_SETUP.md
