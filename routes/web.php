@@ -11,6 +11,9 @@ Route::get('/', [StorefrontController::class, 'index'])->name('storefront.index'
 // Category detail page (all products).
 Route::get('/category/{category}', [StorefrontController::class, 'category'])->name('storefront.category');
 
+// Vendor menu page (products grouped by category).
+Route::get('/vendor/{vendor:slug}', [StorefrontController::class, 'vendor'])->name('storefront.vendor');
+
 // AJAX checkout — creates a pending order and returns its tracking number.
 Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 
