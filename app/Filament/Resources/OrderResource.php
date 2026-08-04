@@ -8,6 +8,8 @@ use App\Models\Order;
 use App\Support\WhatsappFormatter;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Infolists;
+use Filament\Infolists\Infolist;
 use Filament\Notifications\Actions\Action as NotificationAction;
 use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
@@ -67,6 +69,88 @@ class OrderResource extends Resource
         ]);
     }
 
+    /**
+     * Read-only view of an order. Without this the call centre can only see
+     * what was ordered inside the WhatsApp message, which is unrecoverable
+     * if that chat is lost.
+     */
+    public static function infolist(Infolist $infolist): Infolist
+    {
+        return $infolist->schema([
+            Infolists\Components\Section::make(__('wassili.customer_name'))
+                ->columns(2)
+                ->schema([
+                    Infolists\Components\TextEntry::make('customer_name')->label(__('wassili.customer_name')),
+                    Infolists\Components\TextEntry::make('customer_phone')
+                        ->label(__('wassili.customer_phone'))
+                        ->formatStateUsing(fn ($state) => $state ? '+961 '.$state : null)
+                        ->copyable(),
+                    Infolists\Components\TextEntry::make('address')->label(__('wassili.address'))->columnSpanFull(),
+                    Infolists\Components\TextEntry::make('notes')->label(__('wassili.notes'))->placeholder('—')->columnSpanFull(),
+                ]),
+
+            Infolists\Components\Section::make(__('wassili.order_items'))
+                ->schema([
+                    Infolists\Components\RepeatableEntry::make('items')
+                        ->hiddenLabel()
+                        ->columns(4)
+                        ->schema([
+                            Infolists\Components\TextEntry::make('quantity')
+                                ->label(__('wassili.qty'))
+                                ->formatStateUsing(fn ($state) => '× '.$state),
+                            Infolists\Components\TextEntry::make('name')
+                                ->label(__('wassili.name'))
+                                ->columnSpan(2),
+                            Infolists\Components\TextEntry::make('price')
+                                ->label(__('wassili.price'))
+                                ->formatStateUsing(fn ($state) => (float) $state > 0
+                                    ? \App\Support\Money::both((float) $state)
+                                    : __('wassili.to_be_priced')),
+                            Infolists\Components\TextEntry::make('vendor')
+                                ->label(__('wassili.vendor'))
+                                ->placeholder(__('wassili.universal_catalog'))
+                                ->columnSpan(2),
+                            Infolists\Components\TextEntry::make('note')
+                                ->label(__('wassili.notes'))
+                                ->placeholder('—')
+                                ->columnSpan(2),
+                        ]),
+                ]),
+
+            Infolists\Components\Section::make(__('wassili.total'))
+                ->columns(3)
+                ->schema([
+                    Infolists\Components\TextEntry::make('delivery_fee')
+                        ->label(__('wassili.delivery_fee'))
+                        ->formatStateUsing(fn ($state) => \App\Support\Money::both((float) $state)),
+                    Infolists\Components\TextEntry::make('total_price')
+                        ->label(__('wassili.total'))
+                        ->weight('bold')
+                        ->formatStateUsing(fn ($state) => \App\Support\Money::both((float) $state)),
+                    Infolists\Components\TextEntry::make('tracking_number')
+                        ->label(__('wassili.tracking'))
+                        ->copyable(),
+                    Infolists\Components\TextEntry::make('driver.name')
+                        ->label(__('wassili.driver'))
+                        ->placeholder(__('wassili.unassigned')),
+                    Infolists\Components\TextEntry::make('status')
+                        ->label(__('wassili.status'))
+                        ->badge()
+                        ->formatStateUsing(fn (string $state) => __("wassili.$state"))
+                        ->color(fn (string $state): string => match ($state) {
+                            'pending'     => 'warning',
+                            'in_progress' => 'info',
+                            'delivered'   => 'success',
+                            'cancelled'   => 'danger',
+                            default       => 'gray',
+                        }),
+                    Infolists\Components\TextEntry::make('created_at')
+                        ->label(__('wassili.received_at'))
+                        ->dateTime(),
+                ]),
+        ]);
+    }
+
     public static function table(Table $table): Table
     {
         return $table
@@ -120,6 +204,11 @@ class OrderResource extends Resource
                 ]),
             ])
             ->actions([
+                // Full order detail (items, totals, customer) in a modal.
+                Tables\Actions\ViewAction::make()
+                    ->label(__('wassili.view_order'))
+                    ->modalHeading(fn (Order $record) => $record->tracking_number),
+
                 // --- Quick inline status transitions ---
                 Action::make('markInProgress')
                     ->label(__('wassili.mark_in_progress'))
@@ -183,6 +272,20 @@ class OrderResource extends Resource
                                     ->url($whatsappUrl, shouldOpenInNewTab: true),
                             ])
                             ->send();
+                    }),
+
+                // Cancelling was only possible by editing the record by hand.
+                Action::make('cancelOrder')
+                    ->label(__('wassili.cancel_order'))
+                    ->icon('heroicon-o-x-circle')
+                    ->color('danger')
+                    ->visible(fn (Order $record) => ! in_array($record->status, ['delivered', 'cancelled'], true))
+                    ->requiresConfirmation()
+                    ->modalHeading(__('wassili.cancel_order'))
+                    ->action(function (Order $record) {
+                        $record->update(['status' => 'cancelled']);
+                        // Release the driver back into the available pool.
+                        $record->driver?->update(['status' => 'available']);
                     }),
             ])
             ->bulkActions([

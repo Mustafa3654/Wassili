@@ -8,7 +8,10 @@ use Filament\Widgets\ChartWidget;
 
 class OrdersChart extends ChartWidget
 {
-    protected static ?string $heading = 'Orders (7 days)';
+    public function getHeading(): string
+    {
+        return __('wassili.orders_last_7_days');
+    }
 
     protected function getData(): array
     {
@@ -23,10 +26,10 @@ class OrdersChart extends ChartWidget
         return [
             'datasets' => [
                 [
-                    'label' => 'Orders',
+                    'label' => __('wassili.orders'),
                     'data' => $data->pluck('count')->toArray(),
-                    'backgroundColor' => '#10b981',
-                    'borderColor' => '#10b981',
+                    'backgroundColor' => '#1B6B4C',
+                    'borderColor' => '#1B6B4C',
                 ],
             ],
             'labels' => $data->pluck('label')->toArray(),
