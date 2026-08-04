@@ -11,7 +11,7 @@
     $showPrice = \App\Support\Settings::showPriceOnMainPage();
 @endphp
 
-<div x-data="{ q: '' }" class="space-y-6">
+<div x-data="{ q: '' }" class="space-y-5 sm:space-y-6">
 
     <a href="{{ route('storefront.index') }}"
        class="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-faint transition hover:text-zaatar-600">
@@ -20,7 +20,7 @@
 
     {{-- ==================== STORE HEADER ==================== --}}
     <header class="flex items-center gap-4">
-        <span class="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-3xl bg-zaatar-50 text-3xl shadow-card dark:bg-zaatar-500/20">
+        <span class="grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-2xl bg-zaatar-50 text-2xl shadow-card sm:h-16 sm:w-16 sm:rounded-3xl sm:text-3xl dark:bg-zaatar-500/20">
             @if ($vendor->logo)
                 <img src="{{ asset('storage/'.$vendor->logo) }}" alt="" class="h-full w-full object-cover">
             @else
@@ -28,7 +28,7 @@
             @endif
         </span>
         <div class="min-w-0 flex-1">
-            <h1 class="truncate text-2xl font-extrabold">{{ $vendor->label }}</h1>
+            <h1 class="truncate text-xl font-extrabold sm:text-2xl">{{ $vendor->label }}</h1>
             <p class="mt-0.5 flex flex-wrap items-center gap-x-2 text-sm text-ink-faint">
                 <span>{{ trans_choice('{1}:count item|[2,*]:count items', $itemCount, ['count' => $itemCount]) }}</span>
                 <span aria-hidden="true">·</span>
@@ -51,13 +51,13 @@
     @endunless
 
     {{-- ==================== MENU SEARCH ==================== --}}
-    <div class="sticky top-[68px] z-30 -mx-1 px-1 py-2">
+    <div class="sticky top-[60px] z-30 sm:top-[68px] -mx-1 px-1 py-2">
         <div class="relative">
             <span class="pointer-events-none absolute inset-y-0 start-0 grid w-12 place-items-center">🔍</span>
             <input x-model="q" type="search" autocomplete="off"
                    placeholder="{{ __('Search this menu…') }}"
                    aria-label="{{ __('Search this menu…') }}"
-                   class="w-full appearance-none rounded-2xl border-2 border-paper-edge bg-white py-3 ps-12 pe-11 text-base shadow-card transition placeholder:text-ink-faint/70 focus:border-zaatar-500 focus:ring-0 [&::-webkit-search-cancel-button]:hidden dark:border-white/10 dark:bg-white/5">
+                   class="w-full appearance-none rounded-2xl border-2 border-paper-edge bg-white py-3 ps-12 pe-11 text-[15px] shadow-card sm:text-base transition placeholder:text-ink-faint/70 focus:border-zaatar-500 focus:ring-0 [&::-webkit-search-cancel-button]:hidden dark:border-white/10 dark:bg-white/5">
             <button x-show="q" x-cloak @click="q = ''" type="button" aria-label="{{ __('Clear search') }}"
                     class="absolute inset-y-0 end-0 grid w-11 place-items-center text-2xl text-ink-faint hover:text-ink">&times;</button>
         </div>
@@ -71,7 +71,7 @@
         @endphp
 
         <section x-show="!q || {{ Js::from($groupSearch) }}.some(s => s.includes(q.toLowerCase().trim()))">
-            <h2 class="mb-3 flex items-baseline gap-2 text-lg font-bold">
+            <h2 class="mb-2.5 flex items-baseline gap-2 text-base font-bold sm:text-lg">
                 <span>{{ $category?->icon ?: '🏷️' }}</span>
                 <span>{{ $category?->label ?: __('Other') }}</span>
                 <span class="text-sm font-medium text-ink-faint">{{ $group->count() }}</span>
@@ -96,7 +96,7 @@
                     <li x-show="!q || {{ Js::from($search) }}.includes(q.toLowerCase().trim())"
                         class="flex items-center gap-3 rounded-2xl border border-paper-edge bg-white p-3 shadow-card transition dark:border-white/10 dark:bg-white/5 {{ $orderable ? '' : 'opacity-60' }}">
 
-                        <span class="grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-xl bg-paper-sunk text-xl dark:bg-white/10">
+                        <span class="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-xl bg-paper-sunk text-lg sm:h-12 sm:w-12 sm:text-xl dark:bg-white/10">
                             @if ($product->image)
                                 <img src="{{ asset('storage/'.$product->image) }}" alt="" class="h-full w-full object-cover">
                             @else
@@ -105,7 +105,7 @@
                         </span>
 
                         <div class="min-w-0 flex-1">
-                            <p class="font-semibold leading-snug">{{ $product->label }}</p>
+                            <p class="text-sm font-semibold leading-snug sm:text-base">{{ $product->label }}</p>
                             @if ($showPrice)
                                 <p class="mt-0.5 text-[13px] font-bold leading-tight text-zaatar-600 sm:text-sm dark:text-zaatar-200">
                                     {{ \App\Support\Money::both((float) $product->price) }}

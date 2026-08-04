@@ -57,10 +57,10 @@
 
     {{-- ============================= NAVBAR ============================= --}}
     <nav class="sticky top-0 z-40 border-b border-paper-edge/70 bg-paper/90 backdrop-blur-md dark:border-white/10 dark:bg-zaatar-900/90">
-        <div class="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3">
+        <div class="mx-auto flex max-w-5xl items-center gap-3 px-4 py-2.5 sm:py-3">
 
-            <a href="{{ route('storefront.index') }}" class="flex items-center gap-2 font-display text-lg font-extrabold text-zaatar-600 dark:text-zaatar-200">
-                <span class="grid h-9 w-9 place-items-center rounded-2xl bg-zaatar-600 text-base text-white shadow-card">🛵</span>
+            <a href="{{ route('storefront.index') }}" class="flex items-center gap-2 font-display text-base font-extrabold sm:text-lg text-zaatar-600 dark:text-zaatar-200">
+                <span class="grid h-8 w-8 place-items-center rounded-xl bg-zaatar-600 text-sm text-white shadow-card sm:h-9 sm:w-9 sm:rounded-2xl sm:text-base">🛵</span>
                 <span class="leading-none">
                     <span class="block">وصّلي</span>
                     <span class="block text-[10px] font-medium uppercase tracking-[.18em] text-ink-faint">Wassili</span>
@@ -103,8 +103,8 @@
             x-transition:leave-end="opacity-0 scale-90"
             aria-label="{{ __('View cart') }}"
             style="bottom: calc(1.25rem + env(safe-area-inset-bottom));"
-            class="group fixed end-4 z-40 grid h-16 w-16 place-items-center rounded-full bg-zaatar-600 text-white shadow-lift ring-4 ring-paper transition hover:bg-zaatar-700 active:scale-90 dark:ring-zaatar-900">
-        <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            class="group fixed end-4 z-40 grid h-14 w-14 place-items-center rounded-full bg-zaatar-600 sm:h-16 sm:w-16 text-white shadow-lift ring-4 ring-paper transition hover:bg-zaatar-700 active:scale-90 dark:ring-zaatar-900">
+        <svg class="h-6 w-6 sm:h-7 sm:w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="9" cy="20" r="1.6" fill="currentColor" stroke="none"/>
             <circle cx="18" cy="20" r="1.6" fill="currentColor" stroke="none"/>

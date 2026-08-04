@@ -5,7 +5,7 @@
 @section('content')
 @php $showPrice = \App\Support\Settings::showPriceOnMainPage(); @endphp
 
-<div class="space-y-6">
+<div class="space-y-5 sm:space-y-6">
 
     <a href="{{ route('storefront.index') }}"
        class="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-faint transition hover:text-zaatar-600">
@@ -14,11 +14,11 @@
 
     {{-- ==================== HEADER ==================== --}}
     <header class="flex items-center gap-4">
-        <span class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl bg-zaatar-50 text-2xl shadow-card dark:bg-zaatar-500/20">
+        <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-zaatar-50 text-xl shadow-card sm:h-14 sm:w-14 sm:rounded-3xl sm:text-2xl dark:bg-zaatar-500/20">
             {{ $category->icon ?: '🏷️' }}
         </span>
         <div class="min-w-0">
-            <h1 class="truncate text-2xl font-extrabold">{{ $category->label }}</h1>
+            <h1 class="truncate text-xl font-extrabold sm:text-2xl">{{ $category->label }}</h1>
             <p class="text-sm text-ink-faint">
                 {{ trans_choice('{1}:count item|[2,*]:count items', $products->total(), ['count' => $products->total()]) }}
             </p>
@@ -27,13 +27,13 @@
 
     {{-- ==================== FILTERS ==================== --}}
     <form method="GET" action="{{ route('storefront.category', $category) }}"
-          class="sticky top-[68px] z-30 -mx-1 space-y-2 px-1 py-2">
+          class="sticky top-[60px] z-30 sm:top-[68px] -mx-1 space-y-2 px-1 py-2">
         <div class="relative">
             <span class="pointer-events-none absolute inset-y-0 start-0 grid w-12 place-items-center">🔍</span>
             <input name="q" type="search" value="{{ request('q') }}" autocomplete="off"
                    placeholder="{{ __('Search in this category…') }}"
                    aria-label="{{ __('Search in this category…') }}"
-                   class="w-full appearance-none rounded-2xl border-2 border-paper-edge bg-white py-3 ps-12 pe-4 text-base shadow-card transition placeholder:text-ink-faint/70 focus:border-zaatar-500 focus:ring-0 [&::-webkit-search-cancel-button]:hidden dark:border-white/10 dark:bg-white/5">
+                   class="w-full appearance-none rounded-2xl border-2 border-paper-edge bg-white py-3 ps-12 pe-4 text-[15px] shadow-card sm:text-base transition placeholder:text-ink-faint/70 focus:border-zaatar-500 focus:ring-0 [&::-webkit-search-cancel-button]:hidden dark:border-white/10 dark:bg-white/5">
         </div>
 
         <div class="flex gap-2">
@@ -73,7 +73,7 @@
             @endphp
 
             <li class="flex items-center gap-3 rounded-2xl border border-paper-edge bg-white p-3 shadow-card dark:border-white/10 dark:bg-white/5 {{ $orderable ? '' : 'opacity-60' }}">
-                <span class="grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-xl bg-paper-sunk text-xl dark:bg-white/10">
+                <span class="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-xl bg-paper-sunk text-lg sm:h-12 sm:w-12 sm:text-xl dark:bg-white/10">
                     @if ($product->image)
                         <img src="{{ asset('storage/'.$product->image) }}" alt="" class="h-full w-full object-cover">
                     @else
@@ -82,7 +82,7 @@
                 </span>
 
                 <div class="min-w-0 flex-1">
-                    <p class="font-semibold leading-snug">{{ $product->label }}</p>
+                    <p class="text-sm font-semibold leading-snug sm:text-base">{{ $product->label }}</p>
                     @if ($vendor)
                         <a href="{{ route('storefront.vendor', $vendor) }}"
                            class="truncate text-xs text-ink-faint underline-offset-2 hover:text-zaatar-600 hover:underline">{{ $vendor->label }}</a>

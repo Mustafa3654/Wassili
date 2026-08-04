@@ -16,24 +16,24 @@
     ])->values();
 @endphp
 
-<div x-data="storefront()" class="space-y-10">
+<div x-data="storefront()" class="space-y-7 sm:space-y-10">
 
     {{-- ==================== HERO: the ask ==================== --}}
     <header class="animate-rise">
-        <p class="mb-1 text-sm font-semibold text-tangerine-500">
+        <p class="mb-1 text-xs font-semibold text-tangerine-500 sm:text-sm">
             {{ __('Delivered by scooter, ordered on WhatsApp') }}
         </p>
-        <h1 class="text-3xl font-extrabold leading-tight sm:text-4xl">
+        <h1 class="text-2xl font-extrabold leading-tight sm:text-4xl">
             {{ __('What do you need today?') }}
         </h1>
-        <p class="mt-1.5 text-ink-faint dark:text-paper/60">
+        <p class="mt-1 text-sm text-ink-faint sm:text-base dark:text-paper/60">
             {{ __('Search once — we look inside every store for you.') }}
         </p>
 
         {{-- Signature: one field that searches products AND stores --}}
-        <div class="sticky top-[68px] z-30 -mx-1 mt-5 px-1 py-2">
+        <div class="sticky top-[60px] z-30 -mx-1 mt-4 px-1 py-2 sm:top-[68px]">
             <div class="relative">
-                <span class="pointer-events-none absolute inset-y-0 start-0 grid w-14 place-items-center text-lg">🔍</span>
+                <span class="pointer-events-none absolute inset-y-0 start-0 grid w-12 place-items-center">🔍</span>
                 <input
                     x-model="q"
                     x-ref="search"
@@ -43,11 +43,11 @@
                     autocomplete="off"
                     placeholder="{{ __('Try “burger”, “water”, or a store name…') }}"
                     aria-label="{{ __('Search products and stores') }}"
-                    class="w-full appearance-none rounded-3xl border-2 border-paper-edge bg-white py-4 ps-14 pe-12 text-base font-medium shadow-card transition placeholder:text-ink-faint/70 focus:border-zaatar-500 focus:ring-0 [&::-webkit-search-cancel-button]:hidden dark:border-white/10 dark:bg-white/5"
+                    class="w-full appearance-none rounded-2xl border-2 border-paper-edge bg-white py-3 ps-12 pe-11 text-[15px] font-medium shadow-card transition placeholder:text-ink-faint/70 focus:border-zaatar-500 focus:ring-0 sm:rounded-3xl sm:py-4 sm:text-base [&::-webkit-search-cancel-button]:hidden dark:border-white/10 dark:bg-white/5"
                 >
                 <button x-show="q" x-cloak @click="q = ''; $refs.search.focus()" type="button"
                         aria-label="{{ __('Clear search') }}"
-                        class="absolute inset-y-0 end-0 grid w-12 place-items-center text-2xl text-ink-faint transition hover:text-ink">&times;</button>
+                        class="absolute inset-y-0 end-0 grid w-11 place-items-center text-xl text-ink-faint transition hover:text-ink">&times;</button>
             </div>
         </div>
     </header>
@@ -57,7 +57,7 @@
 
         {{-- Products: add straight to the cart, no drilling into stores --}}
         <div x-show="products.length">
-            <h2 class="mb-3 flex items-baseline gap-2 text-lg font-bold">
+            <h2 class="mb-2.5 flex items-baseline gap-2 text-base font-bold sm:text-lg">
                 {{ __('Items') }}
                 <span class="text-sm font-medium text-ink-faint" x-text="`(${products.length})`"></span>
             </h2>
@@ -92,7 +92,7 @@
 
         {{-- Stores --}}
         <div x-show="stores.length">
-            <h2 class="mb-3 text-lg font-bold">{{ __('Stores') }}</h2>
+            <h2 class="mb-2.5 text-base font-bold sm:text-lg">{{ __('Stores') }}</h2>
             <ul class="space-y-2">
                 <template x-for="(v, i) in stores.slice(0, 6)" :key="i">
                     <li>
@@ -134,7 +134,7 @@
         @if ($openNow->isNotEmpty())
             <section>
                 <div class="mb-3 flex items-baseline justify-between gap-3">
-                    <h2 class="text-lg font-bold">
+                    <h2 class="text-base font-bold sm:text-lg">
                         <span class="inline-grid h-2 w-2 -translate-y-px place-items-center rounded-full bg-zaatar-500 ring-4 ring-zaatar-500/20"></span>
                         {{ __('Open now') }}
                     </h2>
@@ -144,11 +144,11 @@
                 <div class="rail -mx-4 px-4">
                     @foreach ($openNow as $vendor)
                         <a href="{{ route('storefront.vendor', $vendor) }}"
-                           class="w-[172px] rounded-3xl border border-paper-edge bg-white p-4 shadow-card transition hover:-translate-y-0.5 hover:border-zaatar-400 hover:shadow-lift dark:border-white/10 dark:bg-white/5">
-                            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-zaatar-50 text-2xl dark:bg-zaatar-500/20">
+                           class="w-[146px] rounded-2xl border border-paper-edge bg-white p-3 sm:w-[172px] sm:rounded-3xl sm:p-4 shadow-card transition hover:-translate-y-0.5 hover:border-zaatar-400 hover:shadow-lift dark:border-white/10 dark:bg-white/5">
+                            <span class="grid h-10 w-10 place-items-center rounded-xl bg-zaatar-50 text-xl sm:h-12 sm:w-12 sm:rounded-2xl sm:text-2xl dark:bg-zaatar-500/20">
                                 {{ optional($vendor->category)->icon ?: '🏪' }}
                             </span>
-                            <p class="mt-3 truncate font-bold">{{ $vendor->label }}</p>
+                            <p class="mt-2 truncate text-sm font-bold sm:mt-3 sm:text-base">{{ $vendor->label }}</p>
                             <p class="truncate text-xs text-ink-faint">{{ optional($vendor->category)->label }}</p>
                             <p class="mt-2 text-xs font-semibold text-zaatar-600 dark:text-zaatar-200">
                                 {{ trans_choice('{1}:count item|[2,*]:count items', $vendor->products_count, ['count' => $vendor->products_count]) }}
@@ -161,8 +161,8 @@
 
         {{-- ---------- Shop by category (100% from the admin) ---------- --}}
         <section>
-            <h2 class="mb-3 text-lg font-bold">{{ __('Shop by category') }}</h2>
-            <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            <h2 class="mb-2.5 text-base font-bold sm:text-lg">{{ __('Shop by category') }}</h2>
+            <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
                 @foreach ($sections as $section)
                     @php
                         $cat  = $section->category;
@@ -171,9 +171,9 @@
                             : route('storefront.category', $cat);
                     @endphp
                     <a href="{{ $href }}"
-                       class="group relative overflow-hidden rounded-3xl border border-paper-edge bg-white p-4 shadow-card transition hover:-translate-y-0.5 hover:border-zaatar-400 hover:shadow-lift dark:border-white/10 dark:bg-white/5">
-                        <span class="text-3xl">{{ $cat->icon ?: '🏷️' }}</span>
-                        <p class="mt-2 font-bold leading-tight">{{ $cat->label }}</p>
+                       class="group relative overflow-hidden rounded-2xl border border-paper-edge bg-white p-3 shadow-card transition hover:-translate-y-0.5 hover:border-zaatar-400 hover:shadow-lift sm:rounded-3xl sm:p-4 dark:border-white/10 dark:bg-white/5">
+                        <span class="text-2xl sm:text-3xl">{{ $cat->icon ?: '🏷️' }}</span>
+                        <p class="mt-1.5 text-sm font-bold leading-tight sm:mt-2 sm:text-base">{{ $cat->label }}</p>
                         <p class="mt-0.5 text-xs text-ink-faint">
                             @if ($section->vendors->isNotEmpty())
                                 {{ trans_choice('{1}:count store|[2,*]:count stores', $section->vendors->count(), ['count' => $section->vendors->count()]) }}
@@ -196,7 +196,7 @@
             @continue($section->vendors->isEmpty())
             <section id="cat-{{ $section->category->id }}" class="scroll-mt-32">
                 <div class="mb-3 flex items-baseline justify-between gap-3">
-                    <h2 class="text-lg font-bold">
+                    <h2 class="text-base font-bold sm:text-lg">
                         {{ $section->category->icon }} {{ $section->category->label }}
                     </h2>
                     <span class="text-sm text-ink-faint">
@@ -209,7 +209,7 @@
                         <li>
                             <a href="{{ route('storefront.vendor', $vendor) }}"
                                class="flex items-center gap-3 rounded-2xl border border-paper-edge bg-white p-3 shadow-card transition hover:border-zaatar-400 hover:shadow-lift dark:border-white/10 dark:bg-white/5">
-                                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-paper-sunk text-xl dark:bg-white/10">
+                                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-paper-sunk text-lg sm:h-12 sm:w-12 sm:rounded-2xl sm:text-xl dark:bg-white/10">
                                     @if ($vendor->logo)
                                         <img src="{{ asset('storage/'.$vendor->logo) }}" alt="" class="h-full w-full rounded-2xl object-cover">
                                     @else
@@ -218,7 +218,7 @@
                                 </span>
 
                                 <div class="min-w-0 flex-1">
-                                    <p class="truncate font-bold">{{ $vendor->label }}</p>
+                                    <p class="truncate text-sm font-bold sm:text-base">{{ $vendor->label }}</p>
                                     <p class="truncate text-xs text-ink-faint">
                                         {{ trans_choice('{1}:count item|[2,*]:count items', $vendor->products_count, ['count' => $vendor->products_count]) }}
                                     </p>
