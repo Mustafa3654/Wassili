@@ -21,18 +21,36 @@ class Vendor extends Model
     public function getIsOpenAttribute(): bool
     {
         $hours = $this->opening_hours ?? [];
-        $day = strtolower(now()->format('l'));
-        $today = $hours[$day] ?? [];
+
+        // No schedule configured yet => treat the store as always open.
+        // Failing closed would hide every vendor until an admin fills in
+        // seven days of hours, which makes the storefront unusable.
+        if (empty($hours)) {
+            return true;
+        }
+
+        $today = $hours[strtolower(now()->format('l'))] ?? [];
 
         if (! ($today['is_open'] ?? false)) {
             return false;
         }
 
         $now = now()->format('H:i');
-        $open  = $today['open']  ?? '09:00';
-        $close = $today['close'] ?? '22:00';
 
-        return $now >= $open && $now < $close;
+        return $now >= ($today['open'] ?? '09:00')
+            && $now <  ($today['close'] ?? '22:00');
+    }
+
+    /**
+     * "09:00"-style opening time for today, or null when the store either has
+     * no schedule or is closed all day. Used to say *when* a store reopens
+     * instead of a dead-end "Closed" badge.
+     */
+    public function getOpensAtAttribute(): ?string
+    {
+        $today = ($this->opening_hours ?? [])[strtolower(now()->format('l'))] ?? [];
+
+        return ($today['is_open'] ?? false) ? ($today['open'] ?? null) : null;
     }
 
     public function category(): BelongsTo

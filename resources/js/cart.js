@@ -147,6 +147,20 @@ export function registerCart(Alpine) {
             return window.WASSILI.locale === 'ar' ? item.name_ar : item.name;
         },
 
+        /** How many of a catalog product are in the cart (0 when absent). */
+        qtyOf(productId) {
+            const item = this.items.find((i) => i.key === 'p' + productId);
+            return item ? item.quantity : 0;
+        },
+
+        /** Step a catalog product up/down by product id. */
+        stepUp(productId) {
+            this.increment('p' + productId);
+        },
+        stepDown(productId) {
+            this.decrement('p' + productId);
+        },
+
         /** Dual USD/LBP display, e.g. "$5.00 · 445,000 LL". */
         money(value) {
             const c = window.WASSILI.currency;

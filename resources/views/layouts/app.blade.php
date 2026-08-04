@@ -12,8 +12,9 @@
 >
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="theme-color" content="#1B6B4C">
     <title>@yield('title', 'Wassili — وصّلي')</title>
 
     {{-- Apply saved theme before paint to avoid a flash of the wrong mode. --}}
@@ -52,55 +53,84 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="min-h-screen">
+
     {{-- ============================= NAVBAR ============================= --}}
-    <nav class="sticky top-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur dark:border-gray-800 dark:bg-gray-900/80">
-        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-            <a href="{{ route('storefront.index') }}" class="flex items-center gap-2 text-xl font-bold text-brand-600 dark:text-brand-500">
-                <span>🛵</span>
-                <span>Wassili <span class="text-gray-400">·</span> وصّلي</span>
+    <nav class="sticky top-0 z-40 border-b border-paper-edge/70 bg-paper/90 backdrop-blur-md dark:border-white/10 dark:bg-zaatar-900/90">
+        <div class="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3">
+
+            <a href="{{ route('storefront.index') }}" class="flex items-center gap-2 font-display text-lg font-extrabold text-zaatar-600 dark:text-zaatar-200">
+                <span class="grid h-9 w-9 place-items-center rounded-2xl bg-zaatar-600 text-base text-white shadow-card">🛵</span>
+                <span class="leading-none">
+                    <span class="block">وصّلي</span>
+                    <span class="block text-[10px] font-medium uppercase tracking-[.18em] text-ink-faint">Wassili</span>
+                </span>
             </a>
 
-            <div class="flex items-center gap-2">
-                {{-- Locale switcher --}}
+            <div class="ms-auto flex items-center gap-1.5">
                 @php $other = $locale === 'ar' ? 'en' : 'ar'; @endphp
                 <a href="{{ request()->fullUrlWithQuery(['lang' => $other]) }}"
-                   class="rounded-lg border border-gray-200 px-3 py-1.5 text-sm font-medium hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800">
-                    {{ $locale === 'ar' ? 'English' : 'العربية' }}
+                   class="rounded-xl px-3 py-2 text-sm font-semibold text-ink-soft transition hover:bg-paper-sunk dark:text-paper/80 dark:hover:bg-white/10">
+                    {{ $locale === 'ar' ? 'EN' : 'ع' }}
                 </a>
 
-                {{-- Dark / light toggle --}}
                 <button @click="dark = !dark" type="button"
-                    class="rounded-lg border border-gray-200 p-2 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800"
-                    :aria-label="dark ? 'Light mode' : 'Dark mode'">
+                    class="grid h-10 w-10 place-items-center rounded-xl text-ink-soft transition hover:bg-paper-sunk dark:text-paper/80 dark:hover:bg-white/10"
+                    :aria-label="dark ? '{{ __('Switch to light mode') }}' : '{{ __('Switch to dark mode') }}'">
                     <span x-show="!dark">🌙</span>
                     <span x-show="dark" x-cloak>☀️</span>
                 </button>
 
-                {{-- Cart button --}}
-                <button @click="$dispatch('open-cart')" type="button"
-                    class="relative rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white hover:bg-brand-700">
-                    🛒 {{ __('Cart') }}
-                    <span x-show="$store.cart.count > 0"
-                          x-text="$store.cart.count"
-                          class="absolute -top-2 -end-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-xs text-white"></span>
-                </button>
             </div>
         </div>
     </nav>
 
-    <main class="mx-auto max-w-6xl px-4 py-6">
+    {{-- Extra bottom room only while the floating cart is on screen. --}}
+    <main class="mx-auto max-w-5xl px-4 pt-5" :class="$store.cart.count > 0 ? 'pb-28' : 'pb-12'">
         @yield('content')
     </main>
+
+    {{-- ================= FLOATING CART BUTTON ================= --}}
+    {{-- Sits in the thumb zone, and `end-4` mirrors with the writing direction:
+         bottom-right in English, bottom-left in Arabic. --}}
+    <button @click="$dispatch('open-cart')" type="button"
+            x-show="$store.cart.count > 0" x-cloak
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 translate-y-3 scale-90"
+            x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90"
+            aria-label="{{ __('View cart') }}"
+            style="bottom: calc(1.25rem + env(safe-area-inset-bottom));"
+            class="group fixed end-4 z-40 grid h-16 w-16 place-items-center rounded-full bg-zaatar-600 text-white shadow-lift ring-4 ring-paper transition hover:bg-zaatar-700 active:scale-90 dark:ring-zaatar-900">
+        <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="20" r="1.6" fill="currentColor" stroke="none"/>
+            <circle cx="18" cy="20" r="1.6" fill="currentColor" stroke="none"/>
+            <path d="M2.5 3.5h2.2l2.4 11.2a1.6 1.6 0 0 0 1.6 1.3h8.9a1.6 1.6 0 0 0 1.6-1.2l1.8-7.3H6"/>
+        </svg>
+
+        {{-- Count badge --}}
+        <span x-show="$store.cart.count > 0" x-cloak
+              x-text="$store.cart.count"
+              x-transition.scale
+              class="absolute -top-1 -end-1 grid h-6 min-w-6 place-items-center rounded-full bg-tangerine-500 px-1.5 text-xs font-extrabold text-white ring-2 ring-paper dark:ring-zaatar-900"></span>
+
+        {{-- Running total, revealed beside the icon once something is in the cart --}}
+        <span x-show="$store.cart.count > 0" x-cloak
+              x-text="$store.cart.money($store.cart.subtotal)"
+              class="pointer-events-none absolute end-full me-2 hidden whitespace-nowrap rounded-full bg-ink/90 px-3 py-1.5 text-xs font-bold text-paper opacity-0 shadow-card transition group-hover:opacity-100 sm:block dark:bg-paper/90 dark:text-ink"></span>
+    </button>
 
     {{-- ============================= CART DRAWER ============================= --}}
     @include('partials.cart-drawer')
 
     {{-- ============================= TOASTS ============================= --}}
     <div x-data="{ show: false, message: '' }"
-         @wassili-toast.window="message = $event.detail.message; show = true; setTimeout(() => show = false, 2000)"
+         @wassili-toast.window="message = $event.detail.message; show = true; setTimeout(() => show = false, 2200)"
          x-show="show" x-cloak
-         class="fixed bottom-5 inset-x-0 z-50 mx-auto w-fit rounded-full bg-gray-900 px-5 py-2 text-sm text-white shadow-lg dark:bg-white dark:text-gray-900"
+         class="pointer-events-none fixed inset-x-0 bottom-24 z-50 mx-auto w-fit max-w-[90vw] rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper shadow-lift sm:bottom-8 dark:bg-paper dark:text-ink"
          x-transition>
         <span x-text="message"></span>
     </div>

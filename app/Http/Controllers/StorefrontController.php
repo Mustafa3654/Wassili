@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\Vendor;
 
 class StorefrontController extends Controller
@@ -11,20 +12,67 @@ class StorefrontController extends Controller
     {
         $vendors = Vendor::query()
             ->where('is_active', true)
+            ->with('category.parent')
             ->withCount('products')
             ->orderBy('name')
             ->get()
-            ->filter(fn ($v) => $v->products_count > 0);
+            ->filter(fn ($v) => $v->products_count > 0)
+            ->values();
 
-        $categories = Category::query()
+        // Resolve every vendor to its TOP-LEVEL category, so a vendor filed
+        // under "Fast food" still shows up beneath "Restaurants".
+        $vendorsByRoot = $vendors->groupBy(
+            fn ($v) => optional($v->category?->parent ?? $v->category)->id ?? 0
+        );
+
+        // Only surface sections that actually exist in the admin: a top-level
+        // category is shown when it has vendors or products of its own.
+        $sections = Category::query()
             ->whereNull('parent_id')
             ->where('is_active', true)
             ->orderBy('sort_order')
             ->withCount('products')
             ->get()
-            ->filter(fn ($c) => $c->products_count > 0);
+            ->map(function ($category) use ($vendorsByRoot) {
+                $categoryVendors = $vendorsByRoot->get($category->id, collect());
 
-        return view('storefront.index', compact('vendors', 'categories'));
+                return (object) [
+                    'category'   => $category,
+                    'vendors'    => $categoryVendors,
+                    'open'       => $categoryVendors->filter->is_open->count(),
+                    // Products sold directly by the category (universal catalog).
+                    'products'   => $category->products_count,
+                ];
+            })
+            ->filter(fn ($s) => $s->vendors->isNotEmpty() || $s->products > 0)
+            ->values();
+
+        // Flat index powering the instant "find any product in any store" search.
+        $productIndex = Product::query()
+            ->where('is_available', true)
+            ->with(['vendor', 'category'])
+            ->orderBy('name')
+            ->get()
+            ->map(fn ($p) => [
+                'id'        => $p->id,
+                'name'      => $p->name,
+                'name_ar'   => $p->name_ar ?: $p->name,
+                'price'     => (float) $p->price,
+                'vendor_id' => $p->vendor_id,
+                'vendor'    => $p->vendor?->name,
+                'vendor_ar' => $p->vendor?->name_ar ?: $p->vendor?->name,
+                'slug'      => $p->vendor?->slug,
+                'is_open'   => $p->vendor ? $p->vendor->is_open : true,
+                'icon'      => $p->category?->icon ?: '🛍️',
+                'q'         => mb_strtolower(trim(
+                    $p->name.' '.$p->name_ar.' '.$p->vendor?->name.' '.$p->vendor?->name_ar
+                )),
+            ])
+            ->values();
+
+        $openNow = $vendors->filter->is_open->values();
+
+        return view('storefront.index', compact('vendors', 'sections', 'productIndex', 'openNow'));
     }
 
     public function category(Category $category)

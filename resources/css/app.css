@@ -1,18 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth theme transitions when toggling dark/light. */
-html {
-    scroll-behavior: smooth;
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        /* Never let a wide rail push the whole page sideways on a phone. */
+        overflow-x: hidden;
+    }
+
+    body {
+        @apply bg-paper text-ink antialiased transition-colors duration-200 dark:bg-zaatar-900 dark:text-paper;
+    }
+
+    h1, h2, h3 {
+        @apply font-display tracking-tight;
+    }
+
+    /* Visible keyboard focus, without a ring on plain mouse clicks. */
+    :focus-visible {
+        @apply outline-none ring-2 ring-tangerine-500 ring-offset-2 ring-offset-paper dark:ring-offset-zaatar-900;
+    }
 }
-body {
-    @apply bg-gray-50 text-gray-900 antialiased transition-colors duration-200 dark:bg-gray-900 dark:text-gray-100;
+
+@layer components {
+    /* Horizontal thumb-scroll rails used across the storefront. */
+    .rail {
+        @apply flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .rail::-webkit-scrollbar { display: none; }
+    .rail > * { @apply snap-start shrink-0; }
 }
 
 /* Hide Alpine templates until the framework is ready to avoid FOUC. */
-[x-cloak] {
-    display: none !important;
+[x-cloak] { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
