@@ -1,0 +1,112 @@
+<?php
+
+return [
+    // Navigation / resources
+    'categories' => 'التصنيفات',
+    'vendors'    => 'المتاجر',
+    'products'   => 'المنتجات',
+    'drivers'    => 'المندوبون',
+    'orders'     => 'الطلبات',
+
+    // Shared fields
+    'name'            => 'الاسم',
+    'username'        => 'اسم المستخدم',
+    'name_en'         => 'الاسم (إنجليزي)',
+    'name_ar'         => 'الاسم (عربي)',
+    'description_en'  => 'الوصف (إنجليزي)',
+    'description_ar'  => 'الوصف (عربي)',
+    'category'        => 'التصنيف',
+    'parent_category' => 'التصنيف الرئيسي',
+    'icon'            => 'الأيقونة',
+    'active'          => 'مُفعّل',
+    'phone'           => 'الهاتف',
+
+    // Category / vendor / product
+    'leave_empty_top_level' => 'اتركه فارغًا ليكون تصنيفًا رئيسيًا.',
+    'is_open'               => 'الحالة',
+    'is_open_help'          => 'عند الإيقاف لن يتمكن العملاء من إضافة منتجات هذا المتجر إلى السلة.',
+    'opening_hours'         => 'ساعات العمل',
+    'opening_hours_help'    => 'حدد ساعات العمل العادية لكل يوم من أيام الأسبوع.',
+    'open'                  => 'مفتوح',
+    'open_time'             => 'يفتح في',
+    'close_time'            => 'يغلق في',
+    'open_now'              => 'مفتوح الآن',
+    'closed_now'            => 'مغلق',
+    'monday'                => 'الاثنين',
+    'tuesday'               => 'الثلاثاء',
+    'wednesday'             => 'الأربعاء',
+    'thursday'              => 'الخميس',
+    'friday'                => 'الجمعة',
+    'saturday'              => 'السبت',
+    'sunday'                => 'الأحد',
+    'vendor'                => 'المتجر',
+    'vendor_null_help'      => 'اتركه فارغًا ليكون منتجًا من الكتالوج العام (من أي متجر قريب).',
+    'is_available'          => 'متوفر',
+    'universal_catalog'     => 'كتالوج عام',
+    'price_usd_help'        => 'أدخل السعر بالدولار الأمريكي. يُعرض المبلغ بالليرة تلقائيًا حسب سعر الصرف المحدد.',
+
+    // Driver
+    'phone_intl_help' => 'صيغة دولية بالأرقام فقط (مثال: 9665XXXXXXXX).',
+    'vehicle_type'    => 'المركبة',
+    'motorcycle'      => 'دراجة نارية',
+    'car'             => 'سيارة',
+    'bicycle'         => 'دراجة هوائية',
+    'status'          => 'الحالة',
+    'available'       => 'متاح',
+    'busy'            => 'مشغول',
+    'offline'         => 'غير متصل',
+
+    // Orders
+    'customer_name'    => 'اسم العميل',
+    'customer_phone'   => 'هاتف العميل',
+    'address'          => 'العنوان',
+    'notes'            => 'ملاحظات',
+    'pending'          => 'قيد الانتظار',
+    'in_progress'      => 'قيد التنفيذ',
+    'delivered'        => 'تم التوصيل',
+    'cancelled'        => 'ملغي',
+    'driver'           => 'المندوب',
+    'tracking'         => 'رقم التتبع',
+    'unassigned'       => 'غير مُسند',
+    'total'            => 'الإجمالي',
+    'received_at'      => 'وقت الاستلام',
+
+    // Order actions
+    'mark_in_progress'      => 'بدء التنفيذ',
+    'mark_delivered'        => 'تم التوصيل',
+    'assign_driver'         => 'إسناد لمندوب',
+    'dispatch_whatsapp'     => 'إرسال عبر واتساب',
+    'select_driver'         => 'اختر مندوبًا',
+    'only_available_drivers'=> 'تظهر فقط المندوبون المفعّلون والمتاحون.',
+    'driver_assigned'       => 'تم إسناد المندوب',
+    'click_to_dispatch'     => 'تم إسناد الطلب إلى :name. اضغط بالأسفل لإرسال التفاصيل عبر واتساب.',
+    'open_whatsapp'         => 'فتح واتساب',
+
+    // Settings page
+    'settings'               => 'الإعدادات',
+    'save'                   => 'حفظ التغييرات',
+    'settings_saved'         => 'تم حفظ الإعدادات بنجاح.',
+    'currency_section'       => 'العملة',
+    'currency_section_help'  => 'تُدخل الأسعار بالدولار، ويُعرض المبلغ بالليرة تلقائيًا حسب سعر الصرف هذا.',
+    'lbp_rate'               => 'سعر صرف الدولار مقابل الليرة',
+    'lbp_per_usd'            => 'ليرة لكل دولار',
+    'lbp_rate_help'          => 'مثال: 89000 يعني أن 1 دولار = 89,000 ليرة.',
+    'delivery_section'       => 'رسوم التوصيل (بالدولار)',
+    'base_delivery_fee'      => 'رسوم التوصيل الأساسية',
+    'multi_vendor_fee'       => 'رسوم إضافية لكل متجر إضافي',
+    'multi_vendor_fee_help'  => 'تُضاف لكل متجر/نقطة استلام إضافية بعد الأولى.',
+    'dispatch_section'       => 'الإرسال',
+    'call_center_number'     => 'رقم واتساب مركز الاتصال',
+    'call_center_help'       => 'صيغة دولية بالأرقام فقط (مثال: 9611234567). تُرسل طلبات العملاء إلى هذا الرقم.',
+
+    // Display
+    'display_section'        => 'العرض',
+    'show_price_on_main_page' => 'إظهار الأسعار في الصفحة الرئيسية',
+
+    // Phone
+    'phone_prefix' => '+961',
+
+    // Import / Export
+    'import_completed' => 'تم الاستيراد بنجاح — :successful من أصل :total صفًا تم استيرادها.',
+    'export_completed' => 'تم اكتمال التصدير — :total صفًا بتصدير ناجح لـ :successful صفًا.',
+];

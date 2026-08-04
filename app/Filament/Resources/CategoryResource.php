@@ -25,36 +25,36 @@ class CategoryResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return __('reva.categories');
+        return __('wassili.categories');
     }
 
     public static function form(Form $form): Form
     {
         return $form->schema([
             Forms\Components\TextInput::make('name')
-                ->label(__('reva.name_en'))
+                ->label(__('wassili.name_en'))
                 ->required()
                 ->live(onBlur: true)
                 ->afterStateUpdated(fn (string $operation, $state, Forms\Set $set) =>
                     $operation === 'create' ? $set('slug', Str::slug($state)) : null),
 
             Forms\Components\TextInput::make('name_ar')
-                ->label(__('reva.name_ar')),
+                ->label(__('wassili.name_ar')),
 
             Forms\Components\TextInput::make('slug')
                 ->required()
                 ->unique(ignoreRecord: true),
 
             Forms\Components\Select::make('parent_id')
-                ->label(__('reva.parent_category'))
+                ->label(__('wassili.parent_category'))
                 ->relationship('parent', 'name')
                 ->searchable()
                 ->preload()
                 ->nullable()
-                ->helperText(__('reva.leave_empty_top_level')),
+                ->helperText(__('wassili.leave_empty_top_level')),
 
             Forms\Components\TextInput::make('icon')
-                ->label(__('reva.icon'))
+                ->label(__('wassili.icon'))
                 ->placeholder('heroicon-o-shopping-bag'),
 
             Forms\Components\TextInput::make('sort_order')
@@ -62,7 +62,7 @@ class CategoryResource extends Resource
                 ->default(0),
 
             Forms\Components\Toggle::make('is_active')
-                ->label(__('reva.active'))
+                ->label(__('wassili.active'))
                 ->default(true),
         ]);
     }
@@ -72,9 +72,9 @@ class CategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('name_ar')->label(__('reva.name_ar')),
+                Tables\Columns\TextColumn::make('name_ar')->label(__('wassili.name_ar')),
                 Tables\Columns\TextColumn::make('parent.name')
-                    ->label(__('reva.parent_category'))
+                    ->label(__('wassili.parent_category'))
                     ->badge()
                     ->placeholder('—'),
                 Tables\Columns\IconColumn::make('is_active')->boolean(),

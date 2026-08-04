@@ -25,7 +25,7 @@ class OrderResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return __('reva.orders');
+        return __('wassili.orders');
     }
 
     // Live counter badge of pending orders in the sidebar.
@@ -42,26 +42,26 @@ class OrderResource extends Resource
     public static function form(Form $form): Form
     {
         return $form->schema([
-            Forms\Components\TextInput::make('customer_name')->label(__('reva.customer_name'))->required(),
+            Forms\Components\TextInput::make('customer_name')->label(__('wassili.customer_name'))->required(),
             Forms\Components\TextInput::make('customer_phone')
-                ->label(__('reva.customer_phone'))
+                ->label(__('wassili.customer_phone'))
                 ->tel()
                 ->required()
-                ->prefix(__('reva.phone_prefix')),
-            Forms\Components\Textarea::make('address')->label(__('reva.address'))->required()->columnSpanFull(),
-            Forms\Components\Textarea::make('notes')->label(__('reva.notes'))->columnSpanFull(),
+                ->prefix(__('wassili.phone_prefix')),
+            Forms\Components\Textarea::make('address')->label(__('wassili.address'))->required()->columnSpanFull(),
+            Forms\Components\Textarea::make('notes')->label(__('wassili.notes'))->columnSpanFull(),
             Forms\Components\TextInput::make('tracking_number')->disabled()->dehydrated(false),
             Forms\Components\TextInput::make('delivery_fee')->numeric()->prefix('$'),
             Forms\Components\TextInput::make('total_price')->numeric()->prefix('$'),
             Forms\Components\Select::make('status')
                 ->options([
-                    'pending'     => __('reva.pending'),
-                    'in_progress' => __('reva.in_progress'),
-                    'delivered'   => __('reva.delivered'),
-                    'cancelled'   => __('reva.cancelled'),
+                    'pending'     => __('wassili.pending'),
+                    'in_progress' => __('wassili.in_progress'),
+                    'delivered'   => __('wassili.delivered'),
+                    'cancelled'   => __('wassili.cancelled'),
                 ])->required(),
             Forms\Components\Select::make('driver_id')
-                ->label(__('reva.driver'))
+                ->label(__('wassili.driver'))
                 ->relationship('driver', 'name')
                 ->searchable(),
         ]);
@@ -75,21 +75,21 @@ class OrderResource extends Resource
             ->defaultSort('created_at', 'desc')
             ->columns([
                 Tables\Columns\TextColumn::make('tracking_number')
-                    ->label(__('reva.tracking'))
+                    ->label(__('wassili.tracking'))
                     ->searchable()->copyable()->weight('bold'),
 
                 Tables\Columns\TextColumn::make('customer_name')
-                    ->label(__('reva.customer_name'))->searchable(),
+                    ->label(__('wassili.customer_name'))->searchable(),
 
                 Tables\Columns\TextColumn::make('customer_phone')
-                    ->label(__('reva.customer_phone'))
+                    ->label(__('wassili.customer_phone'))
                     ->searchable()
                     ->formatStateUsing(fn ($state) => $state ? '+961 ' . $state : null),
 
                 Tables\Columns\TextColumn::make('status')
-                    ->label(__('reva.status'))
+                    ->label(__('wassili.status'))
                     ->badge()
-                    ->formatStateUsing(fn (string $state) => __("reva.$state"))
+                    ->formatStateUsing(fn (string $state) => __("wassili.$state"))
                     ->color(fn (string $state): string => match ($state) {
                         'pending'     => 'warning', // yellow
                         'in_progress' => 'info',    // blue
@@ -99,30 +99,30 @@ class OrderResource extends Resource
                     }),
 
                 Tables\Columns\TextColumn::make('driver.name')
-                    ->label(__('reva.driver'))
-                    ->badge()->placeholder(__('reva.unassigned')),
+                    ->label(__('wassili.driver'))
+                    ->badge()->placeholder(__('wassili.unassigned')),
 
                 Tables\Columns\TextColumn::make('total_price')
-                    ->label(__('reva.total'))
+                    ->label(__('wassili.total'))
                     ->sortable()
                     ->formatStateUsing(fn ($state) => \App\Support\Money::both((float) $state)),
 
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label(__('reva.received_at'))
+                    ->label(__('wassili.received_at'))
                     ->since()->sortable(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('status')->options([
-                    'pending'     => __('reva.pending'),
-                    'in_progress' => __('reva.in_progress'),
-                    'delivered'   => __('reva.delivered'),
-                    'cancelled'   => __('reva.cancelled'),
+                    'pending'     => __('wassili.pending'),
+                    'in_progress' => __('wassili.in_progress'),
+                    'delivered'   => __('wassili.delivered'),
+                    'cancelled'   => __('wassili.cancelled'),
                 ]),
             ])
             ->actions([
                 // --- Quick inline status transitions ---
                 Action::make('markInProgress')
-                    ->label(__('reva.mark_in_progress'))
+                    ->label(__('wassili.mark_in_progress'))
                     ->icon('heroicon-o-play')
                     ->color('info')
                     ->visible(fn (Order $record) => $record->status === 'pending')
@@ -130,7 +130,7 @@ class OrderResource extends Resource
                     ->action(fn (Order $record) => $record->update(['status' => 'in_progress'])),
 
                 Action::make('markDelivered')
-                    ->label(__('reva.mark_delivered'))
+                    ->label(__('wassili.mark_delivered'))
                     ->icon('heroicon-o-check-circle')
                     ->color('success')
                     ->visible(fn (Order $record) => in_array($record->status, ['pending', 'in_progress'], true))
@@ -143,15 +143,15 @@ class OrderResource extends Resource
 
                 // --- Custom "Assign to Driver" dispatch action ---
                 Action::make('assignDriver')
-                    ->label(__('reva.assign_driver'))
+                    ->label(__('wassili.assign_driver'))
                     ->icon('heroicon-o-paper-airplane')
                     ->color('primary')
                     ->visible(fn (Order $record) => $record->status !== 'delivered' && $record->status !== 'cancelled')
-                    ->modalHeading(__('reva.assign_driver'))
-                    ->modalSubmitActionLabel(__('reva.dispatch_whatsapp'))
+                    ->modalHeading(__('wassili.assign_driver'))
+                    ->modalSubmitActionLabel(__('wassili.dispatch_whatsapp'))
                     ->form([
                         Forms\Components\Select::make('driver_id')
-                            ->label(__('reva.select_driver'))
+                            ->label(__('wassili.select_driver'))
                             ->relationship('driver', 'name', modifyQueryUsing: fn ($query) => $query->where('status', 'available')->where('is_active', true))
                             ->required(),
                     ])
@@ -171,13 +171,13 @@ class OrderResource extends Resource
                         // Surface a WhatsApp button that opens the pre-filled chat
                         // in a NEW TAB, keeping the admin on the orders screen.
                         Notification::make()
-                            ->title(__('reva.driver_assigned'))
-                            ->body(__('reva.click_to_dispatch', ['name' => $driver->name]))
+                            ->title(__('wassili.driver_assigned'))
+                            ->body(__('wassili.click_to_dispatch', ['name' => $driver->name]))
                             ->success()
                             ->persistent()
                             ->actions([
                                 NotificationAction::make('openWhatsapp')
-                                    ->label(__('reva.open_whatsapp'))
+                                    ->label(__('wassili.open_whatsapp'))
                                     ->icon('heroicon-o-chat-bubble-left-right')
                                     ->button()
                                     ->url($whatsappUrl, shouldOpenInNewTab: true),

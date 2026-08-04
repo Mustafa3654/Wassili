@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Track your order').' — ' . __('app_name'))
+@section('title', __('Track your order').' — Wassili')
 
 @section('content')
     @php
@@ -32,7 +32,7 @@
             @endphp
             <div class="mb-8 text-center">
                 <span class="inline-block rounded-full px-4 py-1.5 text-sm font-semibold {{ $badge }}">
-                    {{ __('reva.'.$order->status) }}
+                    {{ __('wassili.'.$order->status) }}
                 </span>
             </div>
 

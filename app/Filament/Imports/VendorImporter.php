@@ -47,7 +47,7 @@ class VendorImporter extends Importer
 
     public static function getCompletedNotificationBody(Import $import): string
     {
-        return __('reva.import_completed', [
+        return __('wassili.import_completed', [
             'successful' => $import->successful_rows,
             'total'      => $import->total_rows,
         ]);

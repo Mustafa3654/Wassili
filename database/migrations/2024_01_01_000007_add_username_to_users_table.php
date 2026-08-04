@@ -14,7 +14,7 @@ return new class extends Migration
         });
 
         // Backfill any existing users with a username from their email prefix
-        // (e.g. admin@reva.test -> "admin") so they can still sign in.
+        // (e.g. admin@wassili.test -> "admin") so they can still sign in.
         DB::table('users')->whereNotNull('email')->update([
             'username' => DB::raw("SUBSTRING_INDEX(email, '@', 1)"),
         ]);

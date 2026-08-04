@@ -24,44 +24,44 @@ class ProductResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return __('reva.products');
+        return __('wassili.products');
     }
 
     public static function form(Form $form): Form
     {
         return $form->schema([
             Forms\Components\TextInput::make('name')
-                ->label(__('reva.name_en'))->required(),
+                ->label(__('wassili.name_en'))->required(),
 
-            Forms\Components\TextInput::make('name_ar')->label(__('reva.name_ar')),
+            Forms\Components\TextInput::make('name_ar')->label(__('wassili.name_ar')),
 
             Forms\Components\Textarea::make('description')
-                ->label(__('reva.description_en'))->rows(2),
+                ->label(__('wassili.description_en'))->rows(2),
 
             Forms\Components\Textarea::make('description_ar')
-                ->label(__('reva.description_ar'))->rows(2),
+                ->label(__('wassili.description_ar'))->rows(2),
 
             Forms\Components\TextInput::make('price')
                 ->numeric()->required()->prefix('$')->minValue(0)
-                ->helperText(__('reva.price_usd_help')),
+                ->helperText(__('wassili.price_usd_help')),
 
             Forms\Components\FileUpload::make('image')
                 ->image()->directory('products')->imageEditor(),
 
             Forms\Components\Select::make('category_id')
-                ->label(__('reva.category'))
+                ->label(__('wassili.category'))
                 ->relationship('category', 'name')
                 ->searchable()->preload()->required(),
 
             // NULL vendor => Universal Catalog item (any nearby store).
             Forms\Components\Select::make('vendor_id')
-                ->label(__('reva.vendor'))
+                ->label(__('wassili.vendor'))
                 ->relationship('vendor', 'name')
                 ->searchable()->preload()->nullable()
-                ->helperText(__('reva.vendor_null_help')),
+                ->helperText(__('wassili.vendor_null_help')),
 
             Forms\Components\Toggle::make('is_available')
-                ->label(__('reva.is_available'))->default(true),
+                ->label(__('wassili.is_available'))->default(true),
         ]);
     }
 
@@ -71,16 +71,16 @@ class ProductResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('image')->square(),
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('category.name')->badge()->label(__('reva.category')),
+                Tables\Columns\TextColumn::make('category.name')->badge()->label(__('wassili.category')),
                 Tables\Columns\TextColumn::make('vendor.name')
-                    ->label(__('reva.vendor'))
+                    ->label(__('wassili.vendor'))
                     ->badge()
-                    ->placeholder(__('reva.universal_catalog')),
+                    ->placeholder(__('wassili.universal_catalog')),
                 Tables\Columns\TextColumn::make('price')
                     ->sortable()
                     ->formatStateUsing(fn ($state) => \App\Support\Money::both((float) $state)),
                 Tables\Columns\IconColumn::make('is_available')
-                    ->label(__('reva.is_available'))->boolean(),
+                    ->label(__('wassili.is_available'))->boolean(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('category')->relationship('category', 'name'),

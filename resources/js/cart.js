@@ -1,16 +1,16 @@
 /**
- * Reva — client-side multi-vendor cart.
+ * Wassili (وصّلي) — client-side multi-vendor cart.
  *
  * Everything lives in localStorage until checkout, so there is zero session
  * overhead while the customer browses. Registered as an Alpine.js store named
  * `cart`, plus a `checkout` component that formats the WhatsApp message and
  * mirrors the order to the Laravel backend.
  *
- * Runtime config is injected by the Blade layout on `window.REVA`:
+ * Runtime config is injected by the Blade layout on `window.WASSILI`:
  *   { callCenter, baseFee, multiVendorFee, locale, storeUrl, csrf, t: {...} }
  */
 
-const STORAGE_KEY = 'reva_cart_v1';
+const STORAGE_KEY = 'wassili_cart_v1';
 
 export function registerCart(Alpine) {
     Alpine.store('cart', {
@@ -37,7 +37,7 @@ export function registerCart(Alpine) {
         add(product) {
             // Guard: never allow items from a closed vendor.
             if (product.vendor_id && product.is_open === false) {
-                this.toast(window.REVA.t.closed);
+                this.toast(window.WASSILI.t.closed);
                 return;
             }
 
@@ -61,7 +61,7 @@ export function registerCart(Alpine) {
                 });
             }
             this.save();
-            this.toast(window.REVA.t.added);
+            this.toast(window.WASSILI.t.added);
         },
 
         /** Add a free-text custom request for an unlisted product. */
@@ -82,7 +82,7 @@ export function registerCart(Alpine) {
                 note: (note || '').trim(),
             });
             this.save();
-            this.toast(window.REVA.t.added);
+            this.toast(window.WASSILI.t.added);
         },
 
         increment(key) {
@@ -132,8 +132,8 @@ export function registerCart(Alpine) {
 
         get deliveryFee() {
             if (this.items.length === 0) return 0;
-            const base = Number(window.REVA.baseFee) || 0;
-            const extra = Number(window.REVA.multiVendorFee) || 0;
+            const base = Number(window.WASSILI.baseFee) || 0;
+            const extra = Number(window.WASSILI.multiVendorFee) || 0;
             const extraGroups = Math.max(0, this.distinctPickups - 1);
             return base + extraGroups * extra;
         },
@@ -144,19 +144,19 @@ export function registerCart(Alpine) {
 
         // ---- helpers ----
         displayName(item) {
-            return window.REVA.locale === 'ar' ? item.name_ar : item.name;
+            return window.WASSILI.locale === 'ar' ? item.name_ar : item.name;
         },
 
         /** Dual USD/LBP display, e.g. "$5.00 · 445,000 LL". */
         money(value) {
-            const c = window.REVA.currency;
+            const c = window.WASSILI.currency;
             const usd = c.usdSymbol + Number(value).toFixed(2);
             const lbp = Math.round(Number(value) * c.lbpRate).toLocaleString('en-US') + ' ' + c.lbpLabel;
             return usd + ' · ' + lbp;
         },
 
         toast(message) {
-            window.dispatchEvent(new CustomEvent('reva-toast', { detail: { message } }));
+            window.dispatchEvent(new CustomEvent('wassili-toast', { detail: { message } }));
         },
     });
 
@@ -177,7 +177,7 @@ export function registerCart(Alpine) {
         buildMessage() {
             const c = this.cart;
             const L = [];
-            L.push('🛒 *طلب جديد عبر Reva*');
+            L.push('🛒 *طلب جديد عبر وصّلي (Wassili)*');
             L.push('——————————————');
             L.push('👤 العميل / Customer: ' + this.form.customer_name);
             L.push('📞 الهاتف / Phone: ' + this.form.customer_phone);
@@ -204,10 +204,10 @@ export function registerCart(Alpine) {
         },
 
         validate() {
-            if (this.cart.items.length === 0) { this.error = window.REVA.t.empty_cart; return false; }
-            if (!this.form.customer_name.trim()) { this.error = window.REVA.t.name_required; return false; }
-            if (!this.form.customer_phone.trim()) { this.error = window.REVA.t.phone_required; return false; }
-            if (!this.form.address.trim()) { this.error = window.REVA.t.address_required; return false; }
+            if (this.cart.items.length === 0) { this.error = window.WASSILI.t.empty_cart; return false; }
+            if (!this.form.customer_name.trim()) { this.error = window.WASSILI.t.name_required; return false; }
+            if (!this.form.customer_phone.trim()) { this.error = window.WASSILI.t.phone_required; return false; }
+            if (!this.form.address.trim()) { this.error = window.WASSILI.t.address_required; return false; }
             this.error = '';
             return true;
         },
@@ -222,14 +222,14 @@ export function registerCart(Alpine) {
 
             const message = this.buildMessage();
             const waUrl =
-                'https://wa.me/' + window.REVA.callCenter + '?text=' + encodeURIComponent(message);
+                'https://wa.me/' + window.WASSILI.callCenter + '?text=' + encodeURIComponent(message);
 
             try {
-                const res = await fetch(window.REVA.storeUrl, {
+                const res = await fetch(window.WASSILI.storeUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': window.REVA.csrf,
+                        'X-CSRF-TOKEN': window.WASSILI.csrf,
                         Accept: 'application/json',
                     },
                     body: JSON.stringify({
@@ -251,10 +251,10 @@ export function registerCart(Alpine) {
                 this.cart.clear();
 
                 // Send the customer to their live tracking page.
-                window.location = window.REVA.trackBase + '/' + data.tracking_number;
+                window.location = window.WASSILI.trackBase + '/' + data.tracking_number;
             } catch (e) {
                 if (waTab) waTab.close();
-                this.error = window.REVA.t.send_failed;
+                this.error = window.WASSILI.t.send_failed;
                 this.sending = false;
             }
         },

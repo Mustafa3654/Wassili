@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $category->label . ' — ' . __('app_name'))
+@section('title', $category->label . ' — Wassili')
 
 @section('content')
     <div class="mb-6">

@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         User::updateOrCreate(
             ['username' => 'admin'],
-            ['name' => 'Reva Admin', 'email' => null, 'password' => Hash::make('password')]
+            ['name' => 'Wassili Admin', 'email' => null, 'password' => Hash::make('password')]
         );
 
         // ===================== CATEGORIES =====================
