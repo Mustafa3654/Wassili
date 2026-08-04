@@ -28,3 +28,9 @@ yarn-error.log
 
 # Local dev docs / scratch (keep out of the repo if you prefer)
 # /WASSILI_SETUP.md
+
+# Local DB dump (never commit)
+/wassili-dump.sql
+
+# Scratch files
+/test.txt
