@@ -12,9 +12,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // Trust reverse proxies (ngrok / shared hosting) so Laravel sees the
-        // original HTTPS scheme via X-Forwarded-* and generates https URLs.
-        // This keeps Livewire/Filament requests on https (no mixed-content).
+        // Shared hosting terminates TLS at a proxy, so trust X-Forwarded-* to
+        // detect the original https scheme and generate https URLs. Without
+        // this, Livewire and Filament request assets over http on an https
+        // page and the browser blocks them as mixed content.
         $middleware->trustProxies(at: '*');
 
         // Run SetLocale on every web request so translations + RTL/LTR

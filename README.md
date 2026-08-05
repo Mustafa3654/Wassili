@@ -207,29 +207,27 @@ Every resource supports CSV **import and export** via Filament actions.
 - **Lebanon defaults.** Phone fields are prefixed `+961`; the base currency is USD
   with LBP alongside.
 
-## Running publicly (ngrok)
+## Serve from the document root, never a subfolder
 
-The app must be served at the **domain root**, not a subfolder — Filament/Livewire
-load assets from root-absolute paths, so a subfolder like `…/public/admin` breaks the
-login (a native POST to `/admin/login` → 405). Serve at the root and it works:
+Filament and Livewire load their assets from root-absolute paths, so serving the
+app from a subfolder (`example.com/wassili/public/admin`) breaks the admin login —
+the form falls back to a native POST and returns a 405. Point the web server at
+`public/` and the app works.
 
-```bash
-php artisan serve                 # terminal 1  (keep MySQL running)
-ngrok http --url=https://YOUR-DOMAIN.ngrok-free.dev 8000   # terminal 2
-```
+## Deploying
 
-Set `APP_URL` to the ngrok root (no subfolder) and `php artisan config:clear`.
-`bootstrap/app.php` already trusts proxies, so HTTPS is detected via `X-Forwarded-*`.
-See `WASSILI_SETUP.md` for the full walkthrough, including the Apache VirtualHost
-alternative.
+See **[DEPLOY.md](DEPLOY.md)** for the full walkthrough. In short:
 
-## Deploying to shared hosting (Hostinger)
-
-1. `npm run build` locally and upload `public/build`.
-2. Point the domain's document root at `/public`.
+1. `composer install --no-dev --optimize-autoloader`.
+2. Point the domain's document root at `public/`.
 3. Production `.env`: real DB credentials, `APP_ENV=production`, `APP_DEBUG=false`,
-   real `WASSILI_CALL_CENTER_NUMBER`.
-4. `php artisan migrate --force && php artisan config:cache && php artisan route:cache`.
+   `QUEUE_CONNECTION=sync`, and the real `WASSILI_CALL_CENTER_NUMBER`.
+4. `php artisan migrate --force && php artisan storage:link`.
+5. `php artisan config:cache && php artisan route:cache && php artisan view:cache`.
+6. Install the SSL certificate and force HTTPS — the checkout's "share my
+   location" button only works on a secure origin.
+
+`public/build` is committed, so no Node is needed on the server.
 
 No queue workers or websockets are needed for the core dispatch/tracking flow. (CSV
 imports/exports use Laravel's queue; with `QUEUE_CONNECTION=sync` they run inline,
