@@ -70,16 +70,34 @@ class StorefrontController extends Controller
             ])
             ->values();
 
-        $openNow = $vendors->filter->is_open->values();
-
-        return view('storefront.index', compact('vendors', 'sections', 'productIndex', 'openNow'));
+        return view('storefront.index', compact('vendors', 'sections', 'productIndex'));
     }
 
+    /**
+     * A category opens as its own page. It lists the stores that belong to the
+     * category (including any sub-categories), and — for categories sold from a
+     * shared catalog rather than a specific shop — the products themselves.
+     */
     public function category(Category $category)
     {
+        $childIds = $category->children()->pluck('id')->push($category->id);
+
+        // Stores filed under this category or any of its children.
+        $storeList = Vendor::query()
+            ->where('is_active', true)
+            ->whereIn('category_id', $childIds)
+            ->with('category')
+            ->withCount('products')
+            ->orderBy('name')
+            ->get()
+            ->filter(fn ($v) => $v->products_count > 0)
+            ->values();
+
+        // Universal-catalog products: sold by the category itself, not a store.
         $query = $category->products()
             ->where('is_available', true)
-            ->with(['vendor', 'category']);
+            ->whereNull('vendor_id')
+            ->with('category');
 
         if ($q = request()->string('q')->trim()->lower()) {
             $query->where(function ($b) use ($q) {
@@ -88,21 +106,13 @@ class StorefrontController extends Controller
             });
         }
 
-        if ($vendor = request()->integer('vendor')) {
-            $query->where('vendor_id', $vendor);
-        }
-
         $products = $query->orderBy('name')->paginate(48)->withQueryString();
-        $vendors = $category->products()
-            ->where('is_available', true)
-            ->with('vendor')
-            ->get()
-            ->pluck('vendor')
-            ->filter()
-            ->unique('id')
-            ->sortBy('name');
 
-        return view('storefront.category', compact('category', 'products', 'vendors'));
+        return view('storefront.category', [
+            'category'  => $category,
+            'storeList' => $storeList,
+            'products'  => $products,
+        ]);
     }
 
     public function vendor(Vendor $vendor)

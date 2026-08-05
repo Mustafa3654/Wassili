@@ -130,47 +130,13 @@
     {{-- ==================== BROWSE (hidden while searching) ==================== --}}
     <div x-show="!q" class="space-y-10">
 
-        {{-- ---------- Open now ---------- --}}
-        @if ($openNow->isNotEmpty())
-            <section>
-                <div class="mb-3 flex items-baseline justify-between gap-3">
-                    <h2 class="text-base font-bold sm:text-lg">
-                        <span class="inline-grid h-2 w-2 -translate-y-px place-items-center rounded-full bg-zaatar-500 ring-4 ring-zaatar-500/20"></span>
-                        {{ __('Open now') }}
-                    </h2>
-                    <span class="text-sm text-ink-faint">{{ trans_choice('{1}:count store|[2,*]:count stores', $openNow->count(), ['count' => $openNow->count()]) }}</span>
-                </div>
-
-                <div class="rail -mx-4 px-4">
-                    @foreach ($openNow as $vendor)
-                        <a href="{{ route('storefront.vendor', $vendor) }}"
-                           class="w-[146px] rounded-2xl border border-paper-edge bg-white p-3 sm:w-[172px] sm:rounded-3xl sm:p-4 shadow-card transition hover:-translate-y-0.5 hover:border-zaatar-400 hover:shadow-lift dark:border-white/10 dark:bg-white/5">
-                            <span class="grid h-10 w-10 place-items-center rounded-xl bg-zaatar-50 text-xl sm:h-12 sm:w-12 sm:rounded-2xl sm:text-2xl dark:bg-zaatar-500/20">
-                                {{ optional($vendor->category)->icon ?: '🏪' }}
-                            </span>
-                            <p class="mt-2 truncate text-sm font-bold sm:mt-3 sm:text-base">{{ $vendor->label }}</p>
-                            <p class="truncate text-xs text-ink-faint">{{ optional($vendor->category)->label }}</p>
-                            <p class="mt-2 text-xs font-semibold text-zaatar-600 dark:text-zaatar-200">
-                                {{ trans_choice('{1}:count item|[2,*]:count items', $vendor->products_count, ['count' => $vendor->products_count]) }}
-                            </p>
-                        </a>
-                    @endforeach
-                </div>
-            </section>
-        @endif
-
-        {{-- ---------- Shop by category (100% from the admin) ---------- --}}
+        {{-- ---------- Shop by category: every tile opens its own page ---------- --}}
         <section>
             <h2 class="mb-2.5 text-base font-bold sm:text-lg">{{ __('Shop by category') }}</h2>
             <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
                 @foreach ($sections as $section)
-                    @php
-                        $cat  = $section->category;
-                        $href = $section->vendors->isNotEmpty()
-                            ? '#cat-'.$cat->id
-                            : route('storefront.category', $cat);
-                    @endphp
-                    <a href="{{ $href }}"
+                    @php $cat = $section->category; @endphp
+                    <a href="{{ route('storefront.category', $cat) }}"
                        class="group relative overflow-hidden rounded-2xl border border-paper-edge bg-white p-3 shadow-card transition hover:-translate-y-0.5 hover:border-zaatar-400 hover:shadow-lift sm:rounded-3xl sm:p-4 dark:border-white/10 dark:bg-white/5">
                         <span class="text-2xl sm:text-3xl">{{ $cat->icon ?: '🏷️' }}</span>
                         <p class="mt-1.5 text-sm font-bold leading-tight sm:mt-2 sm:text-base">{{ $cat->label }}</p>
@@ -181,64 +147,10 @@
                                 {{ trans_choice('{1}:count item|[2,*]:count items', $section->products, ['count' => $section->products]) }}
                             @endif
                         </p>
-                        @if ($section->open > 0)
-                            <span class="mt-2 inline-block rounded-full bg-zaatar-50 px-2 py-0.5 text-[11px] font-bold text-zaatar-600 dark:bg-zaatar-500/20 dark:text-zaatar-200">
-                                {{ __(':count open', ['count' => $section->open]) }}
-                            </span>
-                        @endif
                     </a>
                 @endforeach
             </div>
         </section>
-
-        {{-- ---------- Every store, under its real category ---------- --}}
-        @foreach ($sections as $section)
-            @continue($section->vendors->isEmpty())
-            <section id="cat-{{ $section->category->id }}" class="scroll-mt-32">
-                <div class="mb-3 flex items-baseline justify-between gap-3">
-                    <h2 class="text-base font-bold sm:text-lg">
-                        {{ $section->category->icon }} {{ $section->category->label }}
-                    </h2>
-                    <span class="text-sm text-ink-faint">
-                        {{ trans_choice('{1}:count store|[2,*]:count stores', $section->vendors->count(), ['count' => $section->vendors->count()]) }}
-                    </span>
-                </div>
-
-                <ul class="space-y-2">
-                    @foreach ($section->vendors as $vendor)
-                        <li>
-                            <a href="{{ route('storefront.vendor', $vendor) }}"
-                               class="flex items-center gap-3 rounded-2xl border border-paper-edge bg-white p-3 shadow-card transition hover:border-zaatar-400 hover:shadow-lift dark:border-white/10 dark:bg-white/5">
-                                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-paper-sunk text-lg sm:h-12 sm:w-12 sm:rounded-2xl sm:text-xl dark:bg-white/10">
-                                    @if ($vendor->logo)
-                                        <img src="{{ asset('storage/'.$vendor->logo) }}" alt="" class="h-full w-full rounded-2xl object-cover">
-                                    @else
-                                        {{ optional($vendor->category)->icon ?: '🏪' }}
-                                    @endif
-                                </span>
-
-                                <div class="min-w-0 flex-1">
-                                    <p class="truncate text-sm font-bold sm:text-base">{{ $vendor->label }}</p>
-                                    <p class="truncate text-xs text-ink-faint">
-                                        {{ trans_choice('{1}:count item|[2,*]:count items', $vendor->products_count, ['count' => $vendor->products_count]) }}
-                                    </p>
-                                </div>
-
-                                @if ($vendor->is_open)
-                                    <span class="shrink-0 rounded-full bg-zaatar-50 px-2.5 py-1 text-xs font-bold text-zaatar-600 dark:bg-zaatar-500/20 dark:text-zaatar-200">
-                                        {{ __('Open') }}
-                                    </span>
-                                @else
-                                    <span class="shrink-0 rounded-full bg-paper-sunk px-2.5 py-1 text-xs font-semibold text-ink-faint dark:bg-white/10">
-                                        {{ $vendor->opens_at ? __('Opens :time', ['time' => $vendor->opens_at]) : __('Closed') }}
-                                    </span>
-                                @endif
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            </section>
-        @endforeach
 
         {{-- ---------- Can't find it? ---------- --}}
         <section class="rounded-3xl bg-zaatar-600 p-6 text-center text-white shadow-lift dark:bg-zaatar-700">

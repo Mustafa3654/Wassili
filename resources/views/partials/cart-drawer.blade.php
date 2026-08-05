@@ -46,9 +46,9 @@
                             <p x-show="item.vendor" class="truncate text-xs text-ink-faint" x-text="item.vendor"></p>
                             <p x-show="item.is_custom" class="text-xs font-semibold text-tangerine-600">{{ __('Custom request') }}</p>
                             <p x-show="item.note" class="truncate text-xs text-ink-faint" x-text="item.note"></p>
-                            <p x-show="item.price > 0" class="mt-1 text-sm font-bold text-zaatar-600 dark:text-zaatar-200"
+                            <p x-show="item.price > 0 && $store.cart.showPrices" class="mt-1 text-sm font-bold text-zaatar-600 dark:text-zaatar-200"
                                x-text="$store.cart.money(item.price * item.quantity)"></p>
-                            <p x-show="item.price === 0" class="mt-1 text-xs text-ink-faint">{{ __('Priced when confirmed') }}</p>
+                            <p x-show="item.price === 0 && $store.cart.showPrices" class="mt-1 text-xs text-ink-faint">{{ __('Priced when confirmed') }}</p>
                         </div>
 
                         {{-- Quantity --}}
@@ -83,7 +83,7 @@
         <div class="border-t border-paper-edge bg-white/60 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] dark:border-white/10 dark:bg-white/5"
              x-show="$store.cart.items.length > 0">
 
-            <dl class="mb-3 space-y-1.5 text-sm">
+            <dl class="mb-3 space-y-1.5 text-sm" x-show="$store.cart.showPrices">
                 <div class="flex justify-between gap-3">
                     <dt class="text-ink-faint">{{ __('Subtotal') }}</dt>
                     <dd class="font-medium" x-text="$store.cart.money($store.cart.subtotal)"></dd>

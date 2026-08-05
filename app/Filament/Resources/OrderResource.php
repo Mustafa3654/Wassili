@@ -53,8 +53,10 @@ class OrderResource extends Resource
             Forms\Components\Textarea::make('address')->label(__('wassili.address'))->required()->columnSpanFull(),
             Forms\Components\Textarea::make('notes')->label(__('wassili.notes'))->columnSpanFull(),
             Forms\Components\TextInput::make('tracking_number')->disabled()->dehydrated(false),
-            Forms\Components\TextInput::make('delivery_fee')->numeric()->prefix('$'),
-            Forms\Components\TextInput::make('total_price')->numeric()->prefix('$'),
+            Forms\Components\TextInput::make('delivery_fee')->numeric()->prefix('$')
+                ->visible(fn () => \App\Support\Settings::showPriceOnMainPage()),
+            Forms\Components\TextInput::make('total_price')->numeric()->prefix('$')
+                ->visible(fn () => \App\Support\Settings::showPriceOnMainPage()),
             Forms\Components\Select::make('status')
                 ->options([
                     'pending'     => __('wassili.pending'),
@@ -103,6 +105,7 @@ class OrderResource extends Resource
                                 ->columnSpan(2),
                             Infolists\Components\TextEntry::make('price')
                                 ->label(__('wassili.price'))
+                                ->visible(fn () => \App\Support\Settings::showPriceOnMainPage())
                                 ->formatStateUsing(fn ($state) => (float) $state > 0
                                     ? \App\Support\Money::both((float) $state)
                                     : __('wassili.to_be_priced')),
@@ -122,10 +125,12 @@ class OrderResource extends Resource
                 ->schema([
                     Infolists\Components\TextEntry::make('delivery_fee')
                         ->label(__('wassili.delivery_fee'))
+                        ->visible(fn () => \App\Support\Settings::showPriceOnMainPage())
                         ->formatStateUsing(fn ($state) => \App\Support\Money::both((float) $state)),
                     Infolists\Components\TextEntry::make('total_price')
                         ->label(__('wassili.total'))
                         ->weight('bold')
+                        ->visible(fn () => \App\Support\Settings::showPriceOnMainPage())
                         ->formatStateUsing(fn ($state) => \App\Support\Money::both((float) $state)),
                     Infolists\Components\TextEntry::make('tracking_number')
                         ->label(__('wassili.tracking'))
@@ -189,6 +194,7 @@ class OrderResource extends Resource
                 Tables\Columns\TextColumn::make('total_price')
                     ->label(__('wassili.total'))
                     ->sortable()
+                    ->visible(fn () => \App\Support\Settings::showPriceOnMainPage())
                     ->formatStateUsing(fn ($state) => \App\Support\Money::both((float) $state)),
 
                 Tables\Columns\TextColumn::make('created_at')

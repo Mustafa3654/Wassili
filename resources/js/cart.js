@@ -147,6 +147,11 @@ export function registerCart(Alpine) {
             return window.WASSILI.locale === 'ar' ? item.name_ar : item.name;
         },
 
+        /** Whether money may be displayed at all (Admin → Settings). */
+        get showPrices() {
+            return window.WASSILI.showPrices !== false;
+        },
+
         /** How many of a catalog product are in the cart (0 when absent). */
         qtyOf(productId) {
             const item = this.items.find((i) => i.key === 'p' + productId);
@@ -187,32 +192,40 @@ export function registerCart(Alpine) {
             return Alpine.store('cart');
         },
 
-        /** Human-readable, RTL-friendly WhatsApp message (uses \n newlines). */
+        /**
+         * WhatsApp order sent to the call centre. Written in Arabic; item and
+         * store names print exactly as saved, so English products stay English.
+         * Money is omitted entirely when prices are switched off in Settings.
+         */
         buildMessage() {
             const c = this.cart;
+            const showPrices = window.WASSILI.showPrices;
             const L = [];
-            L.push('🛒 *طلب جديد عبر وصّلي (Wassili)*');
+
+            L.push('🛒 *طلب جديد عبر وصّلي*');
             L.push('——————————————');
-            L.push('👤 العميل / Customer: ' + this.form.customer_name);
-            L.push('📞 الهاتف / Phone: ' + this.form.customer_phone);
-            L.push('📍 العنوان / Address: ' + this.form.address);
-            if (this.form.notes) L.push('📝 ملاحظات / Notes: ' + this.form.notes);
+            L.push('👤 الزبون: ' + this.form.customer_name);
+            L.push('📞 الهاتف: +961 ' + this.form.customer_phone);
+            L.push('📍 العنوان: ' + this.form.address);
+            if (this.form.notes) L.push('📝 ملاحظات: ' + this.form.notes);
             L.push('——————————————');
-            L.push('🛒 *الطلبات / Items:*');
+            L.push('🛒 *الطلبية:*');
 
             c.items.forEach((i) => {
                 let line = `• ${i.quantity}× ${i.name}`;
                 if (i.vendor) line += ` (${i.vendor})`;
-                else if (i.is_custom) line += ' (طلب خاص / Custom)';
+                else if (i.is_custom) line += ' (طلب خاص)';
                 if (i.note) line += ` — ${i.note}`;
-                if (i.price > 0) line += ` — ${c.money(i.price * i.quantity)}`;
+                if (showPrices && i.price > 0) line += ` — ${c.money(i.price * i.quantity)}`;
                 L.push(line);
             });
 
-            L.push('——————————————');
-            L.push('💵 المجموع / Subtotal: ' + c.money(c.subtotal));
-            L.push('🚚 التوصيل / Delivery: ' + c.money(c.deliveryFee));
-            L.push('✅ *الإجمالي / Total: ' + c.money(c.total) + '*');
+            if (showPrices) {
+                L.push('——————————————');
+                L.push('💵 المجموع: ' + c.money(c.subtotal));
+                L.push('🚚 التوصيل: ' + c.money(c.deliveryFee));
+                L.push('✅ *الإجمالي: ' + c.money(c.total) + '*');
+            }
 
             return L.join('\n');
         },

@@ -31,6 +31,9 @@
             baseFee: @json(\App\Support\Settings::baseDeliveryFee()),
             multiVendorFee: @json(\App\Support\Settings::multiVendorFee()),
             locale: @json($locale),
+            // When false, no money is shown anywhere: not in the cart, not in
+            // the WhatsApp order, not in the admin.
+            showPrices: @json(\App\Support\Settings::showPriceOnMainPage()),
             currency: {
                 lbpRate: @json(\App\Support\Settings::lbpRate()),
                 usdSymbol: @json(config('wassili.currency.usd_symbol')),
@@ -118,7 +121,7 @@
               class="absolute -top-1 -end-1 grid h-6 min-w-6 place-items-center rounded-full bg-tangerine-500 px-1.5 text-xs font-extrabold text-white ring-2 ring-paper dark:ring-zaatar-900"></span>
 
         {{-- Running total, revealed beside the icon once something is in the cart --}}
-        <span x-show="$store.cart.count > 0" x-cloak
+        <span x-show="$store.cart.count > 0 && $store.cart.showPrices" x-cloak
               x-text="$store.cart.money($store.cart.subtotal)"
               class="pointer-events-none absolute end-full me-2 hidden whitespace-nowrap rounded-full bg-ink/90 px-3 py-1.5 text-xs font-bold text-paper opacity-0 shadow-card transition group-hover:opacity-100 sm:block dark:bg-paper/90 dark:text-ink"></span>
     </button>
