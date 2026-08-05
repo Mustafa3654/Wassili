@@ -10,6 +10,7 @@ class Order extends Model
 {
     protected $fillable = [
         'customer_name', 'customer_phone', 'address', 'notes',
+        'latitude', 'longitude', 'location_accuracy',
         'tracking_number', 'items', 'total_price', 'delivery_fee',
         'status', 'driver_id',
     ];
@@ -19,6 +20,23 @@ class Order extends Model
         'total_price'  => 'decimal:2',
         'delivery_fee' => 'decimal:2',
     ];
+
+    /** True when the customer shared a GPS pin at checkout. */
+    public function hasLocation(): bool
+    {
+        return $this->latitude !== null && $this->longitude !== null;
+    }
+
+    /**
+     * Google Maps link for the pin. Opens the native Maps app on a phone and
+     * the website on desktop, so the driver can start navigation in one tap.
+     */
+    public function getMapsUrlAttribute(): ?string
+    {
+        return $this->hasLocation()
+            ? 'https://maps.google.com/?q='.$this->latitude.','.$this->longitude
+            : null;
+    }
 
     protected static function booted(): void
     {

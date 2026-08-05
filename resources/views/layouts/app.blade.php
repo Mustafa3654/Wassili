@@ -50,6 +50,12 @@
                 phone_required: @json(__('Please enter your phone number')),
                 address_required: @json(__('Please enter your address')),
                 send_failed: @json(__('Could not send the order. Please try again.')),
+                loc_captured: @json(__('Location attached')),
+                loc_denied: @json(__('Location permission was blocked. Allow it in your browser settings, or type the address instead.')),
+                loc_unavailable: @json(__('Could not get your location. Type the address instead.')),
+                loc_timeout: @json(__('That took too long. Try again, or type the address instead.')),
+                loc_unsupported: @json(__('This browser cannot share a location.')),
+                loc_insecure: @json(__('Sharing a location needs a secure (https) connection.')),
             },
         };
     </script>

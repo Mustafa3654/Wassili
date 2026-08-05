@@ -94,5 +94,15 @@
     "Try a different word, or add it as a custom request.": "جرّب كلمة تانية، أو ضيفه كطلب خاص.",
     "Back to all stores": "كل المحلات",
     "Home": "الرئيسية",
-    "Also available": "متوفر أيضاً"
+    "Also available": "متوفر أيضاً",
+    "Send my current location": "أرسل موقعي الحالي",
+    "Finding you…": "عم ندوّر عليك…",
+    "Location attached": "تم إرفاق الموقع",
+    "Check the pin": "شوف الموقع عالخريطة",
+    "Remove location": "شيل الموقع",
+    "Location permission was blocked. Allow it in your browser settings, or type the address instead.": "تم حظر إذن الموقع. اسمح فيه من إعدادات المتصفح، أو اكتب العنوان يدويًا.",
+    "Could not get your location. Type the address instead.": "ما قدرنا نحدد موقعك. اكتب العنوان يدويًا.",
+    "That took too long. Try again, or type the address instead.": "أخد وقت طويل. جرّب مرة تانية، أو اكتب العنوان يدويًا.",
+    "This browser cannot share a location.": "هالمتصفح ما بيدعم مشاركة الموقع.",
+    "Sharing a location needs a secure (https) connection.": "مشاركة الموقع بدها اتصال آمن (https)."
 }

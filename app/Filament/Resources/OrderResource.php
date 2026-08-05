@@ -88,6 +88,16 @@ class OrderResource extends Resource
                         ->formatStateUsing(fn ($state) => $state ? '+961 '.$state : null)
                         ->copyable(),
                     Infolists\Components\TextEntry::make('address')->label(__('wassili.address'))->columnSpanFull(),
+                    // Tappable pin when the customer shared their location.
+                    Infolists\Components\TextEntry::make('maps_url')
+                        ->label(__('wassili.map_location'))
+                        ->visible(fn (Order $record) => $record->hasLocation())
+                        ->formatStateUsing(fn (Order $record) => __('wassili.open_in_maps')
+                            .($record->location_accuracy ? " (±{$record->location_accuracy}m)" : ''))
+                        ->url(fn (Order $record) => $record->maps_url, shouldOpenInNewTab: true)
+                        ->icon('heroicon-o-map-pin')
+                        ->color('primary')
+                        ->columnSpanFull(),
                     Infolists\Components\TextEntry::make('notes')->label(__('wassili.notes'))->placeholder('—')->columnSpanFull(),
                 ]),
 

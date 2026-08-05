@@ -99,4 +99,6 @@ return [
     'delivery_fee' => 'رسوم التوصيل',
     'back_to_store' => 'العودة للمتجر',
     'orders_last_7_days' => 'الطلبات (آخر ٧ أيام)',
+    'map_location' => 'الموقع على الخريطة',
+    'open_in_maps' => 'افتح في خرائط جوجل',
 ];

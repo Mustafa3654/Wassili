@@ -184,12 +184,88 @@ export function registerCart(Alpine) {
      * POSTs the order to Laravel, then opens WhatsApp and redirects to tracking.
      */
     Alpine.data('checkout', () => ({
-        form: { customer_name: '', customer_phone: '', address: '', notes: '' },
+        form: {
+            customer_name: '', customer_phone: '', address: '', notes: '',
+            latitude: null, longitude: null, location_accuracy: null,
+        },
         sending: false,
         error: '',
 
+        // Location capture: 'idle' | 'locating' | 'done' | 'error'
+        locState: 'idle',
+        locError: '',
+
         get cart() {
             return Alpine.store('cart');
+        },
+
+        get hasLocation() {
+            return this.form.latitude !== null && this.form.longitude !== null;
+        },
+
+        /** Google Maps link built from the captured pin. */
+        get mapsUrl() {
+            return this.hasLocation
+                ? `https://maps.google.com/?q=${this.form.latitude},${this.form.longitude}`
+                : null;
+        },
+
+        /**
+         * Ask the device for a GPS fix. This uses the browser's own geolocation
+         * API — no Google Maps, no API key, and the customer never leaves the
+         * page. The resulting coordinates become a maps.google.com link that the
+         * driver taps inside WhatsApp.
+         *
+         * Requires HTTPS (localhost is exempt), which the live domain has.
+         */
+        useMyLocation() {
+            const t = window.WASSILI.t;
+
+            if (!navigator.geolocation) {
+                this.locState = 'error';
+                this.locError = t.loc_unsupported;
+                return;
+            }
+
+            // A secure context is mandatory; fail with a clear reason instead of
+            // a silent permission error.
+            if (!window.isSecureContext) {
+                this.locState = 'error';
+                this.locError = t.loc_insecure;
+                return;
+            }
+
+            this.locState = 'locating';
+            this.locError = '';
+
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    this.form.latitude = +pos.coords.latitude.toFixed(7);
+                    this.form.longitude = +pos.coords.longitude.toFixed(7);
+                    this.form.location_accuracy = pos.coords.accuracy
+                        ? Math.round(pos.coords.accuracy)
+                        : null;
+                    this.locState = 'done';
+                    this.cart.toast(t.loc_captured);
+                },
+                (err) => {
+                    this.locState = 'error';
+                    this.locError = {
+                        1: t.loc_denied,      // PERMISSION_DENIED
+                        2: t.loc_unavailable, // POSITION_UNAVAILABLE
+                        3: t.loc_timeout,     // TIMEOUT
+                    }[err.code] || t.loc_unavailable;
+                },
+                { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 }
+            );
+        },
+
+        clearLocation() {
+            this.form.latitude = null;
+            this.form.longitude = null;
+            this.form.location_accuracy = null;
+            this.locState = 'idle';
+            this.locError = '';
         },
 
         /**
@@ -207,6 +283,8 @@ export function registerCart(Alpine) {
             L.push('👤 الزبون: ' + this.form.customer_name);
             L.push('📞 الهاتف: +961 ' + this.form.customer_phone);
             L.push('📍 العنوان: ' + this.form.address);
+            // A tappable pin beats a written address for the driver.
+            if (this.mapsUrl) L.push('🗺️ الموقع على الخريطة: ' + this.mapsUrl);
             if (this.form.notes) L.push('📝 ملاحظات: ' + this.form.notes);
             L.push('——————————————');
             L.push('🛒 *الطلبية:*');

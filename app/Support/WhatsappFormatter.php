@@ -30,6 +30,11 @@ class WhatsappFormatter
         $lines[] = '📞 الهاتف: '.self::formatPhone($order->customer_phone);
         $lines[] = '📍 العنوان: '.$order->address;
 
+        // Tappable pin: opens the driver's Maps app straight into navigation.
+        if ($order->hasLocation()) {
+            $lines[] = '🗺️ الموقع على الخريطة: '.$order->maps_url;
+        }
+
         if (! empty($order->notes)) {
             $lines[] = '📝 ملاحظات: '.$order->notes;
         }

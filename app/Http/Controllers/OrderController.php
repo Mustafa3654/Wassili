@@ -21,6 +21,10 @@ class OrderController extends Controller
             'customer_phone' => ['required', 'string', 'max:40'],
             'address'        => ['required', 'string', 'max:1000'],
             'notes'          => ['nullable', 'string', 'max:1000'],
+            // Optional GPS pin shared from the customer's browser.
+            'latitude'          => ['nullable', 'numeric', 'between:-90,90'],
+            'longitude'         => ['nullable', 'numeric', 'between:-180,180'],
+            'location_accuracy' => ['nullable', 'integer', 'min:0', 'max:100000'],
             'items'          => ['required', 'array', 'min:1'],
             'items.*.name'       => ['required', 'string', 'max:255'],
             'items.*.quantity'   => ['required', 'integer', 'min:1', 'max:99'],
@@ -73,6 +77,10 @@ class OrderController extends Controller
             'customer_phone' => $data['customer_phone'],
             'address'        => $data['address'],
             'notes'          => $data['notes'] ?? null,
+            // Only store a pin when both halves arrived.
+            'latitude'          => isset($data['longitude']) ? ($data['latitude'] ?? null) : null,
+            'longitude'         => isset($data['latitude']) ? ($data['longitude'] ?? null) : null,
+            'location_accuracy' => $data['location_accuracy'] ?? null,
             'items'          => $lines,
             'total_price'    => $subtotal + $deliveryFee,
             'delivery_fee'   => $deliveryFee,

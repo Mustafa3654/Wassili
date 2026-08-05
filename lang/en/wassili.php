@@ -99,4 +99,6 @@ return [
     'delivery_fee' => 'Delivery fee',
     'back_to_store' => 'Back to store',
     'orders_last_7_days' => 'Orders (last 7 days)',
+    'map_location' => 'Map location',
+    'open_in_maps' => 'Open in Google Maps',
 ];

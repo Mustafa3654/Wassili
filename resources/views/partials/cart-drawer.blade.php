@@ -108,6 +108,43 @@
                 <textarea x-model="form.address" rows="2" autocomplete="street-address"
                           placeholder="{{ __('Address') }}" aria-label="{{ __('Address') }}"
                           class="w-full rounded-xl border border-paper-edge bg-white px-3 py-3 text-sm placeholder:text-ink-faint/70 focus:border-zaatar-500 focus:ring-0 dark:border-white/10 dark:bg-white/5"></textarea>
+
+                {{-- ---------- One-tap GPS pin ---------- --}}
+                {{-- Uses the browser's own geolocation, so the customer never
+                     leaves the page and no Maps API key is involved. --}}
+                <div>
+                    <template x-if="!hasLocation">
+                        <button type="button" @click="useMyLocation()" :disabled="locState === 'locating'"
+                                class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-dashed border-zaatar-200 bg-zaatar-50 px-3 py-3 text-sm font-bold text-zaatar-700 transition hover:border-zaatar-400 active:scale-[.99] disabled:opacity-60 dark:border-white/15 dark:bg-white/5 dark:text-zaatar-200">
+                            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/>
+                                <circle cx="12" cy="10" r="2.6"/>
+                            </svg>
+                            <span x-show="locState !== 'locating'">{{ __('Send my current location') }}</span>
+                            <span x-show="locState === 'locating'" x-cloak>{{ __('Finding you…') }}</span>
+                        </button>
+                    </template>
+
+                    {{-- Captured: confirm it, let them check or drop it --}}
+                    <template x-if="hasLocation">
+                        <div class="flex items-center gap-2 rounded-xl border border-zaatar-200 bg-zaatar-50 px-3 py-2.5 dark:border-white/15 dark:bg-white/5">
+                            <span class="text-base">📍</span>
+                            <div class="min-w-0 flex-1">
+                                <p class="text-sm font-bold text-zaatar-700 dark:text-zaatar-200">{{ __('Location attached') }}</p>
+                                <a :href="mapsUrl" target="_blank" rel="noopener"
+                                   class="text-xs text-ink-faint underline underline-offset-2 hover:text-zaatar-600">
+                                    {{ __('Check the pin') }}
+                                </a>
+                            </div>
+                            <button type="button" @click="clearLocation()" aria-label="{{ __('Remove location') }}"
+                                    class="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-lg text-ink-faint transition hover:bg-white dark:hover:bg-white/10">&times;</button>
+                        </div>
+                    </template>
+
+                    <p x-show="locState === 'error'" x-cloak x-text="locError"
+                       class="mt-1.5 text-xs font-medium text-tangerine-600"></p>
+                </div>
                 <textarea x-model="form.notes" rows="1"
                           placeholder="{{ __('Notes / location link (optional)') }}" aria-label="{{ __('Notes') }}"
                           class="w-full rounded-xl border border-paper-edge bg-white px-3 py-3 text-sm placeholder:text-ink-faint/70 focus:border-zaatar-500 focus:ring-0 dark:border-white/10 dark:bg-white/5"></textarea>
