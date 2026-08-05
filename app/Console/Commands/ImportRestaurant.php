@@ -49,7 +49,20 @@ class ImportRestaurant extends Command
         DB::transaction(function () use ($data) {
             $v = $data['vendor'];
 
-            $parent = Category::where('slug', $v['parent'] ?? 'restaurants')->firstOrFail();
+            // Create the top-level category on first run, so importing into an
+            // empty database works without seeding anything by hand.
+            $parentSlug = $v['parent'] ?? 'restaurants';
+            $parent = Category::firstOrCreate(
+                ['slug' => $parentSlug],
+                [
+                    'name'       => $v['parent_name'] ?? Str::title(str_replace('-', ' ', $parentSlug)),
+                    'name_ar'    => $v['parent_name_ar'] ?? 'مطاعم',
+                    'icon'       => $v['parent_icon'] ?? '🍔',
+                    'parent_id'  => null,
+                    'sort_order' => 1,
+                    'is_active'  => true,
+                ]
+            );
 
             // ---- menu sections -> shared sub-categories ----
             $sectionIds = [];
