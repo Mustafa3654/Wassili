@@ -75,7 +75,8 @@
                                     <span class="font-semibold text-tangerine-600"> · {{ __('Closed') }}</span>
                                 </template>
                             </p>
-                            <p class="mt-0.5 truncate text-sm font-bold text-zaatar-600 dark:text-zaatar-200"
+                            <p x-show="$store.cart.showPrices"
+                               class="mt-0.5 truncate text-sm font-bold text-zaatar-600 dark:text-zaatar-200"
                                x-text="$store.cart.money(p.price)"></p>
                         </div>
                         <button

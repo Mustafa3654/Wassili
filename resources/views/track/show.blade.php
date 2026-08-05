@@ -71,8 +71,10 @@
                 @if ($order->driver)
                     <div class="flex justify-between"><span class="text-gray-500">{{ __('Driver') }}</span><span>{{ $order->driver->name }}</span></div>
                 @endif
-                <div class="flex justify-between"><span class="text-gray-500">{{ __('Delivery fee') }}</span><span>{{ \App\Support\Money::both((float) $order->delivery_fee) }}</span></div>
-                <div class="flex justify-between font-bold"><span>{{ __('Total') }}</span><span>{{ \App\Support\Money::both((float) $order->total_price) }}</span></div>
+                @if (\App\Support\Settings::showPriceOnMainPage())
+                    <div class="flex justify-between"><span class="text-gray-500">{{ __('Delivery fee') }}</span><span>{{ \App\Support\Money::both((float) $order->delivery_fee) }}</span></div>
+                    <div class="flex justify-between font-bold"><span>{{ __('Total') }}</span><span>{{ \App\Support\Money::both((float) $order->total_price) }}</span></div>
+                @endif
             </div>
         </div>
 
