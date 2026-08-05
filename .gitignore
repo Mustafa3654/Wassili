@@ -1,6 +1,5 @@
 /.phpunit.cache
 /node_modules
-/public/build
 /public/hot
 /public/storage
 /storage/*.key
@@ -34,3 +33,6 @@ yarn-error.log
 
 # Scratch files
 /test.txt
+
+# public/build is committed on purpose: Hostinger shared hosting has no
+# Node, so the compiled CSS/JS must ship with the repo.
