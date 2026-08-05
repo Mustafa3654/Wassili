@@ -1,0 +1,1233 @@
+{
+    "vendor": {
+        "name": "Layalina & Fairuz Cafes",
+        "name_ar": "مقاهي ليالينا وفيروز",
+        "slug": "layalina-fairuz",
+        "parent": "restaurants",
+        "address": "لبنان",
+        "hours": {
+            "open": "08:00",
+            "close": "23:59"
+        }
+    },
+    "sections": {
+        "Breakfast": {
+            "ar": "فطور",
+            "icon": "🍳"
+        },
+        "Cold Appetizers": {
+            "ar": "مقبلات باردة",
+            "icon": "🥗"
+        },
+        "Hot Appetizers": {
+            "ar": "مقبلات ساخنة",
+            "icon": "🥟"
+        },
+        "Salad": {
+            "ar": "سلطات",
+            "icon": "🥬"
+        },
+        "Sandwiches": {
+            "ar": "سندويشات",
+            "icon": "🥪"
+        },
+        "Pizza": {
+            "ar": "بيتزا",
+            "icon": "🍕"
+        },
+        "Chicken Plates": {
+            "ar": "أطباق دجاج",
+            "icon": "🍗"
+        },
+        "Meat Dishes": {
+            "ar": "أطباق لحمة",
+            "icon": "🥩"
+        },
+        "Barbecue": {
+            "ar": "مشاوي",
+            "icon": "🍢"
+        },
+        "Fukhara": {
+            "ar": "فخارة",
+            "icon": "🍲"
+        },
+        "Italian Pasta": {
+            "ar": "باستا إيطالية",
+            "icon": "🍝"
+        },
+        "Juice": {
+            "ar": "عصائر",
+            "icon": "🧃"
+        },
+        "Sweets": {
+            "ar": "حلويات",
+            "icon": "🍰"
+        },
+        "Shisha": {
+            "ar": "أراكيل",
+            "icon": "💨"
+        },
+        "Cold Drinks": {
+            "ar": "مشروبات باردة",
+            "icon": "🥤"
+        },
+        "Hot Drinks": {
+            "ar": "مشروبات ساخنة",
+            "icon": "☕"
+        }
+    },
+    "items": [
+        {
+            "section": "Breakfast",
+            "name": "Saj Cheese",
+            "name_ar": "صاج جبنة",
+            "price": 2.75
+        },
+        {
+            "section": "Breakfast",
+            "name": "Fatte Hummus with Meat",
+            "name_ar": "فتة حمص مع لحمة",
+            "price": 7.02
+        },
+        {
+            "section": "Breakfast",
+            "name": "Roll Goat Labneh",
+            "name_ar": "لبنة ماعز مكعزلة",
+            "price": 4.49
+        },
+        {
+            "section": "Breakfast",
+            "name": "Saj Cheese with Tomato",
+            "name_ar": "جبنة مع بندورة",
+            "price": 3.31
+        },
+        {
+            "section": "Breakfast",
+            "name": "Saj Cheese with Turkey",
+            "name_ar": "جبنة مع مرتديلا",
+            "price": 3.93
+        },
+        {
+            "section": "Breakfast",
+            "name": "Msabbaha",
+            "name_ar": "مسبحة",
+            "price": 3.92
+        },
+        {
+            "section": "Breakfast",
+            "name": "Balila",
+            "name_ar": "بليلة",
+            "price": 3.92
+        },
+        {
+            "section": "Breakfast",
+            "name": "Foul",
+            "name_ar": "فول",
+            "price": 3.92
+        },
+        {
+            "section": "Breakfast",
+            "name": "Fatte Hummus",
+            "name_ar": "فتة حمص",
+            "price": 4.38
+        },
+        {
+            "section": "Breakfast",
+            "name": "Saj Labneh",
+            "name_ar": "صاج لبنة",
+            "price": 1.91
+        },
+        {
+            "section": "Breakfast",
+            "name": "Saj Thyme",
+            "name_ar": "صاج زعتر",
+            "price": 1.57
+        },
+        {
+            "section": "Breakfast",
+            "name": "Saj Kishk",
+            "name_ar": "صاج كشك",
+            "price": 2.25
+        },
+        {
+            "section": "Breakfast",
+            "name": "Grilled Halloum",
+            "name_ar": "حلوم مشوي",
+            "price": 5.28
+        },
+        {
+            "section": "Breakfast",
+            "name": "Mixed Cheese Plate",
+            "name_ar": "صحن جبنة مشكلة",
+            "price": 7.75
+        },
+        {
+            "section": "Breakfast",
+            "name": "Omelette",
+            "name_ar": "اومليت",
+            "price": 3.6
+        },
+        {
+            "section": "Breakfast",
+            "name": "Egg with Meat",
+            "name_ar": "بيض مع لحمة",
+            "price": 5.9
+        },
+        {
+            "section": "Breakfast",
+            "name": "Egg with Cheese",
+            "name_ar": "بيض مع جبنة",
+            "price": 4.94
+        },
+        {
+            "section": "Breakfast",
+            "name": "Egg with Vegetables",
+            "name_ar": "بيض مع خضار",
+            "price": 3.99
+        },
+        {
+            "section": "Breakfast",
+            "name": "Labneh Plate",
+            "name_ar": "صحن لبنة",
+            "price": 3.03
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "Labneh with Garlic Herbs",
+            "name_ar": "لبنة متومة",
+            "price": 3.6
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "Hummus",
+            "name_ar": "حمص متبل",
+            "price": 3.6
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "Baba Ghannouj",
+            "name_ar": "بابا غنوج",
+            "price": 3.6
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "Vine Leaves",
+            "name_ar": "ورق عنب",
+            "price": 3.6
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "Hummus and Meat",
+            "name_ar": "حمص مع لحمة",
+            "price": 7.98
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "Hummus with Beetroot",
+            "name_ar": "حمص مع شمندر",
+            "price": 3.6
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "Hummus with Avocado",
+            "name_ar": "حمص افوكا",
+            "price": 3.93
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "Spicy Hummus",
+            "name_ar": "حمص بالخضار الحر",
+            "price": 3.93
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Chicken Creamy Soup",
+            "name_ar": "شوربة دجاج مع كريمة",
+            "price": 5.62
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Mushroom Soup",
+            "name_ar": "شوربة فطر",
+            "price": 4.49
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Vegetable Soup",
+            "name_ar": "شوربة خضار",
+            "price": 3.93
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Onion Soup",
+            "name_ar": "شوربة بصل",
+            "price": 4.49
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Nachos with Cheese",
+            "name_ar": "ناتشو مع جبنة",
+            "price": 5.06
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Grilled Potato",
+            "name_ar": "بطاطا مشوية",
+            "price": 4.49
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "French Fries",
+            "name_ar": "بطاطا مقلية",
+            "price": 4.38
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Potato Wedges",
+            "name_ar": "بطاطا ودجز",
+            "price": 6.18
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Spicy Potato",
+            "name_ar": "بطاطا حرة",
+            "price": 3.6
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Curly Fries",
+            "name_ar": "بطاطا كيرلي",
+            "price": 5.84
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Truffle Fries",
+            "name_ar": "بطاطا مع صوص ترافل",
+            "price": 6.74
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Cheese Garlic Bread",
+            "name_ar": "خبز بالثوم والجبنة",
+            "price": 3.93
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Cheese Rolls",
+            "name_ar": "رقاقات جبنة",
+            "price": 3.82
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Mozzarella Sticks",
+            "name_ar": "موزاريلا ستيك",
+            "price": 6.07
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Fried Kibbeh",
+            "name_ar": "كبة مقلية",
+            "price": 5.84
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Grilled Wings",
+            "name_ar": "جوانح مشوية",
+            "price": 4.38
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Buffalo Wings",
+            "name_ar": "جوانح بوفالو",
+            "price": 4.38
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Chicken Liver",
+            "name_ar": "سودة دجاج",
+            "price": 5.84
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Sausage",
+            "name_ar": "نقانق",
+            "price": 6.85
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Meat with Mushroom",
+            "name_ar": "لحمة راس عصفور مع فطر",
+            "price": 8.43
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Dynamite Shrimps",
+            "name_ar": "دينامايت شريمبس",
+            "price": 10
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "Sfiha 1 KG",
+            "name_ar": "كيلو صفيحة",
+            "price": 26.97
+        },
+        {
+            "section": "Salad",
+            "name": "Fattoush",
+            "name_ar": "فتوش",
+            "price": 2.98
+        },
+        {
+            "section": "Salad",
+            "name": "Tabbouleh",
+            "name_ar": "تبولة",
+            "price": 2.98
+        },
+        {
+            "section": "Salad",
+            "name": "Mixed Garden Salad",
+            "name_ar": "مكس غاردن سلاد",
+            "price": 5.62
+        },
+        {
+            "section": "Salad",
+            "name": "Rocca",
+            "name_ar": "روكا",
+            "price": 3.26
+        },
+        {
+            "section": "Salad",
+            "name": "Rocca with Mushroom",
+            "name_ar": "روكا مع فطر وشمندر",
+            "price": 6.18
+        },
+        {
+            "section": "Salad",
+            "name": "Greek Salad",
+            "name_ar": "سلطة يونانية",
+            "price": 6.74
+        },
+        {
+            "section": "Salad",
+            "name": "Tuna Salad",
+            "name_ar": "سلطة تونا",
+            "price": 7.3
+        },
+        {
+            "section": "Salad",
+            "name": "Caesar Salad",
+            "name_ar": "سلطة سيزر",
+            "price": 8.43
+        },
+        {
+            "section": "Salad",
+            "name": "Chicken Chips Salad",
+            "name_ar": "دجاج مع شيبس",
+            "price": 8.43
+        },
+        {
+            "section": "Salad",
+            "name": "Crab Salad",
+            "name_ar": "سلطة كراب",
+            "price": 9.55
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Halloumi Pesto",
+            "name_ar": "حلوم مع الحبق",
+            "price": 4.72
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Fillet with Cheddar",
+            "name_ar": "فتايل مع التشيدر",
+            "price": 6.29
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Truffle Burger",
+            "name_ar": "ترافل برغر",
+            "price": 6.74
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Meat Shawarma",
+            "name_ar": "شاورما لحمة",
+            "price": 5.62
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Chicken Shawarma Plate",
+            "name_ar": "شاورما دجاج مقطعة",
+            "price": 6.29
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Meat Shawarma Plate",
+            "name_ar": "شاورما لحمة مقطعة",
+            "price": 7.3
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Francisco / Fajita",
+            "name_ar": "فرانسيسكو - فاهيتا",
+            "price": 5.56
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Escalope / Crispy",
+            "name_ar": "اسكالوب - كريسبي",
+            "price": 5.34
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Philadelphia",
+            "name_ar": "فيلادلفيا",
+            "price": 6.29
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Fillet Cheese Steak Sub",
+            "name_ar": "فيليه تشيز ستيك ساب",
+            "price": 6.29
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Chicken Sub",
+            "name_ar": "تشيكن ساب",
+            "price": 5.56
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Tawouk",
+            "name_ar": "طاووق",
+            "price": 5.11
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Kabab",
+            "name_ar": "كباب",
+            "price": 5.39
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Grilled Lamb",
+            "name_ar": "شقف غنم",
+            "price": 5.9
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Chicken Shawarma",
+            "name_ar": "شاورما دجاج",
+            "price": 4.49
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Hamburger",
+            "name_ar": "همبرغر",
+            "price": 5.28
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Chicken Burger",
+            "name_ar": "تشيكن برغر",
+            "price": 4.38
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Cheese Burger",
+            "name_ar": "تشيز برغر",
+            "price": 5.62
+        },
+        {
+            "section": "Sandwiches",
+            "name": "Zinger",
+            "name_ar": "زنجر",
+            "price": 5.56
+        },
+        {
+            "section": "Pizza",
+            "name": "Pizza Vegetarian",
+            "name_ar": "بيتزا خضار",
+            "price": 7.87
+        },
+        {
+            "section": "Pizza",
+            "name": "Pizza Margherita",
+            "name_ar": "بيتزا مارغريتا",
+            "price": 6.74
+        },
+        {
+            "section": "Pizza",
+            "name": "Pizza Four Cheese",
+            "name_ar": "بيتزا بالاجبان",
+            "price": 8.43
+        },
+        {
+            "section": "Pizza",
+            "name": "Pizza Pepperoni",
+            "name_ar": "بيتزا بيبيروني",
+            "price": 8.99
+        },
+        {
+            "section": "Pizza",
+            "name": "Pizza Truffle",
+            "name_ar": "بيتزا ترافل",
+            "price": 10.67
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Sizzling Fajita",
+            "name_ar": "سيزلينغ فاهيتا",
+            "price": 11.12
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Chicken with Cream and Mushroom",
+            "name_ar": "دجاج مع كريمة وفطر",
+            "price": 10.67
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Montblanc Chicken",
+            "name_ar": "مونبلان تشيكن",
+            "price": 11.12
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "King Chicken",
+            "name_ar": "كينغ تشيكن",
+            "price": 11.12
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Bomb Chicken",
+            "name_ar": "بومب تشيكن",
+            "price": 11.12
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Avocado Chicken",
+            "name_ar": "دجاج مع كريمة وافوكا",
+            "price": 11.12
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Chicken Quesadilla",
+            "name_ar": "كساديا الدجاج",
+            "price": 10.11
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Chicken Breast Plate",
+            "name_ar": "طبق صدر دجاج",
+            "price": 9.78
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Chicken Slices",
+            "name_ar": "شرحات مطفاية بالحامض",
+            "price": 10.34
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Chicken and Herbs",
+            "name_ar": "دجاج بالاعشاب",
+            "price": 11.01
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Crispy",
+            "name_ar": "كريسبي",
+            "price": 10.56
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Escalope",
+            "name_ar": "اسكالوب",
+            "price": 10.56
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Nuggets",
+            "name_ar": "ناغتس",
+            "price": 6.97
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Crunchy Chicken",
+            "name_ar": "كرانشي تشيكن",
+            "price": 10.67
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Crispy and Fries",
+            "name_ar": "كريسبي اند فرايز",
+            "price": 10.34
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Escalope Milanaise",
+            "name_ar": "اسكالوب ميلانيز",
+            "price": 10.67
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Cheddar Escalope",
+            "name_ar": "اسكالوب تشيدر",
+            "price": 11.12
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Corcanto Chicken",
+            "name_ar": "كوركانتو دجاج",
+            "price": 10.34
+        },
+        {
+            "section": "Chicken Plates",
+            "name": "Cordon Bleu",
+            "name_ar": "كوردون بلو",
+            "price": 11.12
+        },
+        {
+            "section": "Meat Dishes",
+            "name": "Grilled Steak",
+            "name_ar": "ستيك مشوي",
+            "price": 14.61
+        },
+        {
+            "section": "Meat Dishes",
+            "name": "Pepper Steak",
+            "name_ar": "ستيك بالبهار",
+            "price": 15.73
+        },
+        {
+            "section": "Meat Dishes",
+            "name": "Mushroom Steak",
+            "name_ar": "ستيك بالفطر",
+            "price": 15.73
+        },
+        {
+            "section": "Meat Dishes",
+            "name": "Steak Diane",
+            "name_ar": "ستيك ديان",
+            "price": 17.42
+        },
+        {
+            "section": "Meat Dishes",
+            "name": "Layalina Steak with Baguette",
+            "name_ar": "ستيك ليالينا مع باغيت",
+            "price": 17.42
+        },
+        {
+            "section": "Barbecue",
+            "name": "Tawouk",
+            "name_ar": "طاووق",
+            "price": 9.44
+        },
+        {
+            "section": "Barbecue",
+            "name": "Kabab",
+            "name_ar": "كباب",
+            "price": 10.67
+        },
+        {
+            "section": "Barbecue",
+            "name": "Grilled Lamb",
+            "name_ar": "شقف",
+            "price": 11.8
+        },
+        {
+            "section": "Barbecue",
+            "name": "Arayes Kafta",
+            "name_ar": "عرايس كفتا",
+            "price": 10.11
+        },
+        {
+            "section": "Barbecue",
+            "name": "Mixed BBQ",
+            "name_ar": "مشاوي مشكل",
+            "price": 12.81
+        },
+        {
+            "section": "Barbecue",
+            "name": "Tawouk 1 KG",
+            "name_ar": "كيلو طاووق",
+            "price": 26.4
+        },
+        {
+            "section": "Barbecue",
+            "name": "Lamb Meat 1 KG",
+            "name_ar": "كيلو شقف غنم",
+            "price": 51.69
+        },
+        {
+            "section": "Barbecue",
+            "name": "Kabab 1 KG",
+            "name_ar": "كيلو كباب",
+            "price": 33.71
+        },
+        {
+            "section": "Barbecue",
+            "name": "Mixed BBQ 1 KG",
+            "name_ar": "كيلو مشاوي",
+            "price": 48.31
+        },
+        {
+            "section": "Barbecue",
+            "name": "Grilled Chicken",
+            "name_ar": "فروج عالفحم",
+            "price": 20.22
+        },
+        {
+            "section": "Fukhara",
+            "name": "Mexican Chicken",
+            "name_ar": "دجاج مكسيكي",
+            "price": 13.48
+        },
+        {
+            "section": "Fukhara",
+            "name": "Chicken Curry",
+            "name_ar": "دجاج بالكاري",
+            "price": 13.48
+        },
+        {
+            "section": "Fukhara",
+            "name": "Tawouk Fukhara",
+            "name_ar": "طاووق بالفخار",
+            "price": 13.48
+        },
+        {
+            "section": "Fukhara",
+            "name": "Fillet Meat with Thyme",
+            "name_ar": "فتايل لحم بالزعتر",
+            "price": 15.17
+        },
+        {
+            "section": "Italian Pasta",
+            "name": "Fettuccine",
+            "name_ar": "فيتوتشيني",
+            "price": 10
+        },
+        {
+            "section": "Italian Pasta",
+            "name": "Chicken Alfredo",
+            "name_ar": "دجاج الفريدو",
+            "price": 10.45
+        },
+        {
+            "section": "Italian Pasta",
+            "name": "Spaghetti Bolognese",
+            "name_ar": "سباكيتي بولونيز",
+            "price": 10.45
+        },
+        {
+            "section": "Italian Pasta",
+            "name": "Penne Arrabbiata",
+            "name_ar": "بيني ارابياتا",
+            "price": 9.55
+        },
+        {
+            "section": "Juice",
+            "name": "Watermelon Juice",
+            "name_ar": "عصير بطيخ",
+            "price": 3.82
+        },
+        {
+            "section": "Juice",
+            "name": "Nutella Fruit Salad",
+            "name_ar": "سلطة نوتيلا",
+            "price": 6.18
+        },
+        {
+            "section": "Juice",
+            "name": "Fresh Mango Juice",
+            "name_ar": "عصير منغا طبيعي",
+            "price": 4.94
+        },
+        {
+            "section": "Juice",
+            "name": "Mojito",
+            "name_ar": "موهيتو",
+            "price": 3.93
+        },
+        {
+            "section": "Juice",
+            "name": "Milk Shake Extra Cup",
+            "name_ar": "ميلك شيك اكسترا كب",
+            "price": 6.07
+        },
+        {
+            "section": "Juice",
+            "name": "Lemonade with Ice Cream",
+            "name_ar": "ليموناضة مع بوظة حامض",
+            "price": 5.62
+        },
+        {
+            "section": "Juice",
+            "name": "Orange / Apple / Carrot",
+            "name_ar": "جزر - تفاح - برتقال",
+            "price": 3.82
+        },
+        {
+            "section": "Juice",
+            "name": "Strawberry",
+            "name_ar": "فراولة",
+            "price": 3.82
+        },
+        {
+            "section": "Juice",
+            "name": "Mango / Pineapple / Guava",
+            "name_ar": "اناناس - جوافة - منغا",
+            "price": 3.26
+        },
+        {
+            "section": "Juice",
+            "name": "Kiwi",
+            "name_ar": "كيوي",
+            "price": 5.06
+        },
+        {
+            "section": "Juice",
+            "name": "Banana Milk Shake",
+            "name_ar": "موز وحليب",
+            "price": 3.82
+        },
+        {
+            "section": "Juice",
+            "name": "Milk Shake",
+            "name_ar": "ميلك شيك",
+            "price": 5.73
+        },
+        {
+            "section": "Juice",
+            "name": "Avocado",
+            "name_ar": "افوكا",
+            "price": 7.3
+        },
+        {
+            "section": "Juice",
+            "name": "Juice Cocktail",
+            "name_ar": "كوكتيل عصير",
+            "price": 3.82
+        },
+        {
+            "section": "Juice",
+            "name": "Pieces Cocktail",
+            "name_ar": "كوكتيل شقف",
+            "price": 5.84
+        },
+        {
+            "section": "Juice",
+            "name": "Frappuccino",
+            "name_ar": "فرابوتشينو",
+            "price": 4.89
+        },
+        {
+            "section": "Juice",
+            "name": "Jallab",
+            "name_ar": "جلاب",
+            "price": 3.65
+        },
+        {
+            "section": "Juice",
+            "name": "Lemonade",
+            "name_ar": "ليموناضة",
+            "price": 3.71
+        },
+        {
+            "section": "Juice",
+            "name": "Minted Lemonade",
+            "name_ar": "ليموناضة نعنع",
+            "price": 3.88
+        },
+        {
+            "section": "Sweets",
+            "name": "Lotus / Oreo Crepe",
+            "name_ar": "كريب لوتس - اوريو",
+            "price": 5.96
+        },
+        {
+            "section": "Sweets",
+            "name": "Crepe Pistachio",
+            "name_ar": "كريب بيستاشيو",
+            "price": 6.18
+        },
+        {
+            "section": "Sweets",
+            "name": "Kashta and Honey",
+            "name_ar": "قشطة طبيعية وعسل",
+            "price": 7.87
+        },
+        {
+            "section": "Sweets",
+            "name": "Banana Split",
+            "name_ar": "بنانا سبليت",
+            "price": 5.06
+        },
+        {
+            "section": "Sweets",
+            "name": "Extra Ice Cream",
+            "name_ar": "بوظة اكسترا",
+            "price": 5.06
+        },
+        {
+            "section": "Sweets",
+            "name": "Cheese Cake",
+            "name_ar": "تشيز كيك",
+            "price": 4.61
+        },
+        {
+            "section": "Sweets",
+            "name": "Chocolate Cake",
+            "name_ar": "كيك شوكولا",
+            "price": 4.61
+        },
+        {
+            "section": "Sweets",
+            "name": "Tiramisu",
+            "name_ar": "تيراميسو",
+            "price": 4.61
+        },
+        {
+            "section": "Sweets",
+            "name": "Fondant",
+            "name_ar": "فوندون",
+            "price": 6.18
+        },
+        {
+            "section": "Sweets",
+            "name": "Crepe Nutella",
+            "name_ar": "كريب نوتيلا",
+            "price": 5.51
+        },
+        {
+            "section": "Sweets",
+            "name": "Crepe Kinder",
+            "name_ar": "كريب كيندر",
+            "price": 5.84
+        },
+        {
+            "section": "Sweets",
+            "name": "Ice Cream",
+            "name_ar": "بوظة عادي",
+            "price": 4.21
+        },
+        {
+            "section": "Sweets",
+            "name": "Cotton Candy Ice Cream",
+            "name_ar": "بوظة غزل البنات",
+            "price": 5.96
+        },
+        {
+            "section": "Sweets",
+            "name": "Choco-Mo",
+            "name_ar": "شوكولامو",
+            "price": 5.62
+        },
+        {
+            "section": "Sweets",
+            "name": "Brownies with Ice Cream",
+            "name_ar": "براونيز مع بوظة",
+            "price": 5.28
+        },
+        {
+            "section": "Sweets",
+            "name": "Extra Nuts",
+            "name_ar": "قلوبات اكسترا",
+            "price": 6.07
+        },
+        {
+            "section": "Sweets",
+            "name": "Mixed Nuts Plate",
+            "name_ar": "صحن بزورات",
+            "price": 4.78
+        },
+        {
+            "section": "Sweets",
+            "name": "Carrot Plate",
+            "name_ar": "صحن جزر",
+            "price": 2.19
+        },
+        {
+            "section": "Shisha",
+            "name": "Shisha",
+            "name_ar": "أركيلة - معسل / عجمي / زغلول",
+            "price": 0
+        },
+        {
+            "section": "Shisha",
+            "name": "Shisha Premium",
+            "name_ar": "أركيلة ليالينا - تبغ رأس",
+            "price": 0
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Iced Tea",
+            "name_ar": "ايس تي",
+            "price": 1.85
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Iced Coffee",
+            "name_ar": "قهوة باردة",
+            "price": 3.37
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Dark Blue Mexican",
+            "name_ar": "دارك بلو مكسيكان",
+            "price": 2.25
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Malt Beer Mexican",
+            "name_ar": "مياه شعير مكسيكان",
+            "price": 2.81
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Boom Boom Mexican",
+            "name_ar": "بوم بوم مكسيكن",
+            "price": 3.31
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Boom Boom",
+            "name_ar": "بوم بوم",
+            "price": 3.03
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Red Bull",
+            "name_ar": "ريدبول",
+            "price": 3.37
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Large Water",
+            "name_ar": "مياه كبير",
+            "price": 1.69
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Small Water",
+            "name_ar": "مياه صغير",
+            "price": 0.56
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Pepsi",
+            "name_ar": "بيبسي",
+            "price": 1.46
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Perrier",
+            "name_ar": "بيرييه",
+            "price": 2.7
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Non Alcoholic Beer",
+            "name_ar": "بيرة خالية من الكحول",
+            "price": 2.53
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Ayran Yogurt",
+            "name_ar": "لبن عيران",
+            "price": 1.46
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Rim Sparkling Water",
+            "name_ar": "ريم مياه غازية",
+            "price": 2.13
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "Dark Blue Sugar Free",
+            "name_ar": "دارك بلو",
+            "price": 2.02
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Espresso",
+            "name_ar": "قهوة اكسبريس",
+            "price": 1.12
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Turkish Coffee",
+            "name_ar": "قهوة تركية",
+            "price": 1.52
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Tea",
+            "name_ar": "شاي",
+            "price": 1.52
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Herbal Infusions",
+            "name_ar": "زهورات بانواعها",
+            "price": 1.52
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Cumin and Lemon",
+            "name_ar": "كمون وليمون",
+            "price": 1.91
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Ginger with Honey",
+            "name_ar": "زنجبيل مع عسل",
+            "price": 1.91
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Nescafe",
+            "name_ar": "نيسكافيه",
+            "price": 2.92
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Nescafe Coffeemate",
+            "name_ar": "نسكافيه كوفي ميت",
+            "price": 3.03
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Cappuccino",
+            "name_ar": "كابتشينو",
+            "price": 2.92
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Hot Chocolate",
+            "name_ar": "هوت شوكليت",
+            "price": 2.92
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Cocoa",
+            "name_ar": "كاكاو",
+            "price": 2.92
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Cafe Latte",
+            "name_ar": "كافيه لاتيه",
+            "price": 4.04
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "Sahlab with Kaak",
+            "name_ar": "سحلب مع كعك",
+            "price": 3.15
+        }
+    ]
+}

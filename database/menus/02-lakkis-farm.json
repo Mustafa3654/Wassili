@@ -1,0 +1,2017 @@
+{
+    "vendor": {
+        "name": "Lakkis Farm",
+        "name_ar": "مزرعة لقيس",
+        "slug": "lakkis-farm-baalbak",
+        "parent": "restaurants",
+        "address": "الطريق العام، دورس، بعلبك",
+        "hours": {
+            "open": "07:00",
+            "close": "23:59"
+        }
+    },
+    "sections": {
+        "New Items": {
+            "ar": "جديدنا",
+            "icon": "✨"
+        },
+        "Kids Meal": {
+            "ar": "وجبات أطفال",
+            "icon": "🧒"
+        },
+        "Manakeesh": {
+            "ar": "مناقيش",
+            "icon": "🫓"
+        },
+        "Fatteh": {
+            "ar": "فتة",
+            "icon": "🥣"
+        },
+        "Breakfast": {
+            "ar": "فطور",
+            "icon": "🍳"
+        },
+        "Salads": {
+            "ar": "سلطات",
+            "icon": "🥗"
+        },
+        "Cold Mezza": {
+            "ar": "مقبلات باردة",
+            "icon": "🥙"
+        },
+        "Hot Mezza": {
+            "ar": "مقبلات ساخنة",
+            "icon": "🥟"
+        },
+        "Hot Sandwiches": {
+            "ar": "سندويشات ساخنة",
+            "icon": "🌯"
+        },
+        "Snack Sandwiches": {
+            "ar": "سندويشات سناك",
+            "icon": "🥪"
+        },
+        "Cold Sandwiches": {
+            "ar": "سندويشات باردة",
+            "icon": "🥖"
+        },
+        "Fresh Raw Meat": {
+            "ar": "لحوم نية طازجة",
+            "icon": "🥩"
+        },
+        "Sfiha Experts": {
+            "ar": "صفيحة",
+            "icon": "🥐"
+        },
+        "Grills": {
+            "ar": "مشاوي",
+            "icon": "🍢"
+        },
+        "Main Course": {
+            "ar": "أطباق رئيسية",
+            "icon": "🍽️"
+        },
+        "Burgers": {
+            "ar": "برجر",
+            "icon": "🍔"
+        },
+        "Chanklish": {
+            "ar": "شنكليش",
+            "icon": "🧀"
+        },
+        "Mouajjanat": {
+            "ar": "معجنات",
+            "icon": "🥧"
+        },
+        "Hot Beverages": {
+            "ar": "مشروبات ساخنة",
+            "icon": "☕"
+        },
+        "Cold Beverages": {
+            "ar": "مشروبات باردة",
+            "icon": "🥤"
+        },
+        "Juices": {
+            "ar": "عصائر",
+            "icon": "🧃"
+        },
+        "Dessert": {
+            "ar": "حلويات",
+            "icon": "🍰"
+        },
+        "Shisha": {
+            "ar": "أراكيل",
+            "icon": "💨"
+        },
+        "Farm Shop": {
+            "ar": "منتجات المزرعة",
+            "icon": "🥛"
+        },
+        "Butcher": {
+            "ar": "ملحمة",
+            "icon": "🍖"
+        }
+    },
+    "items": [
+        {
+            "section": "New Items",
+            "name": "Green Detox",
+            "price": 5
+        },
+        {
+            "section": "New Items",
+            "name": "Red Detox",
+            "price": 3
+        },
+        {
+            "section": "New Items",
+            "name": "Pineapple Fire",
+            "price": 10
+        },
+        {
+            "section": "New Items",
+            "name": "Lemonade Twist",
+            "price": 4
+        },
+        {
+            "section": "New Items",
+            "name": "Fresh Mango",
+            "price": 6
+        },
+        {
+            "section": "New Items",
+            "name": "Passion Heaven",
+            "price": 9
+        },
+        {
+            "section": "New Items",
+            "name": "Iced Latte Punch",
+            "price": 4
+        },
+        {
+            "section": "New Items",
+            "name": "Oreo Milkshake",
+            "price": 7
+        },
+        {
+            "section": "New Items",
+            "name": "Strawberry Milkshake",
+            "price": 7
+        },
+        {
+            "section": "New Items",
+            "name": "Avocado Karisheh Bowl",
+            "price": 11
+        },
+        {
+            "section": "New Items",
+            "name": "Dozen Grilled Wings",
+            "price": 7
+        },
+        {
+            "section": "New Items",
+            "name": "Mouhamara Walnut",
+            "price": 4
+        },
+        {
+            "section": "Kids Meal",
+            "name": "Beef Burger",
+            "price": 7
+        },
+        {
+            "section": "Kids Meal",
+            "name": "Crispy Chicken Tenders",
+            "price": 6
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Muhammara & Cheese Mankousheh",
+            "price": 3
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Sujuk & Cheese Mankousheh",
+            "price": 4
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Zaatar Mankousheh",
+            "price": 1
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Keshek Mankousheh",
+            "price": 4.5
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Spinach Mankousheh",
+            "price": 2
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Cheese Mankousheh",
+            "price": 4
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Tomato & Onion Mankousheh",
+            "price": 2
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Tolmeyet Kafta",
+            "price": 9
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Bakleh Mankousheh",
+            "price": 4
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Lahme Mankousheh",
+            "price": 5.5
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Cocktail Mankousheh",
+            "price": 3
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Zaatar with Vegetables Mankousheh",
+            "price": 1.5
+        },
+        {
+            "section": "Manakeesh",
+            "name": "Tomato with Onion & Cheese Mankousheh",
+            "price": 3
+        },
+        {
+            "section": "Fatteh",
+            "name": "Sfiha Fatteh",
+            "price": 8
+        },
+        {
+            "section": "Fatteh",
+            "name": "Hummus Fatteh",
+            "price": 6.5
+        },
+        {
+            "section": "Fatteh",
+            "name": "Eggplant Fatteh",
+            "price": 7.5
+        },
+        {
+            "section": "Fatteh",
+            "name": "Lsanat Fatteh",
+            "price": 8
+        },
+        {
+            "section": "Fatteh",
+            "name": "Makadem Fatteh",
+            "price": 8.5
+        },
+        {
+            "section": "Fatteh",
+            "name": "Meat Fatteh",
+            "price": 9
+        },
+        {
+            "section": "Breakfast",
+            "name": "Balila",
+            "price": 4
+        },
+        {
+            "section": "Breakfast",
+            "name": "Msabaha",
+            "price": 4.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Foul",
+            "price": 5.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Fried Eggs with Kawarma",
+            "price": 10
+        },
+        {
+            "section": "Breakfast",
+            "name": "Fried Eggs with Sujuk",
+            "price": 5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Eggs Your Style",
+            "price": 3.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Labneh Plate",
+            "price": 4.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Labneh with Kawarma",
+            "price": 9.3
+        },
+        {
+            "section": "Breakfast",
+            "name": "Cow Labneh Balls",
+            "price": 4
+        },
+        {
+            "section": "Breakfast",
+            "name": "Goat Labneh Balls",
+            "price": 7
+        },
+        {
+            "section": "Breakfast",
+            "name": "Mixed Cheese Platter",
+            "price": 9
+        },
+        {
+            "section": "Breakfast",
+            "name": "Ambaris Spread Plate",
+            "price": 7.2
+        },
+        {
+            "section": "Breakfast",
+            "name": "Chanklish Labneh",
+            "price": 5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Chanklish Cheese",
+            "price": 5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Karisheh and Honey",
+            "price": 6.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Feta Plate",
+            "price": 5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Naboulsi Plate",
+            "price": 6
+        },
+        {
+            "section": "Breakfast",
+            "name": "Eggs Meat Plate",
+            "price": 6
+        },
+        {
+            "section": "Breakfast",
+            "name": "Akkawi Cheese Plate",
+            "price": 5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Baladeyeh Cheese Plate",
+            "price": 5
+        },
+        {
+            "section": "Breakfast",
+            "name": "Chelal Cheese Plate",
+            "price": 5
+        },
+        {
+            "section": "Salads",
+            "name": "Tabbouleh",
+            "price": 6.5
+        },
+        {
+            "section": "Salads",
+            "name": "Fattoush",
+            "price": 7.5
+        },
+        {
+            "section": "Salads",
+            "name": "Greek Salad",
+            "price": 6
+        },
+        {
+            "section": "Salads",
+            "name": "Rocca & Beetroot Salad",
+            "price": 6
+        },
+        {
+            "section": "Salads",
+            "name": "Rocca, Thyme & Goat Labneh",
+            "price": 5
+        },
+        {
+            "section": "Salads",
+            "name": "Raheb",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Hindbeh Bel Zeit",
+            "price": 4
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Grape Leaves with Oil",
+            "price": 6
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Labneh with Garlic",
+            "price": 3.5
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Hummus Har",
+            "price": 3
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Hummus Beiruti",
+            "price": 3.5
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Hummus",
+            "price": 4
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Mutabbal",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Moutabbal Ajami",
+            "price": 3.5
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Muhammara",
+            "price": 5
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Vegetables Plate",
+            "price": 4
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Goat Yoghurt",
+            "price": 2.5
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Sheep Yoghurt",
+            "price": 2.5
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Cow Yoghurt",
+            "price": 2
+        },
+        {
+            "section": "Cold Mezza",
+            "name": "Halloum with Pesto",
+            "price": 5
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Pumpkin Kebbe",
+            "price": 3
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Batata Harra",
+            "price": 4
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "French Fries",
+            "price": 3
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Grilled Potato",
+            "price": 2
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Grilled Cheese Rolls",
+            "price": 5
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Chicken Wings Provencal",
+            "price": 4.5
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Makanek",
+            "price": 9
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Sujuk",
+            "price": 8
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Meat Ras Asfour",
+            "price": 10
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Fried Cheese Rolls",
+            "price": 4.5
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Meat Sambousek",
+            "price": 5
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Grilled Halloumi Plate",
+            "price": 6
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Fried Kebbe",
+            "price": 8
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Kebbe Sajiyeh",
+            "price": 9
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Fried Lamb Liver",
+            "price": 9
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Nkhaat Plate",
+            "price": 4
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Sheep Eggs",
+            "price": 10
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Hummus with Kawarma",
+            "price": 11
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Cocktail Plate",
+            "price": 16
+        },
+        {
+            "section": "Hot Mezza",
+            "name": "Shrimps Provencal",
+            "price": 8
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Tawouk Sandwich",
+            "price": 5.5
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Grilled Chicken Sandwich",
+            "price": 7.5
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Shekaf Sandwich",
+            "price": 8
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Kabab Sandwich",
+            "price": 5.5
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Orfali Kabab Sandwich",
+            "price": 5.5
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Kabab Kheshkhash Sandwich",
+            "price": 5.5
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Kafta Sandwich",
+            "price": 6
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Sujuk Sandwich",
+            "price": 5.5
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Makanek Sandwich",
+            "price": 5.5
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Fried Sheep Liver Sandwich",
+            "price": 7
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Grilled Halloumi Sandwich",
+            "price": 4.5
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Sheep Eggs Sandwich",
+            "price": 6
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Lsanat Sandwich",
+            "price": 3
+        },
+        {
+            "section": "Hot Sandwiches",
+            "name": "Nkhaat Sandwich",
+            "price": 2.5
+        },
+        {
+            "section": "Snack Sandwiches",
+            "name": "Fajita Chicken",
+            "price": 7.5
+        },
+        {
+            "section": "Snack Sandwiches",
+            "name": "Fillet Cheese Steak Sandwich",
+            "price": 6
+        },
+        {
+            "section": "Snack Sandwiches",
+            "name": "Lakkis Chicken Sandwich",
+            "price": 6
+        },
+        {
+            "section": "Snack Sandwiches",
+            "name": "Mexican Chicken Sandwich",
+            "price": 8
+        },
+        {
+            "section": "Snack Sandwiches",
+            "name": "Chili Chicken Sandwich",
+            "price": 6
+        },
+        {
+            "section": "Snack Sandwiches",
+            "name": "Chicken Francisco Sandwich",
+            "price": 6.5
+        },
+        {
+            "section": "Snack Sandwiches",
+            "name": "Chili Fillet Steak Sandwich",
+            "price": 8
+        },
+        {
+            "section": "Snack Sandwiches",
+            "name": "Combo Add-On",
+            "price": 1.5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Cow Labneh Sandwich",
+            "price": 2.22
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Goat Labneh Sandwich",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Ambaris Sandwich",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Majdouleh Sandwich",
+            "price": 5.5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Halloumi Cheese Sandwich",
+            "price": 4
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Double Cream Sandwich",
+            "price": 3.5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Akkawi Sandwich",
+            "price": 4
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Baladeyeh Sandwich",
+            "price": 3.5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Chelal Sandwich",
+            "price": 4
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Feta Sandwich",
+            "price": 3
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Naboulsi Sandwich",
+            "price": 4
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Chanklish Sandwich",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Karisheh & Honey Sandwich",
+            "price": 3
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Malseh Sheep Sandwich",
+            "price": 5.5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Malseh Veal Sandwich",
+            "price": 3
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Raw Kafta Sandwich",
+            "price": 5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Moujarmashe Sandwich",
+            "price": 5
+        },
+        {
+            "section": "Cold Sandwiches",
+            "name": "Nayye Liver Sandwich",
+            "price": 6.5
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Frakeh Veal Plate",
+            "price": 8
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Frakeh Sheep Plate",
+            "price": 10
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Malseh",
+            "price": 11
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Malseh Plate",
+            "price": 10
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Kafta Plate",
+            "price": 12
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Moujarmashe Plate",
+            "price": 12
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Raw Ftileh Plate",
+            "price": 12
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Lamb Liver Plate",
+            "price": 12
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Small Mixed Raw Meat",
+            "price": 22.5
+        },
+        {
+            "section": "Fresh Raw Meat",
+            "name": "Big Mixed Raw Meat Plate",
+            "price": 45
+        },
+        {
+            "section": "Sfiha Experts",
+            "name": "Signature Sfiha Dozen",
+            "price": 6
+        },
+        {
+            "section": "Sfiha Experts",
+            "name": "Signature Sfiha 0.5 KG",
+            "price": 16
+        },
+        {
+            "section": "Sfiha Experts",
+            "name": "Signature Sfiha 1 KG",
+            "price": 32
+        },
+        {
+            "section": "Sfiha Experts",
+            "name": "Lamb Sfiha Dozen",
+            "price": 8
+        },
+        {
+            "section": "Sfiha Experts",
+            "name": "Lamb Sfiha 0.5 KG",
+            "price": 17
+        },
+        {
+            "section": "Sfiha Experts",
+            "name": "Lamb Sfiha 1 KG",
+            "price": 34
+        },
+        {
+            "section": "Sfiha Experts",
+            "name": "Sfiha Round Dozen",
+            "price": 9.5
+        },
+        {
+            "section": "Sfiha Experts",
+            "name": "Sfiha Round 0.5 KG",
+            "price": 16
+        },
+        {
+            "section": "Sfiha Experts",
+            "name": "Sfiha Round 1 KG",
+            "price": 32
+        },
+        {
+            "section": "Grills",
+            "name": "Tawouk Plate",
+            "price": 10
+        },
+        {
+            "section": "Grills",
+            "name": "Grilled Meat",
+            "price": 15
+        },
+        {
+            "section": "Grills",
+            "name": "Kafta Plate",
+            "price": 12.5
+        },
+        {
+            "section": "Grills",
+            "name": "Kabab Plate",
+            "price": 12
+        },
+        {
+            "section": "Grills",
+            "name": "Kabab Orfali",
+            "price": 12.5
+        },
+        {
+            "section": "Grills",
+            "name": "Kabab Kheshkhash Plate",
+            "price": 11
+        },
+        {
+            "section": "Grills",
+            "name": "Mixed Grill Plate",
+            "price": 15
+        },
+        {
+            "section": "Grills",
+            "name": "Lamb Chops",
+            "price": 20
+        },
+        {
+            "section": "Grills",
+            "name": "Kafta 0.5 KG",
+            "price": 25
+        },
+        {
+            "section": "Grills",
+            "name": "Tawouk 0.5 KG",
+            "price": 20
+        },
+        {
+            "section": "Grills",
+            "name": "Kabab 0.5 KG",
+            "price": 25.5
+        },
+        {
+            "section": "Grills",
+            "name": "Grilled Meat 0.5 KG",
+            "price": 30
+        },
+        {
+            "section": "Grills",
+            "name": "Mixed Grill 0.5 KG",
+            "price": 24
+        },
+        {
+            "section": "Grills",
+            "name": "Riyash 0.5 KG",
+            "price": 33
+        },
+        {
+            "section": "Grills",
+            "name": "Shekaf 1 KG",
+            "price": 60
+        },
+        {
+            "section": "Grills",
+            "name": "Kafta Sheep 1 KG",
+            "price": 50
+        },
+        {
+            "section": "Grills",
+            "name": "Tawouk 1 KG",
+            "price": 40
+        },
+        {
+            "section": "Grills",
+            "name": "Mixed Grill 1 KG",
+            "price": 47
+        },
+        {
+            "section": "Grills",
+            "name": "Grilled Sheep Cutlets 1 KG",
+            "price": 65
+        },
+        {
+            "section": "Grills",
+            "name": "Grilled Kabab 1 KG",
+            "price": 47
+        },
+        {
+            "section": "Grills",
+            "name": "Chicken Wings",
+            "price": 8
+        },
+        {
+            "section": "Grills",
+            "name": "Half Grilled Chicken",
+            "price": 13.5
+        },
+        {
+            "section": "Grills",
+            "name": "Grilled Boneless Chicken",
+            "price": 25
+        },
+        {
+            "section": "Grills",
+            "name": "Arayes Kafta",
+            "price": 13
+        },
+        {
+            "section": "Main Course",
+            "name": "Vine Leaves and Lamb Cutlets",
+            "price": 20
+        },
+        {
+            "section": "Main Course",
+            "name": "Chicken Escalope",
+            "price": 10
+        },
+        {
+            "section": "Main Course",
+            "name": "Kafta in Oven",
+            "price": 29
+        },
+        {
+            "section": "Main Course",
+            "name": "Meat in Oven",
+            "price": 29
+        },
+        {
+            "section": "Main Course",
+            "name": "Chicken Rice",
+            "price": 10
+        },
+        {
+            "section": "Main Course",
+            "name": "Meat Rice",
+            "price": 22
+        },
+        {
+            "section": "Main Course",
+            "name": "Chicken Frikeh",
+            "price": 12
+        },
+        {
+            "section": "Main Course",
+            "name": "Meat Frikeh",
+            "price": 24
+        },
+        {
+            "section": "Main Course",
+            "name": "Kebbe and Shish Barak",
+            "price": 12
+        },
+        {
+            "section": "Main Course",
+            "name": "Crispy Chicken 5 Pcs",
+            "price": 10
+        },
+        {
+            "section": "Main Course",
+            "name": "Broasted Chicken 4 Pcs",
+            "price": 11
+        },
+        {
+            "section": "Main Course",
+            "name": "Broasted Chicken 8 Pcs",
+            "price": 20
+        },
+        {
+            "section": "Burgers",
+            "name": "Lebanese Burger",
+            "price": 6.5
+        },
+        {
+            "section": "Burgers",
+            "name": "Pane Chicken Burger",
+            "price": 6
+        },
+        {
+            "section": "Burgers",
+            "name": "Pane Cheese Burger",
+            "price": 10
+        },
+        {
+            "section": "Burgers",
+            "name": "Pane Mozzarella Chicken Burger",
+            "price": 8.5
+        },
+        {
+            "section": "Burgers",
+            "name": "Mexican Burger",
+            "price": 7.5
+        },
+        {
+            "section": "Burgers",
+            "name": "American Burger",
+            "price": 7
+        },
+        {
+            "section": "Chanklish",
+            "name": "Chanklish Seneyeh",
+            "price": 5
+        },
+        {
+            "section": "Chanklish",
+            "name": "Chanklish 2 Pcs",
+            "price": 4
+        },
+        {
+            "section": "Mouajjanat",
+            "name": "Bakleh 6 Pcs",
+            "price": 4
+        },
+        {
+            "section": "Mouajjanat",
+            "name": "Pizza 6 Pcs",
+            "price": 3
+        },
+        {
+            "section": "Mouajjanat",
+            "name": "Fatayer Spinach 6 Pcs",
+            "price": 3
+        },
+        {
+            "section": "Mouajjanat",
+            "name": "Fatayer Cheese 6 Pcs",
+            "price": 3.5
+        },
+        {
+            "section": "Mouajjanat",
+            "name": "Keshek 6 Pcs",
+            "price": 4
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Espresso",
+            "price": 1
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Double Espresso",
+            "price": 1.5
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Coffee Rakwe 2 Pax",
+            "price": 2
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Tea Bowl",
+            "price": 3
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Green Tea Cup",
+            "price": 1
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Yellow Tea Cup",
+            "price": 1
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Tea Bowl Khamir",
+            "price": 3
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Nescafe",
+            "price": 2.5
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Turkish Coffee Cup",
+            "price": 1
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Cappuccino",
+            "price": 2.5
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Hot Chocolate",
+            "price": 3.5
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Zhourat",
+            "price": 1
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Ginger",
+            "price": 1
+        },
+        {
+            "section": "Hot Beverages",
+            "name": "Chamomile",
+            "price": 1
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Seven Up Diet",
+            "price": 1.22
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "San Pellegrino Sparkling Water",
+            "price": 3
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Fresh Juice",
+            "price": 4
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Mr. Juicy",
+            "price": 0.55
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Large Water",
+            "price": 1.5
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Pepsi Diet Can",
+            "price": 1.22
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Laziza Mexican",
+            "price": 3.5
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Ayran",
+            "price": 1
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Mirinda",
+            "price": 1.22
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Seven Up Can",
+            "price": 1.22
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Energy Drink",
+            "price": 3
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Iced Tea",
+            "price": 1.5
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Small Water",
+            "price": 0.67
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Pepsi Can",
+            "price": 1.22
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Laziza",
+            "price": 2.5
+        },
+        {
+            "section": "Cold Beverages",
+            "name": "Rim Sparkling Water",
+            "price": 2.5
+        },
+        {
+            "section": "Juices",
+            "name": "Banana Milk",
+            "price": 4
+        },
+        {
+            "section": "Juices",
+            "name": "Lemonade",
+            "price": 2.7
+        },
+        {
+            "section": "Juices",
+            "name": "Minted Lemonade",
+            "price": 3
+        },
+        {
+            "section": "Juices",
+            "name": "Strawberry Juice",
+            "price": 4
+        },
+        {
+            "section": "Juices",
+            "name": "Cocktail Shekaf",
+            "price": 6
+        },
+        {
+            "section": "Juices",
+            "name": "Orange Juice",
+            "price": 3.5
+        },
+        {
+            "section": "Juices",
+            "name": "Banana Strawberry Juice",
+            "price": 4.5
+        },
+        {
+            "section": "Juices",
+            "name": "Milk and Strawberry Juice",
+            "price": 5
+        },
+        {
+            "section": "Juices",
+            "name": "Avocado Juice",
+            "price": 9
+        },
+        {
+            "section": "Dessert",
+            "name": "Ice Cream 0.5 KG",
+            "price": 4.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Italian Ice Cream 0.5 KG",
+            "price": 6
+        },
+        {
+            "section": "Dessert",
+            "name": "Pancake",
+            "price": 6
+        },
+        {
+            "section": "Dessert",
+            "name": "Crepe Lotus",
+            "price": 5
+        },
+        {
+            "section": "Dessert",
+            "name": "Waffle",
+            "price": 5
+        },
+        {
+            "section": "Dessert",
+            "name": "Crepe Oreo",
+            "price": 7
+        },
+        {
+            "section": "Dessert",
+            "name": "Crepe Nutella",
+            "price": 6
+        },
+        {
+            "section": "Dessert",
+            "name": "Karishi Pancake",
+            "price": 5
+        },
+        {
+            "section": "Dessert",
+            "name": "Knefe",
+            "price": 7
+        },
+        {
+            "section": "Dessert",
+            "name": "Maamoul Mad",
+            "price": 8.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Roll Osmalieh Bl Ashta",
+            "price": 8
+        },
+        {
+            "section": "Dessert",
+            "name": "Baklawa Pistachio Vanilla Ice Cream",
+            "price": 6.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Chocolate Fondant",
+            "price": 8
+        },
+        {
+            "section": "Dessert",
+            "name": "Pain Perdu",
+            "price": 7.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Qatayef Plate",
+            "price": 4
+        },
+        {
+            "section": "Dessert",
+            "name": "Oum Ali Plate",
+            "price": 3
+        },
+        {
+            "section": "Dessert",
+            "name": "Nammoura Plate",
+            "price": 4
+        },
+        {
+            "section": "Dessert",
+            "name": "Chocolate Fudge Cake",
+            "price": 5.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Ghazel El Banet",
+            "price": 8
+        },
+        {
+            "section": "Dessert",
+            "name": "Oreo Jar",
+            "price": 6.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Mafroukeh Cheesecake Jar",
+            "price": 5.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Lotus Jar",
+            "price": 5.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Tiramisu Jar",
+            "price": 4
+        },
+        {
+            "section": "Dessert",
+            "name": "Red Velvet Jar",
+            "price": 5.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Ice Cream Scoop",
+            "price": 1.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Italian Ice Cream Scoop",
+            "price": 1.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Jello",
+            "price": 1.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Custard",
+            "price": 2
+        },
+        {
+            "section": "Dessert",
+            "name": "Custard Chocolate",
+            "price": 2
+        },
+        {
+            "section": "Dessert",
+            "name": "Mouhallabiyeh",
+            "price": 2
+        },
+        {
+            "section": "Dessert",
+            "name": "Meghleh",
+            "price": 2
+        },
+        {
+            "section": "Dessert",
+            "name": "Amhiyeh",
+            "price": 2
+        },
+        {
+            "section": "Dessert",
+            "name": "Toast",
+            "price": 2
+        },
+        {
+            "section": "Dessert",
+            "name": "Mousse Chocolate Jar",
+            "price": 3
+        },
+        {
+            "section": "Dessert",
+            "name": "Cup Red Velvet Jar",
+            "price": 5.5
+        },
+        {
+            "section": "Dessert",
+            "name": "Rez Bl Halib Pistachio",
+            "price": 4.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Gum",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Plastic Tube",
+            "price": 1.58
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Watermelon Mint",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Orange",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Mix",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Mulberry",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Orange Mint",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Ras Arguili",
+            "price": 3.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Grapes",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Ajami",
+            "price": 8
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Lemon Mint",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Mint",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Apple",
+            "price": 6.5
+        },
+        {
+            "section": "Shisha",
+            "name": "Arguili Grapes Mint",
+            "price": 6.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Laban 180 gr",
+            "price": 0.65
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Laban 1 KG",
+            "price": 2.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Goat Laban 1 KG",
+            "price": 4.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Sheep Laban 1 KG",
+            "price": 5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Laban 2 KG",
+            "price": 4.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Goat Laban 2 KG",
+            "price": 9
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Sheep Laban 2 KG",
+            "price": 9
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Laban 4 KG",
+            "price": 7.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Goat Laban 4 KG",
+            "price": 15
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Sheep Laban 4 KG",
+            "price": 15
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Laban Ayran",
+            "price": 0.55
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Laban Ayran 1 L",
+            "price": 2
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Labneh 0.4 KG",
+            "price": 2.75
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Goat Labneh 0.4 KG",
+            "price": 4.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Labneh 1 KG",
+            "price": 5.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Dry Cow Labneh Roll",
+            "price": 3.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Dry Goat Labneh Roll",
+            "price": 5.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Ambariss 200 gr",
+            "price": 7.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Ambariss 0.5 KG",
+            "price": 7.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Labneh Tray",
+            "price": 6
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Goat Labneh Tray",
+            "price": 8.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Baladi Eggs Pack",
+            "price": 3.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Fresh Milk 2.5 L",
+            "price": 5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Fresh Milk 1 L",
+            "price": 2
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Honey Jar",
+            "price": 45
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Chili Paste Jar",
+            "price": 7
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Keshek Jar",
+            "price": 11
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Keshek Extra Jar",
+            "price": 19
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Ghee Jar",
+            "price": 13
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Kawarma Jar",
+            "price": 24
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Chanklish Jar",
+            "price": 9
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Ambariss Jar",
+            "price": 15
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Naboulsi Jar",
+            "price": 7.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Labneh with Oil Jar",
+            "price": 9
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Labneh with Zaatar Jar",
+            "price": 9
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Labneh with Mint Jar",
+            "price": 9
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Cow Labneh with Black Seeds Jar",
+            "price": 9
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Spicy Cow Labneh Jar",
+            "price": 9
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Goat Labneh with Oil Jar",
+            "price": 12
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Karisheh",
+            "price": 3.75
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Majdouleh",
+            "price": 17
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Naboulsi",
+            "price": 12
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Double Cream",
+            "price": 8.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Akkawi Tshiki",
+            "price": 13.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Halloum",
+            "price": 11
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Baladiyeh",
+            "price": 9.5
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Chelal",
+            "price": 14
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Akkawi Baladi",
+            "price": 11
+        },
+        {
+            "section": "Farm Shop",
+            "name": "Fetta",
+            "price": 9
+        },
+        {
+            "section": "Butcher",
+            "name": "Makanek",
+            "price": 18
+        },
+        {
+            "section": "Butcher",
+            "name": "Sujuk",
+            "price": 18
+        },
+        {
+            "section": "Butcher",
+            "name": "Meat Mix KG",
+            "price": 22
+        },
+        {
+            "section": "Butcher",
+            "name": "Kebbe Nayyeh Mix",
+            "price": 23
+        },
+        {
+            "section": "Butcher",
+            "name": "Kafta Mix",
+            "price": 21
+        },
+        {
+            "section": "Butcher",
+            "name": "Kabab Mix",
+            "price": 21
+        },
+        {
+            "section": "Butcher",
+            "name": "Burger Mix",
+            "price": 22
+        },
+        {
+            "section": "Butcher",
+            "name": "Ghammeh",
+            "price": 15
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Eggs",
+            "price": 10
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Fakhd",
+            "price": 24
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Lsen",
+            "price": 3.5
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Meat",
+            "price": 26
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Leyyeh",
+            "price": 14
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Neck",
+            "price": 24
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Brain",
+            "price": 3.5
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Extra",
+            "price": 30
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Kidneys",
+            "price": 16
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Fawaregh",
+            "price": 3.5
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Mawzet B3admo",
+            "price": 24
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Doran",
+            "price": 16
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Asaees",
+            "price": 14
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Head",
+            "price": 6
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Dla3",
+            "price": 24
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Makadem",
+            "price": 15
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Cocktail",
+            "price": 15
+        },
+        {
+            "section": "Butcher",
+            "name": "Sheep Liver",
+            "price": 23
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Asous",
+            "price": 10
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Burger",
+            "price": 19
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Brain",
+            "price": 3
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Asab",
+            "price": 7.77
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Meat",
+            "price": 18
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Liver",
+            "price": 14
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Lsen",
+            "price": 10
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Shehbeyeh",
+            "price": 20
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Filet",
+            "price": 25
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Baladi Extra",
+            "price": 20
+        },
+        {
+            "section": "Butcher",
+            "name": "Veal Reyash",
+            "price": 18
+        },
+        {
+            "section": "Butcher",
+            "name": "Kebbe Nayyeh Veal",
+            "price": 19
+        },
+        {
+            "section": "Butcher",
+            "name": "Kafta Veal",
+            "price": 19
+        },
+        {
+            "section": "Butcher",
+            "name": "Kabab Veal",
+            "price": 19
+        }
+    ]
+}

@@ -1,0 +1,2030 @@
+{
+    "vendor": {
+        "name": "Al Rida Cafe Resto",
+        "name_ar": "الرضا كافيه ريستو",
+        "slug": "al-rida-cafe-resto",
+        "parent": "restaurants",
+        "phone": "81305205",
+        "address": "بعلبك، البقاع",
+        "hours": {
+            "open": "07:00",
+            "close": "23:59"
+        }
+    },
+    "sections": {
+        "Monthly Special": {
+            "ar": "طبق الشهر المميز",
+            "icon": "⭐"
+        },
+        "Breakfast": {
+            "ar": "ترويقة",
+            "icon": "🍳"
+        },
+        "Lebanese Salads": {
+            "ar": "سلطات لبنانية",
+            "icon": "🥗"
+        },
+        "Western Salads": {
+            "ar": "سلطات غربية",
+            "icon": "🥬"
+        },
+        "Cold Appetizers": {
+            "ar": "مقبلات باردة",
+            "icon": "🥙"
+        },
+        "Hot Appetizers": {
+            "ar": "مقبلات ساخنة",
+            "icon": "🥟"
+        },
+        "Shawarma": {
+            "ar": "شاورما",
+            "icon": "🌯"
+        },
+        "Oriental Sandwiches": {
+            "ar": "ساندويشات شرقي",
+            "icon": "🥙"
+        },
+        "Western Sandwiches": {
+            "ar": "سندويشات غربي",
+            "icon": "🥪"
+        },
+        "Burgers": {
+            "ar": "برغر",
+            "icon": "🍔"
+        },
+        "Italian": {
+            "ar": "ايطالي",
+            "icon": "🍝"
+        },
+        "Pizza & Pastries": {
+            "ar": "بيتزا و معجنات",
+            "icon": "🍕"
+        },
+        "Grills": {
+            "ar": "مشاوي",
+            "icon": "🍢"
+        },
+        "Oriental Plates": {
+            "ar": "اطباق شرقي",
+            "icon": "🍛"
+        },
+        "Raw Meat": {
+            "ar": "نية",
+            "icon": "🥩"
+        },
+        "Daily Plate": {
+            "ar": "طبق يومي",
+            "icon": "🍚"
+        },
+        "Western Plates": {
+            "ar": "اطباق غربية",
+            "icon": "🍽️"
+        },
+        "Fish": {
+            "ar": "أسماك",
+            "icon": "🐟"
+        },
+        "Juices & Cocktails": {
+            "ar": "العصائر و الكوكتيل",
+            "icon": "🧃"
+        },
+        "Milk Shakes": {
+            "ar": "ميلك شيك",
+            "icon": "🥤"
+        },
+        "Smoothies": {
+            "ar": "سموزي",
+            "icon": "🍹"
+        },
+        "Crepe": {
+            "ar": "كريب",
+            "icon": "🥞"
+        },
+        "Sweets": {
+            "ar": "حلويات",
+            "icon": "🍮"
+        },
+        "Waffle": {
+            "ar": "وافل",
+            "icon": "🧇"
+        },
+        "Ice Cream": {
+            "ar": "بوظة",
+            "icon": "🍦"
+        },
+        "Cakes": {
+            "ar": "كيك",
+            "icon": "🍰"
+        },
+        "Cold Drinks": {
+            "ar": "مشروبات باردة",
+            "icon": "🥤"
+        },
+        "Hot Drinks": {
+            "ar": "مشروبات ساخنة",
+            "icon": "☕"
+        },
+        "Shisha": {
+            "ar": "اراكيل",
+            "icon": "💨"
+        }
+    },
+    "items": [
+        {
+            "section": "Monthly Special",
+            "name": "بشاميل كوردون بلو",
+            "name_ar": "بشاميل كوردون بلو",
+            "price": 14
+        },
+        {
+            "section": "Monthly Special",
+            "name": "كوردون بلو بالخردل والليمون",
+            "name_ar": "كوردون بلو بالخردل والليمون",
+            "price": 14
+        },
+        {
+            "section": "Monthly Special",
+            "name": "دجاج بالكاري",
+            "name_ar": "دجاج بالكاري",
+            "price": 14
+        },
+        {
+            "section": "Monthly Special",
+            "name": "قريدس بالكاري",
+            "name_ar": "قريدس بالكاري",
+            "price": 17
+        },
+        {
+            "section": "Monthly Special",
+            "name": "تشاينيز دجاج",
+            "name_ar": "تشاينيز دجاج",
+            "price": 14
+        },
+        {
+            "section": "Monthly Special",
+            "name": "قريدس تشاينيز",
+            "name_ar": "قريدس تشاينيز",
+            "price": 17
+        },
+        {
+            "section": "Monthly Special",
+            "name": "داينامايت دجاج",
+            "name_ar": "داينامايت دجاج",
+            "price": 7
+        },
+        {
+            "section": "Breakfast",
+            "name": "فول مدمس",
+            "name_ar": "فول مدمس",
+            "price": 4
+        },
+        {
+            "section": "Breakfast",
+            "name": "بليلة",
+            "name_ar": "بليلة",
+            "price": 4
+        },
+        {
+            "section": "Breakfast",
+            "name": "مسبحة",
+            "name_ar": "مسبحة",
+            "price": 4
+        },
+        {
+            "section": "Breakfast",
+            "name": "فتة حمص",
+            "name_ar": "فتة حمص",
+            "price": 5.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "فتة حمص باللحمة",
+            "name_ar": "فتة حمص باللحمة",
+            "price": 8
+        },
+        {
+            "section": "Breakfast",
+            "name": "بيض مقلي",
+            "name_ar": "بيض مقلي",
+            "price": 4
+        },
+        {
+            "section": "Breakfast",
+            "name": "بيض مقلي مع السجق",
+            "name_ar": "بيض مقلي مع السجق",
+            "price": 7.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "بيض مقلي مع الكريمة والزبدة",
+            "name_ar": "بيض مقلي مع الكريمة والزبدة",
+            "price": 4.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "بيض مقلي بالجبنة",
+            "name_ar": "بيض مقلي بالجبنة",
+            "price": 7.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "بيض مقلي بقاورما",
+            "name_ar": "بيض مقلي بقاورما",
+            "price": 7.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "حلوم مشوي",
+            "name_ar": "حلوم مشوي",
+            "price": 6.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "صحن جبنة مشكل",
+            "name_ar": "صحن جبنة مشكل",
+            "price": 7
+        },
+        {
+            "section": "Breakfast",
+            "name": "صحن لبنة بلدية",
+            "name_ar": "صحن لبنة بلدية",
+            "price": 3
+        },
+        {
+            "section": "Breakfast",
+            "name": "لبنة بخضرة",
+            "name_ar": "لبنة بخضرة",
+            "price": 3
+        },
+        {
+            "section": "Breakfast",
+            "name": "منقوشة زعتر",
+            "name_ar": "منقوشة زعتر",
+            "price": 1.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "منقوشة جبنة",
+            "name_ar": "منقوشة جبنة",
+            "price": 3.3
+        },
+        {
+            "section": "Breakfast",
+            "name": "منقوشة زعتر مع خضرة",
+            "name_ar": "منقوشة زعتر مع خضرة",
+            "price": 2
+        },
+        {
+            "section": "Breakfast",
+            "name": "منقوشة جبنة وزعتر",
+            "name_ar": "منقوشة جبنة وزعتر",
+            "price": 3.3
+        },
+        {
+            "section": "Breakfast",
+            "name": "منقوشة لحمة",
+            "name_ar": "منقوشة لحمة",
+            "price": 5.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "حرحورة الرضا جبنة",
+            "name_ar": "حرحورة الرضا جبنة",
+            "price": 3.3
+        },
+        {
+            "section": "Breakfast",
+            "name": "منقوشة كشك",
+            "name_ar": "منقوشة كشك",
+            "price": 3.3
+        },
+        {
+            "section": "Breakfast",
+            "name": "منقوشة جبنة مع سجق",
+            "name_ar": "منقوشة جبنة مع سجق",
+            "price": 5.5
+        },
+        {
+            "section": "Breakfast",
+            "name": "منقوشة موزوريلا وقشقوان",
+            "name_ar": "منقوشة موزوريلا وقشقوان",
+            "price": 3.3
+        },
+        {
+            "section": "Breakfast",
+            "name": "شنكليش مع خضار",
+            "name_ar": "شنكليش مع خضار",
+            "price": 4
+        },
+        {
+            "section": "Lebanese Salads",
+            "name": "فتوش الرضا",
+            "name_ar": "فتوش الرضا",
+            "price": 5
+        },
+        {
+            "section": "Lebanese Salads",
+            "name": "فتوش",
+            "name_ar": "فتوش",
+            "price": 3.3
+        },
+        {
+            "section": "Lebanese Salads",
+            "name": "تبولة",
+            "name_ar": "تبولة",
+            "price": 3.3
+        },
+        {
+            "section": "Lebanese Salads",
+            "name": "سلطة",
+            "name_ar": "سلطة",
+            "price": 3.3
+        },
+        {
+            "section": "Lebanese Salads",
+            "name": "روكا",
+            "name_ar": "روكا",
+            "price": 4
+        },
+        {
+            "section": "Lebanese Salads",
+            "name": "روكا مع زعتر",
+            "name_ar": "روكا مع زعتر",
+            "price": 4
+        },
+        {
+            "section": "Lebanese Salads",
+            "name": "سلطة مايونيز",
+            "name_ar": "سلطة مايونيز",
+            "price": 2.5
+        },
+        {
+            "section": "Western Salads",
+            "name": "سلطة يونانية",
+            "name_ar": "سلطة يونانية",
+            "price": 7
+        },
+        {
+            "section": "Western Salads",
+            "name": "تشيكن سيزر سالاد",
+            "name_ar": "تشيكن سيزر سالاد",
+            "price": 10
+        },
+        {
+            "section": "Western Salads",
+            "name": "كينوا دجاج سالاد",
+            "name_ar": "كينوا دجاج سالاد",
+            "price": 10
+        },
+        {
+            "section": "Western Salads",
+            "name": "تونا سالاد",
+            "name_ar": "تونا سالاد",
+            "price": 8
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "متبل",
+            "name_ar": "متبل",
+            "price": 4
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "متبل الرضا",
+            "name_ar": "متبل الرضا",
+            "price": 5
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "حمص بالبستو",
+            "name_ar": "حمص بالبستو",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "حمص بالشمندر",
+            "name_ar": "حمص بالشمندر",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "حمص بالطحينة",
+            "name_ar": "حمص بالطحينة",
+            "price": 4
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "حمص بيروتي",
+            "name_ar": "حمص بيروتي",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "صحن حمص مشكل",
+            "name_ar": "صحن حمص مشكل",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "بابا غنوج",
+            "name_ar": "بابا غنوج",
+            "price": 5
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "ورق عنب بالزيت",
+            "name_ar": "ورق عنب بالزيت",
+            "price": 4.5
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "مسقعة باذنجان",
+            "name_ar": "مسقعة باذنجان",
+            "price": 3.5
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "محمرة",
+            "name_ar": "محمرة",
+            "price": 5
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "باذنجان مقلي مع طراطور",
+            "name_ar": "باذنجان مقلي مع طراطور",
+            "price": 4
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "حمص باللحمة",
+            "name_ar": "حمص باللحمة",
+            "price": 8
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "حمص بشاورما اللحمة",
+            "name_ar": "حمص بشاورما اللحمة",
+            "price": 8
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "حمص بشاورما دجاج",
+            "name_ar": "حمص بشاورما دجاج",
+            "price": 7
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "حمص بالسجق",
+            "name_ar": "حمص بالسجق",
+            "price": 8
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "لبنة متومة",
+            "name_ar": "لبنة متومة",
+            "price": 3
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "هندبة بزيت",
+            "name_ar": "هندبة بزيت",
+            "price": 4
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "خيار بلبن",
+            "name_ar": "خيار بلبن",
+            "price": 2
+        },
+        {
+            "section": "Cold Appetizers",
+            "name": "صحن كبيس مشكل",
+            "name_ar": "صحن كبيس مشكل",
+            "price": 2
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "بطاطا مقلية",
+            "name_ar": "بطاطا مقلية",
+            "price": 5
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "بطاطا كيرلي",
+            "name_ar": "بطاطا كيرلي",
+            "price": 6
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "بطاطا ودجز",
+            "name_ar": "بطاطا ودجز",
+            "price": 7
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "موزوريلا ستيكس (حبة)",
+            "name_ar": "موزوريلا ستيكس (حبة)",
+            "price": 1
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "برك جبنة (حبة)",
+            "name_ar": "برك جبنة (حبة)",
+            "price": 1.5
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "رقاقات جبنة (حبة)",
+            "name_ar": "رقاقات جبنة (حبة)",
+            "price": 1
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "كبة مشوية (حبة)",
+            "name_ar": "كبة مشوية (حبة)",
+            "price": 2.5
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "كبة مقلية (حبة)",
+            "name_ar": "كبة مقلية (حبة)",
+            "price": 1.66
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "سودة دجاج حرة",
+            "name_ar": "سودة دجاج حرة",
+            "price": 6
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "سودة دجاج مع دبس رمان",
+            "name_ar": "سودة دجاج مع دبس رمان",
+            "price": 6
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "سجق مع دبس الرمان",
+            "name_ar": "سجق مع دبس الرمان",
+            "price": 8
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "مقانق مطفاية بدبس الرمان",
+            "name_ar": "مقانق مطفاية بدبس الرمان",
+            "price": 8
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "بطاطا حرة",
+            "name_ar": "بطاطا حرة",
+            "price": 4
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "جوانح بروفنسال (8 قطع)",
+            "name_ar": "جوانح بروفنسال (8 قطع)",
+            "price": 7
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "باربكيو وينغز (8 قطع)",
+            "name_ar": "باربكيو وينغز (8 قطع)",
+            "price": 7
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "بافيلو وينغز (8 قطع)",
+            "name_ar": "بافيلو وينغز (8 قطع)",
+            "price": 7
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "هاني ماسترد وينغز (8 قطع)",
+            "name_ar": "هاني ماسترد وينغز (8 قطع)",
+            "price": 7
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "قريدس دايناميت",
+            "name_ar": "قريدس دايناميت",
+            "price": 9
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "قريدس بروفنسال",
+            "name_ar": "قريدس بروفنسال",
+            "price": 9
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "تشيكن هاني ماسترد ستريبس (4 قطع)",
+            "name_ar": "تشيكن هاني ماسترد ستريبس (4 قطع)",
+            "price": 6
+        },
+        {
+            "section": "Hot Appetizers",
+            "name": "تشيكن باربكيو ستريبس (4 قطع)",
+            "name_ar": "تشيكن باربكيو ستريبس (4 قطع)",
+            "price": 6
+        },
+        {
+            "section": "Shawarma",
+            "name": "شاورما دجاج ساندويش",
+            "name_ar": "شاورما دجاج ساندويش",
+            "price": 3.3
+        },
+        {
+            "section": "Shawarma",
+            "name": "وجبة شاورما دجاج مقطعة",
+            "name_ar": "وجبة شاورما دجاج مقطعة",
+            "price": 5.5
+        },
+        {
+            "section": "Shawarma",
+            "name": "شاورما الرضا دجاج وجبة مقطعة",
+            "name_ar": "شاورما الرضا دجاج وجبة مقطعة",
+            "price": 5.5
+        },
+        {
+            "section": "Shawarma",
+            "name": "شاورما دجاج مقطع اكسترا",
+            "name_ar": "شاورما دجاج مقطع اكسترا",
+            "price": 10.5
+        },
+        {
+            "section": "Shawarma",
+            "name": "شاورما تركي دجاج",
+            "name_ar": "شاورما تركي دجاج",
+            "price": 5.5
+        },
+        {
+            "section": "Shawarma",
+            "name": "وجبة شاورما دجاج شرحات",
+            "name_ar": "وجبة شاورما دجاج شرحات",
+            "price": 11
+        },
+        {
+            "section": "Shawarma",
+            "name": "كيلو شاورما دجاج",
+            "name_ar": "كيلو شاورما دجاج",
+            "price": 28
+        },
+        {
+            "section": "Shawarma",
+            "name": "شاورما لحمة ساندويش",
+            "name_ar": "شاورما لحمة ساندويش",
+            "price": 6
+        },
+        {
+            "section": "Shawarma",
+            "name": "وجبة شاورما لحمة مقطعة",
+            "name_ar": "وجبة شاورما لحمة مقطعة",
+            "price": 7.5
+        },
+        {
+            "section": "Shawarma",
+            "name": "شاورما لحمة مقطعة اكسترا",
+            "name_ar": "شاورما لحمة مقطعة اكسترا",
+            "price": 14
+        },
+        {
+            "section": "Shawarma",
+            "name": "شاورما تركي لحمة",
+            "name_ar": "شاورما تركي لحمة",
+            "price": 7.5
+        },
+        {
+            "section": "Shawarma",
+            "name": "وجبة شاورما لحمة شرحات",
+            "name_ar": "وجبة شاورما لحمة شرحات",
+            "price": 14
+        },
+        {
+            "section": "Shawarma",
+            "name": "كيلو شاورما لحمة",
+            "name_ar": "كيلو شاورما لحمة",
+            "price": 40
+        },
+        {
+            "section": "Shawarma",
+            "name": "وجبة شاورما لحمة مطبقة",
+            "name_ar": "وجبة شاورما لحمة مطبقة",
+            "price": 15
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "شقف",
+            "name_ar": "شقف",
+            "price": 6.5
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "كباب",
+            "name_ar": "كباب",
+            "price": 5.5
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "طاووق",
+            "name_ar": "طاووق",
+            "price": 5
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "كباب اورفلي",
+            "name_ar": "كباب اورفلي",
+            "price": 5.5
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "كباب خشخاش",
+            "name_ar": "كباب خشخاش",
+            "price": 5.5
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "سودة دجاج",
+            "name_ar": "سودة دجاج",
+            "price": 4
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "سودة دجاج حرة",
+            "name_ar": "سودة دجاج حرة",
+            "price": 4
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "دجاج مشوي عالفحم",
+            "name_ar": "دجاج مشوي عالفحم",
+            "price": 5
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "ملسة",
+            "name_ar": "ملسة",
+            "price": 5.5
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "كفتة نية",
+            "name_ar": "كفتة نية",
+            "price": 5.5
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "بطاطا",
+            "name_ar": "بطاطا",
+            "price": 2.2
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "شقف دوبل",
+            "name_ar": "شقف دوبل",
+            "price": 10
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "كباب دوبل",
+            "name_ar": "كباب دوبل",
+            "price": 9
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "طاووق دوبل",
+            "name_ar": "طاووق دوبل",
+            "price": 8
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "طاووق مع جبنة",
+            "name_ar": "طاووق مع جبنة",
+            "price": 6
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "مقانق",
+            "name_ar": "مقانق",
+            "price": 5.5
+        },
+        {
+            "section": "Oriental Sandwiches",
+            "name": "سجق",
+            "name_ar": "سجق",
+            "price": 5.5
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "فاهيتا",
+            "name_ar": "فاهيتا",
+            "price": 6
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "فرانسيسكو",
+            "name_ar": "فرانسيسكو",
+            "price": 6
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "كريسبي",
+            "name_ar": "كريسبي",
+            "price": 5.5
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "زنجر",
+            "name_ar": "زنجر",
+            "price": 6
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "اسكالوب دجاج",
+            "name_ar": "اسكالوب دجاج",
+            "price": 5.5
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "تشيكن ساب",
+            "name_ar": "تشيكن ساب",
+            "price": 6
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "فيلادلفيا",
+            "name_ar": "فيلادلفيا",
+            "price": 7
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "روستو",
+            "name_ar": "روستو",
+            "price": 7
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "بفتيك",
+            "name_ar": "بفتيك",
+            "price": 5.5
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "تشيكن باربكيو",
+            "name_ar": "تشيكن باربكيو",
+            "price": 6
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "مكسيكان",
+            "name_ar": "مكسيكان",
+            "price": 7.5
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "تشيكن افوكادو",
+            "name_ar": "تشيكن افوكادو",
+            "price": 6.5
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "قريدس مع دجاج",
+            "name_ar": "قريدس مع دجاج",
+            "price": 8
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "بونليس",
+            "name_ar": "بونليس",
+            "price": 6.5
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "تويستر",
+            "name_ar": "تويستر",
+            "price": 6.5
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "بوريتو دجاج",
+            "name_ar": "بوريتو دجاج",
+            "price": 6
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "بوريتو لحمة",
+            "name_ar": "بوريتو لحمة",
+            "price": 7
+        },
+        {
+            "section": "Western Sandwiches",
+            "name": "كريسبي كورن فلكس",
+            "name_ar": "كريسبي كورن فلكس",
+            "price": 5.5
+        },
+        {
+            "section": "Burgers",
+            "name": "برغر لبنانية",
+            "name_ar": "برغر لبنانية",
+            "price": 6
+        },
+        {
+            "section": "Burgers",
+            "name": "موزوريلا تشيز برغر",
+            "name_ar": "موزوريلا تشيز برغر",
+            "price": 7
+        },
+        {
+            "section": "Burgers",
+            "name": "برغر الرضا سبيسيال",
+            "name_ar": "برغر الرضا سبيسيال",
+            "price": 7
+        },
+        {
+            "section": "Burgers",
+            "name": "موزوريلا برغر",
+            "name_ar": "موزوريلا برغر",
+            "price": 7
+        },
+        {
+            "section": "Burgers",
+            "name": "كريسبي تشيكن برغر",
+            "name_ar": "كريسبي تشيكن برغر",
+            "price": 5
+        },
+        {
+            "section": "Burgers",
+            "name": "تشيكن برغر",
+            "name_ar": "تشيكن برغر",
+            "price": 5
+        },
+        {
+            "section": "Burgers",
+            "name": "موزوريلا تشيكن برغر",
+            "name_ar": "موزوريلا تشيكن برغر",
+            "price": 6
+        },
+        {
+            "section": "Italian",
+            "name": "معكرونة بالخضار المشوية",
+            "name_ar": "معكرونة بالخضار المشوية",
+            "price": 12
+        },
+        {
+            "section": "Italian",
+            "name": "فيتوتشيني الفريدو دجاج",
+            "name_ar": "فيتوتشيني الفريدو دجاج",
+            "price": 13
+        },
+        {
+            "section": "Italian",
+            "name": "باستا بالسبانخ وصوص الكريمة",
+            "name_ar": "باستا بالسبانخ وصوص الكريمة",
+            "price": 11
+        },
+        {
+            "section": "Italian",
+            "name": "باستا بالقريدس",
+            "name_ar": "باستا بالقريدس",
+            "price": 15
+        },
+        {
+            "section": "Italian",
+            "name": "بيني ارابياتا",
+            "name_ar": "بيني ارابياتا",
+            "price": 11
+        },
+        {
+            "section": "Italian",
+            "name": "بيني بومودورو",
+            "name_ar": "بيني بومودورو",
+            "price": 11
+        },
+        {
+            "section": "Italian",
+            "name": "بستو باستا",
+            "name_ar": "بستو باستا",
+            "price": 12
+        },
+        {
+            "section": "Pizza & Pastries",
+            "name": "بيتزا خضار",
+            "name_ar": "بيتزا خضار",
+            "price": 8
+        },
+        {
+            "section": "Pizza & Pastries",
+            "name": "بيتزا تشيكن باربكيو",
+            "name_ar": "بيتزا تشيكن باربكيو",
+            "price": 10
+        },
+        {
+            "section": "Pizza & Pastries",
+            "name": "بيتزا سجق",
+            "name_ar": "بيتزا سجق",
+            "price": 10
+        },
+        {
+            "section": "Pizza & Pastries",
+            "name": "بيتزا ببيروني",
+            "name_ar": "بيتزا ببيروني",
+            "price": 10
+        },
+        {
+            "section": "Pizza & Pastries",
+            "name": "بيتزا مارغريتا",
+            "name_ar": "بيتزا مارغريتا",
+            "price": 5
+        },
+        {
+            "section": "Pizza & Pastries",
+            "name": "صفيحة بعلبكية كيلو",
+            "name_ar": "صفيحة بعلبكية كيلو",
+            "price": 30
+        },
+        {
+            "section": "Pizza & Pastries",
+            "name": "دزينة صفيحة بعلبكية",
+            "name_ar": "دزينة صفيحة بعلبكية",
+            "price": 8
+        },
+        {
+            "section": "Grills",
+            "name": "فروج مسحب",
+            "name_ar": "فروج مسحب",
+            "price": 25
+        },
+        {
+            "section": "Grills",
+            "name": "فروج مشوي على الفحم",
+            "name_ar": "فروج مشوي على الفحم",
+            "price": 20
+        },
+        {
+            "section": "Grills",
+            "name": "نصف فروج مسحب",
+            "name_ar": "نصف فروج مسحب",
+            "price": 13
+        },
+        {
+            "section": "Grills",
+            "name": "نصف فروج مشوي على الفحم",
+            "name_ar": "نصف فروج مشوي على الفحم",
+            "price": 10
+        },
+        {
+            "section": "Grills",
+            "name": "دزينة جوانح مشوية",
+            "name_ar": "دزينة جوانح مشوية",
+            "price": 10
+        },
+        {
+            "section": "Grills",
+            "name": "كيلو طاووق",
+            "name_ar": "كيلو طاووق",
+            "price": 35
+        },
+        {
+            "section": "Grills",
+            "name": "كيلو كباب",
+            "name_ar": "كيلو كباب",
+            "price": 43
+        },
+        {
+            "section": "Grills",
+            "name": "كيلو مشاوي مشكل",
+            "name_ar": "كيلو مشاوي مشكل",
+            "price": 44
+        },
+        {
+            "section": "Grills",
+            "name": "كيلو شقف",
+            "name_ar": "كيلو شقف",
+            "price": 49
+        },
+        {
+            "section": "Grills",
+            "name": "كيلو كباب اورفلي",
+            "name_ar": "كيلو كباب اورفلي",
+            "price": 46
+        },
+        {
+            "section": "Grills",
+            "name": "كيلو كباب خشخاش",
+            "name_ar": "كيلو كباب خشخاش",
+            "price": 46
+        },
+        {
+            "section": "Grills",
+            "name": "كيلو ريش",
+            "name_ar": "كيلو ريش",
+            "price": 49
+        },
+        {
+            "section": "Grills",
+            "name": "جاط مشاوي اكسترا",
+            "name_ar": "جاط مشاوي اكسترا",
+            "price": 55
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "فروج غاز",
+            "name_ar": "فروج غاز",
+            "price": 15
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "فروج غاز مع أرز",
+            "name_ar": "فروج غاز مع أرز",
+            "price": 18
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "نصف فروج غاز",
+            "name_ar": "نصف فروج غاز",
+            "price": 8
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "نصف فروج غاز مع أرز",
+            "name_ar": "نصف فروج غاز مع أرز",
+            "price": 9
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "شقف (300غ)",
+            "name_ar": "شقف (300غ)",
+            "price": 17
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "كباب (300غ)",
+            "name_ar": "كباب (300غ)",
+            "price": 15
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "طاووق (300غ)",
+            "name_ar": "طاووق (300غ)",
+            "price": 13
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "مشاوي مشكل (300غ)",
+            "name_ar": "مشاوي مشكل (300غ)",
+            "price": 15
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "ريش (300غ)",
+            "name_ar": "ريش (300غ)",
+            "price": 17
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "كباب اورفلي (300غ)",
+            "name_ar": "كباب اورفلي (300غ)",
+            "price": 15
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "كباب خشخاش (300غ)",
+            "name_ar": "كباب خشخاش (300غ)",
+            "price": 15
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "عرايس",
+            "name_ar": "عرايس",
+            "price": 7
+        },
+        {
+            "section": "Oriental Plates",
+            "name": "طاووق مقطع",
+            "name_ar": "طاووق مقطع",
+            "price": 7
+        },
+        {
+            "section": "Raw Meat",
+            "name": "ملسة",
+            "name_ar": "ملسة",
+            "price": 10
+        },
+        {
+            "section": "Raw Meat",
+            "name": "كفتة",
+            "name_ar": "كفتة",
+            "price": 10
+        },
+        {
+            "section": "Raw Meat",
+            "name": "كبة",
+            "name_ar": "كبة",
+            "price": 10
+        },
+        {
+            "section": "Raw Meat",
+            "name": "فراكة",
+            "name_ar": "فراكة",
+            "price": 10
+        },
+        {
+            "section": "Raw Meat",
+            "name": "نية صغيرة",
+            "name_ar": "نية صغيرة",
+            "price": 20
+        },
+        {
+            "section": "Raw Meat",
+            "name": "نية مشكلة",
+            "name_ar": "نية مشكلة",
+            "price": 36
+        },
+        {
+            "section": "Raw Meat",
+            "name": "فتيلة غنم عالسيخين",
+            "name_ar": "فتيلة غنم عالسيخين",
+            "price": 12
+        },
+        {
+            "section": "Raw Meat",
+            "name": "كيلو كفتة نية",
+            "name_ar": "كيلو كفتة نية",
+            "price": 35
+        },
+        {
+            "section": "Raw Meat",
+            "name": "كيلو ملسة نية",
+            "name_ar": "كيلو ملسة نية",
+            "price": 35
+        },
+        {
+            "section": "Raw Meat",
+            "name": "كيلو كبة نية",
+            "name_ar": "كيلو كبة نية",
+            "price": 35
+        },
+        {
+            "section": "Raw Meat",
+            "name": "كيلو فراكة نية",
+            "name_ar": "كيلو فراكة نية",
+            "price": 35
+        },
+        {
+            "section": "Raw Meat",
+            "name": "كيلو سودة نية",
+            "name_ar": "كيلو سودة نية",
+            "price": 50
+        },
+        {
+            "section": "Raw Meat",
+            "name": "صحن سودة نية",
+            "name_ar": "صحن سودة نية",
+            "price": 15
+        },
+        {
+            "section": "Daily Plate",
+            "name": "رز ودجاج",
+            "name_ar": "رز ودجاج",
+            "price": 7
+        },
+        {
+            "section": "Daily Plate",
+            "name": "رز ولحمة",
+            "name_ar": "رز ولحمة",
+            "price": 10
+        },
+        {
+            "section": "Daily Plate",
+            "name": "رز وكباب",
+            "name_ar": "رز وكباب",
+            "price": 10
+        },
+        {
+            "section": "Daily Plate",
+            "name": "رز وطاووق",
+            "name_ar": "رز وطاووق",
+            "price": 7
+        },
+        {
+            "section": "Daily Plate",
+            "name": "رز وشاورما دجاج",
+            "name_ar": "رز وشاورما دجاج",
+            "price": 7
+        },
+        {
+            "section": "Daily Plate",
+            "name": "رز وشاورما لحمة",
+            "name_ar": "رز وشاورما لحمة",
+            "price": 10
+        },
+        {
+            "section": "Western Plates",
+            "name": "فاهيتا",
+            "name_ar": "فاهيتا",
+            "price": 12.5
+        },
+        {
+            "section": "Western Plates",
+            "name": "كريسبي",
+            "name_ar": "كريسبي",
+            "price": 11
+        },
+        {
+            "section": "Western Plates",
+            "name": "كريسبي كورن فلكس",
+            "name_ar": "كريسبي كورن فلكس",
+            "price": 11
+        },
+        {
+            "section": "Western Plates",
+            "name": "وجبة كريسبي عائلية",
+            "name_ar": "وجبة كريسبي عائلية",
+            "price": 22
+        },
+        {
+            "section": "Western Plates",
+            "name": "زنجر",
+            "name_ar": "زنجر",
+            "price": 12.5
+        },
+        {
+            "section": "Western Plates",
+            "name": "اسكالوب دجاج",
+            "name_ar": "اسكالوب دجاج",
+            "price": 10
+        },
+        {
+            "section": "Western Plates",
+            "name": "فيلادلفيا",
+            "name_ar": "فيلادلفيا",
+            "price": 14
+        },
+        {
+            "section": "Western Plates",
+            "name": "بفتيك",
+            "name_ar": "بفتيك",
+            "price": 12
+        },
+        {
+            "section": "Western Plates",
+            "name": "ستيك دجاج بالفطر",
+            "name_ar": "ستيك دجاج بالفطر",
+            "price": 14
+        },
+        {
+            "section": "Western Plates",
+            "name": "ستيك بالفطر",
+            "name_ar": "ستيك بالفطر",
+            "price": 16
+        },
+        {
+            "section": "Western Plates",
+            "name": "ستيك بالبهار",
+            "name_ar": "ستيك بالبهار",
+            "price": 16
+        },
+        {
+            "section": "Western Plates",
+            "name": "تشيكن ناغتس",
+            "name_ar": "تشيكن ناغتس",
+            "price": 7
+        },
+        {
+            "section": "Western Plates",
+            "name": "ستروغونوف لحمة",
+            "name_ar": "ستروغونوف لحمة",
+            "price": 17
+        },
+        {
+            "section": "Western Plates",
+            "name": "ستروغونوف دجاج",
+            "name_ar": "ستروغونوف دجاج",
+            "price": 14
+        },
+        {
+            "section": "Western Plates",
+            "name": "بيكاتا دجاج",
+            "name_ar": "بيكاتا دجاج",
+            "price": 14
+        },
+        {
+            "section": "Western Plates",
+            "name": "كافيه دي باريس دجاج",
+            "name_ar": "كافيه دي باريس دجاج",
+            "price": 15
+        },
+        {
+            "section": "Western Plates",
+            "name": "كافيه دي باريس ستيك",
+            "name_ar": "كافيه دي باريس ستيك",
+            "price": 17
+        },
+        {
+            "section": "Western Plates",
+            "name": "تشيكن فرايز",
+            "name_ar": "تشيكن فرايز",
+            "price": 10
+        },
+        {
+            "section": "Fish",
+            "name": "سمك اجاج مشوي وجبة",
+            "name_ar": "سمك اجاج مشوي وجبة",
+            "price": 15
+        },
+        {
+            "section": "Fish",
+            "name": "سمك اجاج مشوي (كيلو)",
+            "name_ar": "سمك اجاج مشوي (كيلو)",
+            "price": 30
+        },
+        {
+            "section": "Fish",
+            "name": "وجبة سمك اجاج مقلي",
+            "name_ar": "وجبة سمك اجاج مقلي",
+            "price": 15
+        },
+        {
+            "section": "Fish",
+            "name": "سمك اجاج مقلي (كيلو)",
+            "name_ar": "سمك اجاج مقلي (كيلو)",
+            "price": 30
+        },
+        {
+            "section": "Fish",
+            "name": "قريدس مشوي وجبة",
+            "name_ar": "قريدس مشوي وجبة",
+            "price": 16
+        },
+        {
+            "section": "Fish",
+            "name": "قريدس مشوي (كيلو)",
+            "name_ar": "قريدس مشوي (كيلو)",
+            "price": 45
+        },
+        {
+            "section": "Fish",
+            "name": "قريدس بانيه (كيلو)",
+            "name_ar": "قريدس بانيه (كيلو)",
+            "price": 35
+        },
+        {
+            "section": "Fish",
+            "name": "قريدس بانيه وجبة",
+            "name_ar": "قريدس بانيه وجبة",
+            "price": 13
+        },
+        {
+            "section": "Fish",
+            "name": "سالمون بصوص الكريمة والحامض",
+            "name_ar": "سالمون بصوص الكريمة والحامض",
+            "price": 20
+        },
+        {
+            "section": "Fish",
+            "name": "سالمون بالعسل والتوم",
+            "name_ar": "سالمون بالعسل والتوم",
+            "price": 20
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "برتقال",
+            "name_ar": "برتقال",
+            "price": 4.4
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "تفاح",
+            "name_ar": "تفاح",
+            "price": 4.4
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "مانغا",
+            "name_ar": "مانغا",
+            "price": 6
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "ليموناضة",
+            "name_ar": "ليموناضة",
+            "price": 4.4
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "ليموناضة ونعنع",
+            "name_ar": "ليموناضة ونعنع",
+            "price": 4.4
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "فريز",
+            "name_ar": "فريز",
+            "price": 6
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "جزر",
+            "name_ar": "جزر",
+            "price": 4.4
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "كوكتيل شقف",
+            "name_ar": "كوكتيل شقف",
+            "price": 7
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "كوكتيل شقف سبيسيال",
+            "name_ar": "كوكتيل شقف سبيسيال",
+            "price": 16
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "كوكتيل شقف شوكولا",
+            "name_ar": "كوكتيل شقف شوكولا",
+            "price": 8
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "افوكا",
+            "name_ar": "افوكا",
+            "price": 8
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "موز وحليب",
+            "name_ar": "موز وحليب",
+            "price": 4.4
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "موز وحليب وفريز",
+            "name_ar": "موز وحليب وفريز",
+            "price": 4.4
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "كوكتيل عصير",
+            "name_ar": "كوكتيل عصير",
+            "price": 5
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "رمان (موسمي)",
+            "name_ar": "رمان (موسمي)",
+            "price": 8
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "اناناس",
+            "name_ar": "اناناس",
+            "price": 10
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "عصير بطيخ (موسمي)",
+            "name_ar": "عصير بطيخ (موسمي)",
+            "price": 4.4
+        },
+        {
+            "section": "Juices & Cocktails",
+            "name": "عصير شمام (موسمي)",
+            "name_ar": "عصير شمام (موسمي)",
+            "price": 5
+        },
+        {
+            "section": "Milk Shakes",
+            "name": "ميلك شيك اوريو",
+            "name_ar": "ميلك شيك اوريو",
+            "price": 7
+        },
+        {
+            "section": "Milk Shakes",
+            "name": "ميلك شيك كيندر",
+            "name_ar": "ميلك شيك كيندر",
+            "price": 7
+        },
+        {
+            "section": "Milk Shakes",
+            "name": "ميلك شيك غالاكسي",
+            "name_ar": "ميلك شيك غالاكسي",
+            "price": 7
+        },
+        {
+            "section": "Milk Shakes",
+            "name": "ميلك شيك سنيكرز",
+            "name_ar": "ميلك شيك سنيكرز",
+            "price": 7
+        },
+        {
+            "section": "Milk Shakes",
+            "name": "ميلك شيك كيتكات",
+            "name_ar": "ميلك شيك كيتكات",
+            "price": 7
+        },
+        {
+            "section": "Milk Shakes",
+            "name": "ميلك شيك شوكولا",
+            "name_ar": "ميلك شيك شوكولا",
+            "price": 7
+        },
+        {
+            "section": "Milk Shakes",
+            "name": "ميلك شيك مارس",
+            "name_ar": "ميلك شيك مارس",
+            "price": 7
+        },
+        {
+            "section": "Milk Shakes",
+            "name": "ميلك شيك ستروبيري",
+            "name_ar": "ميلك شيك ستروبيري",
+            "price": 7
+        },
+        {
+            "section": "Smoothies",
+            "name": "ميكس سموزي",
+            "name_ar": "ميكس سموزي",
+            "price": 6
+        },
+        {
+            "section": "Smoothies",
+            "name": "باشن سموزي",
+            "name_ar": "باشن سموزي",
+            "price": 6
+        },
+        {
+            "section": "Smoothies",
+            "name": "فريز سموزي",
+            "name_ar": "فريز سموزي",
+            "price": 6
+        },
+        {
+            "section": "Smoothies",
+            "name": "مانغا سموزي",
+            "name_ar": "مانغا سموزي",
+            "price": 6
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب شوكولا",
+            "name_ar": "كريب شوكولا",
+            "price": 6
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب كيندر",
+            "name_ar": "كريب كيندر",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب اوريو",
+            "name_ar": "كريب اوريو",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب لوتس",
+            "name_ar": "كريب لوتس",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب كيت كات",
+            "name_ar": "كريب كيت كات",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب كرانش",
+            "name_ar": "كريب كرانش",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب غالاكسي",
+            "name_ar": "كريب غالاكسي",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب مارس",
+            "name_ar": "كريب مارس",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب سنيكرز",
+            "name_ar": "كريب سنيكرز",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب فروت",
+            "name_ar": "كريب فروت",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب سوشي",
+            "name_ar": "كريب سوشي",
+            "price": 8
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب ايس كريم",
+            "name_ar": "كريب ايس كريم",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب مارشميلو",
+            "name_ar": "كريب مارشميلو",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب بنانا",
+            "name_ar": "كريب بنانا",
+            "price": 6
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب فيتوتشيني",
+            "name_ar": "كريب فيتوتشيني",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب زبدة وسكر",
+            "name_ar": "كريب زبدة وسكر",
+            "price": 5
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب تويكس",
+            "name_ar": "كريب تويكس",
+            "price": 7
+        },
+        {
+            "section": "Crepe",
+            "name": "كريب فروت سوشي",
+            "name_ar": "كريب فروت سوشي",
+            "price": 9
+        },
+        {
+            "section": "Sweets",
+            "name": "صحن قشطة وعسل",
+            "name_ar": "صحن قشطة وعسل",
+            "price": 15
+        },
+        {
+            "section": "Waffle",
+            "name": "وافل شوكولا",
+            "name_ar": "وافل شوكولا",
+            "price": 8
+        },
+        {
+            "section": "Waffle",
+            "name": "وافل شوكولا مع فواكه",
+            "name_ar": "وافل شوكولا مع فواكه",
+            "price": 10
+        },
+        {
+            "section": "Waffle",
+            "name": "وافل ايس كريم",
+            "name_ar": "وافل ايس كريم",
+            "price": 9
+        },
+        {
+            "section": "Ice Cream",
+            "name": "بوظة ايطالي",
+            "name_ar": "بوظة ايطالي",
+            "price": 8
+        },
+        {
+            "section": "Ice Cream",
+            "name": "شوكولامو",
+            "name_ar": "شوكولامو",
+            "price": 6
+        },
+        {
+            "section": "Ice Cream",
+            "name": "بنانا سبليت",
+            "name_ar": "بنانا سبليت",
+            "price": 6
+        },
+        {
+            "section": "Ice Cream",
+            "name": "بول بوظة",
+            "name_ar": "بول بوظة",
+            "price": 1.5
+        },
+        {
+            "section": "Cakes",
+            "name": "براوني",
+            "name_ar": "براوني",
+            "price": 6
+        },
+        {
+            "section": "Cakes",
+            "name": "فوندو",
+            "name_ar": "فوندو",
+            "price": 6
+        },
+        {
+            "section": "Cakes",
+            "name": "شوكولا بان كيك",
+            "name_ar": "شوكولا بان كيك",
+            "price": 8
+        },
+        {
+            "section": "Cakes",
+            "name": "افوكا بان كيك",
+            "name_ar": "افوكا بان كيك",
+            "price": 10
+        },
+        {
+            "section": "Cakes",
+            "name": "بنانا بان كيك",
+            "name_ar": "بنانا بان كيك",
+            "price": 8
+        },
+        {
+            "section": "Cakes",
+            "name": "ايس كريم بان كيك",
+            "name_ar": "ايس كريم بان كيك",
+            "price": 8
+        },
+        {
+            "section": "Cakes",
+            "name": "تشيز كيك اوريو",
+            "name_ar": "تشيز كيك اوريو",
+            "price": 8
+        },
+        {
+            "section": "Cakes",
+            "name": "تشيز كيك لوتس",
+            "name_ar": "تشيز كيك لوتس",
+            "price": 8
+        },
+        {
+            "section": "Cakes",
+            "name": "تشيز كيك بلوبيري",
+            "name_ar": "تشيز كيك بلوبيري",
+            "price": 8
+        },
+        {
+            "section": "Cakes",
+            "name": "تشيز كيك فريز",
+            "name_ar": "تشيز كيك فريز",
+            "price": 8
+        },
+        {
+            "section": "Cakes",
+            "name": "تشيز كيك شوكولا",
+            "name_ar": "تشيز كيك شوكولا",
+            "price": 8
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "مشروبات غازية",
+            "name_ar": "مشروبات غازية",
+            "price": 1.5
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "مياه كبير",
+            "name_ar": "مياه كبير",
+            "price": 1.11
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "مياه صغير",
+            "name_ar": "مياه صغير",
+            "price": 0.55
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "لبن عيران",
+            "name_ar": "لبن عيران",
+            "price": 1.5
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "بوم بوم",
+            "name_ar": "بوم بوم",
+            "price": 3
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "بوم بوم مكسيكان",
+            "name_ar": "بوم بوم مكسيكان",
+            "price": 4
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "بيرييه",
+            "name_ar": "بيرييه",
+            "price": 2.5
+        },
+        {
+            "section": "Cold Drinks",
+            "name": "مياه شعير",
+            "name_ar": "مياه شعير",
+            "price": 1.5
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "قهوة تركية",
+            "name_ar": "قهوة تركية",
+            "price": 1.5
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "اسبريسو",
+            "name_ar": "اسبريسو",
+            "price": 1.5
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "هوت شوكليت",
+            "name_ar": "هوت شوكليت",
+            "price": 3
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "كابوتشينو",
+            "name_ar": "كابوتشينو",
+            "price": 3
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "كافيه لاتيه",
+            "name_ar": "كافيه لاتيه",
+            "price": 3.5
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "نسكافيه",
+            "name_ar": "نسكافيه",
+            "price": 3
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "شاي خمير",
+            "name_ar": "شاي خمير",
+            "price": 1.5
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "شاي عربي",
+            "name_ar": "شاي عربي",
+            "price": 1.1
+        },
+        {
+            "section": "Hot Drinks",
+            "name": "زهورات (على أنواعها)",
+            "name_ar": "زهورات (على أنواعها)",
+            "price": 1.5
+        },
+        {
+            "section": "Shisha",
+            "name": "اركيلة اكسترا",
+            "name_ar": "اركيلة اكسترا",
+            "price": 8
+        },
+        {
+            "section": "Shisha",
+            "name": "معسل",
+            "name_ar": "معسل",
+            "price": 6.6
+        },
+        {
+            "section": "Shisha",
+            "name": "عجمي",
+            "name_ar": "عجمي",
+            "price": 6.6
+        },
+        {
+            "section": "Shisha",
+            "name": "راس معسل",
+            "name_ar": "راس معسل",
+            "price": 3.3
+        },
+        {
+            "section": "Shisha",
+            "name": "خدمة اركيلة",
+            "name_ar": "خدمة اركيلة",
+            "price": 3.3
+        },
+        {
+            "section": "Shisha",
+            "name": "نبريش بلاستيك",
+            "name_ar": "نبريش بلاستيك",
+            "price": 2
+        }
+    ]
+}
