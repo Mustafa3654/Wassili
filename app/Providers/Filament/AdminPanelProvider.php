@@ -29,9 +29,9 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login(\App\Filament\Pages\Auth\Login::class)
-            // Lets an admin change their own name/password from the user menu,
-            // instead of needing shell access on shared hosting.
-            ->profile(isSimple: false)
+            // Custom profile page: the stock one edits email, but this app
+            // signs in with a username, so it edits username + password.
+            ->profile(\App\Filament\Pages\Auth\EditProfile::class, isSimple: false)
             // "Wassili Control Center" branding.
             ->brandName('Wassili — وصّلي')
             ->favicon(asset('favicon.ico'))

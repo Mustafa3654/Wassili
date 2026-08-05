@@ -101,4 +101,10 @@ return [
     'orders_last_7_days' => 'Orders (last 7 days)',
     'map_location' => 'Map location',
     'open_in_maps' => 'Open in Google Maps',
+    'sub_category' => 'Sub-category',
+    'sub_categories' => 'Sub-categories',
+    'sections' => 'Sections',
+    'sort_order' => 'Order',
+    'icon_help' => 'An emoji works best — it shows on the storefront tile.',
+    'username_help' => 'You sign in with this. Changing it changes your login.',
 ];

@@ -35,4 +35,32 @@ class AdminPanelAccessTest extends TestCase
     {
         $this->get('/admin')->assertRedirect('/admin/login');
     }
+
+    /**
+     * Categories and sub-categories are two screens over one model, and the
+     * profile page is customised to edit a username instead of an email — all
+     * three are easy to break with a bad scope or a missing page class.
+     */
+    public function test_admin_screens_render(): void
+    {
+        $user = User::create([
+            'name' => 'Admin', 'username' => 'admin', 'password' => bcrypt('irrelevant'),
+        ]);
+
+        foreach (['/admin/categories', '/admin/menu-sections', '/admin/profile'] as $url) {
+            $this->actingAs($user)->get($url)->assertSuccessful();
+        }
+    }
+
+    public function test_profile_page_edits_username_not_email(): void
+    {
+        $user = User::create([
+            'name' => 'Admin', 'username' => 'admin', 'password' => bcrypt('irrelevant'),
+        ]);
+
+        $this->actingAs($user)
+            ->get('/admin/profile')
+            ->assertSuccessful()
+            ->assertSee('username');
+    }
 }
