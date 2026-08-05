@@ -39,7 +39,7 @@ Customer follows  /track/{code}   (live status page, no login)
 | Layer     | Choice                               |
 |-----------|--------------------------------------|
 | Framework | Laravel 11                           |
-| Language  | PHP 8.2+ (tested on 8.5)             |
+| Language  | PHP 8.4+ (tested on 8.5)             |
 | Database  | MySQL 5.7+ / 8                       |
 | Admin     | Filament v3                          |
 | Frontend  | Blade · Tailwind CSS · Alpine.js     |

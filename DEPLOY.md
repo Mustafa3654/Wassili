@@ -12,12 +12,27 @@ Check in hPanel that the plan gives you:
 
 | Requirement | Where | Needed value |
 |---|---|---|
-| PHP version | hPanel → Advanced → PHP Configuration | **8.2 or newer** |
+| PHP version | hPanel → Advanced → PHP Configuration | **8.4 or newer** |
 | PHP extensions | same screen, "PHP extensions" tab | `intl`, `zip`, `mbstring`, `pdo_mysql`, `fileinfo`, `gd`, `openssl` |
 | SSH access | hPanel → Advanced → SSH Access | Optional but makes this far easier |
 
 `intl` and `zip` are the two people usually have to switch on — Filament will
 not boot without them.
+
+Two version gotchas on Hostinger:
+
+- `composer.json` allows PHP 8.2, but the committed `composer.lock` resolves to
+  Symfony 8 packages that require **8.4+**. Installing from the lock on anything
+  older fails. Either run 8.4/8.5, or regenerate the lock with
+  `config.platform.php` pinned to your target version.
+- **SSH has its own PHP default, separate from the domain's.** A shell that
+  reports 8.1 while the site runs 8.5 is normal. Point your shell at the right
+  binary before running composer or artisan:
+
+  ```bash
+  echo "alias php='/opt/alt/php85/usr/bin/php'" >> ~/.bashrc && source ~/.bashrc
+  php -v          # confirm before continuing
+  ```
 
 ---
 
