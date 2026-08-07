@@ -47,7 +47,14 @@ class AdminPanelAccessTest extends TestCase
             'name' => 'Admin', 'username' => 'admin', 'password' => bcrypt('irrelevant'),
         ]);
 
-        foreach (['/admin/categories', '/admin/menu-sections', '/admin/profile'] as $url) {
+        $screens = [
+            '/admin/categories', '/admin/menu-sections', '/admin/profile',
+            '/admin/drivers', '/admin/drivers/create',
+            '/admin/vendors', '/admin/products', '/admin/orders',
+            '/admin/manage-settings',
+        ];
+
+        foreach ($screens as $url) {
             $this->actingAs($user)->get($url)->assertSuccessful();
         }
     }

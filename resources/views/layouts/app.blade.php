@@ -28,6 +28,7 @@
     <script>
         window.WASSILI = {
             callCenter: @json(\App\Support\Settings::callCenterNumber()),
+            countryCode: @json(\App\Support\Settings::countryCode()),
             baseFee: @json(\App\Support\Settings::baseDeliveryFee()),
             multiVendorFee: @json(\App\Support\Settings::multiVendorFee()),
             locale: @json($locale),

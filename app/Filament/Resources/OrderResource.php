@@ -49,7 +49,7 @@ class OrderResource extends Resource
                 ->label(__('wassili.customer_phone'))
                 ->tel()
                 ->required()
-                ->prefix(__('wassili.phone_prefix')),
+                ->prefix(fn () => \App\Support\Settings::countryCode()),
             Forms\Components\Textarea::make('address')->label(__('wassili.address'))->required()->columnSpanFull(),
             Forms\Components\Textarea::make('notes')->label(__('wassili.notes'))->columnSpanFull(),
             Forms\Components\TextInput::make('tracking_number')->disabled()->dehydrated(false),
@@ -85,7 +85,7 @@ class OrderResource extends Resource
                     Infolists\Components\TextEntry::make('customer_name')->label(__('wassili.customer_name')),
                     Infolists\Components\TextEntry::make('customer_phone')
                         ->label(__('wassili.customer_phone'))
-                        ->formatStateUsing(fn ($state) => $state ? '+961 '.$state : null)
+                        ->formatStateUsing(fn ($state) => \App\Support\Settings::formatPhone($state))
                         ->copyable(),
                     Infolists\Components\TextEntry::make('address')->label(__('wassili.address'))->columnSpanFull(),
                     // Tappable pin when the customer shared their location.
@@ -183,7 +183,7 @@ class OrderResource extends Resource
                 Tables\Columns\TextColumn::make('customer_phone')
                     ->label(__('wassili.customer_phone'))
                     ->searchable()
-                    ->formatStateUsing(fn ($state) => $state ? '+961 ' . $state : null),
+                    ->formatStateUsing(fn ($state) => \App\Support\Settings::formatPhone($state)),
 
                 Tables\Columns\TextColumn::make('status')
                     ->label(__('wassili.status'))
@@ -257,17 +257,37 @@ class OrderResource extends Resource
                     ->form([
                         Forms\Components\Select::make('driver_id')
                             ->label(__('wassili.select_driver'))
-                            ->relationship('driver', 'name', modifyQueryUsing: fn ($query) => $query->where('status', 'available')->where('is_active', true))
-                            ->required(),
+                            // Only drivers who are active, free, and inside
+                            // their shift right now. Shifts are JSON, so the
+                            // final filter happens in PHP.
+                            ->options(fn () => Driver::availableNow()
+                                ->mapWithKeys(fn (Driver $d) => [
+                                    $d->id => $d->delivery_fee !== null
+                                        ? $d->name.' — '.\App\Support\Money::usd((float) $d->delivery_fee)
+                                        : $d->name,
+                                ]))
+                            ->native(false)
+                            ->required()
+                            ->helperText(__('wassili.only_available_drivers')),
                     ])
                     ->action(function (Order $record, array $data): void {
                         $driver = Driver::findOrFail($data['driver_id']);
 
-                        // Assign + move order to in_progress, mark driver busy.
-                        $record->update([
+                        $changes = [
                             'driver_id' => $driver->id,
                             'status'    => 'in_progress',
-                        ]);
+                        ];
+
+                        // A driver with their own rate replaces the fee the
+                        // customer was quoted, and the total moves with it.
+                        // The quote at checkout can't know who will deliver.
+                        if (($fee = $driver->overrideFee()) !== null) {
+                            $subtotal = (float) $record->total_price - (float) $record->delivery_fee;
+                            $changes['delivery_fee'] = $fee;
+                            $changes['total_price']  = $subtotal + $fee;
+                        }
+
+                        $record->update($changes);
                         $driver->update(['status' => 'busy']);
 
                         $record->refresh()->load('driver');

@@ -44,6 +44,7 @@ class ManageSettings extends Page implements HasForms
             'base_delivery_fee'  => Settings::baseDeliveryFee(),
             'multi_vendor_fee'   => Settings::multiVendorFee(),
             'call_center_number'   => Settings::callCenterNumber(),
+            'country_code'         => Settings::countryCode(),
             'show_price_on_main_page' => Settings::showPriceOnMainPage(),
         ]);
     }
@@ -79,6 +80,12 @@ class ManageSettings extends Page implements HasForms
                             ->label(__('wassili.call_center_number'))
                             ->tel()
                             ->helperText(__('wassili.call_center_help')),
+
+                        TextInput::make('country_code')
+                            ->label(__('wassili.country_code'))
+                            ->required()
+                            ->placeholder('+961')
+                            ->helperText(__('wassili.country_code_help')),
                     ]),
 
                 Section::make(__('wassili.display_section'))

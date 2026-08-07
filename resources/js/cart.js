@@ -281,7 +281,7 @@ export function registerCart(Alpine) {
             L.push('🛒 *طلب جديد عبر وصّلي*');
             L.push('——————————————');
             L.push('👤 الزبون: ' + this.form.customer_name);
-            L.push('📞 الهاتف: +961 ' + this.form.customer_phone);
+            L.push('📞 الهاتف: ' + window.WASSILI.countryCode + ' ' + this.form.customer_phone);
             L.push('📍 العنوان: ' + this.form.address);
             // A tappable pin beats a written address for the driver.
             if (this.mapsUrl) L.push('🗺️ الموقع على الخريطة: ' + this.mapsUrl);

@@ -54,7 +54,7 @@ class VendorResource extends Resource
 
             Forms\Components\TextInput::make('phone')
                 ->tel()
-                ->prefix(__('wassili.phone_prefix')),
+                ->prefix(fn () => \App\Support\Settings::countryCode()),
 
             Forms\Components\Textarea::make('address')->rows(2)->columnSpanFull(),
 
@@ -116,7 +116,7 @@ class VendorResource extends Resource
                 Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('category.name')->badge()->label(__('wassili.category')),
                 Tables\Columns\TextColumn::make('phone')
-                    ->formatStateUsing(fn ($state) => $state ? '+961 ' . $state : null),
+                    ->formatStateUsing(fn ($state) => \App\Support\Settings::formatPhone($state)),
                 Tables\Columns\TextColumn::make('is_open')
                     ->label(__('wassili.is_open'))
                     ->badge()

@@ -81,12 +81,10 @@ class WhatsappFormatter
         return $line;
     }
 
-    /** Display a Lebanese number with its country code, e.g. +961 71123456. */
+    /** Display a local number with its dialling code, e.g. +961 71123456. */
     public static function formatPhone(?string $phone): string
     {
-        $phone = trim((string) $phone);
-
-        return $phone === '' ? '—' : '+961 '.$phone;
+        return Settings::formatPhone($phone);
     }
 
     /** Strip everything except digits so wa.me receives a clean number. */

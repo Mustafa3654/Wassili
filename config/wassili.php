@@ -7,6 +7,10 @@ return [
     // Call-center WhatsApp number (full international format, digits only).
     'call_center_number' => env('WASSILI_CALL_CENTER_NUMBER', ''),
 
+    // Dialling code prefixed to local phone numbers on screen and in messages.
+    // Overridable at runtime from Admin → Settings.
+    'country_code' => env('WASSILI_COUNTRY_CODE', '+961'),
+
     // Delivery fee model (amounts are in the base currency: USD).
     'base_delivery_fee' => (float) env('WASSILI_BASE_DELIVERY_FEE', 2),
 

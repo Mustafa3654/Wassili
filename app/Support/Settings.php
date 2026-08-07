@@ -38,6 +38,23 @@ class Settings
         return (bool) self::value('show_price_on_main_page', config('wassili.show_price_on_main_page', true));
     }
 
+    /**
+     * Dialling code shown in front of every local phone number, e.g. "+961".
+     * Editable so the app isn't pinned to one country.
+     */
+    public static function countryCode(): string
+    {
+        return (string) self::value('country_code', config('wassili.country_code', '+961'));
+    }
+
+    /** "+961 71123456", or an em dash when there's no number. */
+    public static function formatPhone(?string $phone): string
+    {
+        $phone = trim((string) $phone);
+
+        return $phone === '' ? '—' : self::countryCode().' '.$phone;
+    }
+
     /** Returns the stored value, or $default when missing/empty/unavailable. */
     protected static function value(string $key, $default)
     {
