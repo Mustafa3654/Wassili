@@ -65,6 +65,9 @@ class VendorResource extends Resource
 
             Section::make(__('wassili.opening_hours'))
                 ->description(__('wassili.opening_hours_help'))
+                // Collapsed by default: seven days of pickers otherwise bury
+                // the fields above them.
+                ->collapsed()
                 ->schema(function () {
                     $days = [
                         'monday'    => __('wassili.monday'),
