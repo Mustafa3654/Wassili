@@ -59,9 +59,16 @@ class VendorResource extends Resource
             Forms\Components\Textarea::make('address')->rows(2)->columnSpanFull(),
 
             Forms\Components\FileUpload::make('logo')
+                ->label(__('wassili.logo'))
                 ->image()
-                ->directory('vendors')
-                ->imageEditor(),
+                ->imageEditor()
+                ->maxSize(12288)
+                ->helperText(__('wassili.image_help'))
+                // Logos render small, so they downscale harder than photos.
+                ->saveUploadedFileUsing(fn (\Illuminate\Http\UploadedFile $file) =>
+                    \App\Support\ImageOptimizer::storeWebp(
+                        $file, 'vendors', \App\Support\ImageOptimizer::MAX_LOGO
+                    )),
 
             Section::make(__('wassili.opening_hours'))
                 ->description(__('wassili.opening_hours_help'))

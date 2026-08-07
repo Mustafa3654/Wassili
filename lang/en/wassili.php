@@ -121,4 +121,7 @@ return [
     'driver_delivery_fee_help' => 'Optional. Leave empty to use the base fee from Settings.',
     'uses_base_fee' => 'Base fee',
     'inactive' => 'Inactive',
+    'image' => 'Image',
+    'logo' => 'Logo',
+    'image_help' => 'Converted to WebP and resized automatically — upload the original, no need to compress it first.',
 ];

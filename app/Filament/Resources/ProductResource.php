@@ -46,7 +46,14 @@ class ProductResource extends Resource
                 ->helperText(__('wassili.price_usd_help')),
 
             Forms\Components\FileUpload::make('image')
-                ->image()->directory('products')->imageEditor(),
+                ->label(__('wassili.image'))
+                ->image()
+                ->imageEditor()
+                ->maxSize(12288) // 12 MB in, a few dozen KB out
+                ->helperText(__('wassili.image_help'))
+                // Everything is re-encoded to WebP and downscaled on save.
+                ->saveUploadedFileUsing(fn (\Illuminate\Http\UploadedFile $file) =>
+                    \App\Support\ImageOptimizer::storeWebp($file, 'products')),
 
             Forms\Components\Select::make('category_id')
                 ->label(__('wassili.category'))
